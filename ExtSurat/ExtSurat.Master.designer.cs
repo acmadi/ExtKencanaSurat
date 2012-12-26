@@ -166,31 +166,31 @@ namespace ExtSurat {
         protected global::Ext.Net.ButtonGroup ButtonGroup3;
         
         /// <summary>
-        /// Button3 control.
+        /// btnReportInbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.Button Button3;
+        protected global::Ext.Net.Button btnReportInbox;
         
         /// <summary>
-        /// Button4 control.
+        /// btnReportOutbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.Button Button4;
+        protected global::Ext.Net.Button btnReportOutbox;
         
         /// <summary>
-        /// Button5 control.
+        /// btnReportDisposition control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.Button Button5;
+        protected global::Ext.Net.Button btnReportDisposition;
         
         /// <summary>
         /// lblWelcome control.

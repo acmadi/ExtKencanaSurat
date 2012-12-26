@@ -46,7 +46,7 @@ namespace ExtSurat
                 }                
             }
             else
-                X.AddScript("parentAutoLoadControl.close();");
+                X.AddScript("parentAutoLoadControl.close(); Delay='2' ");
         }
 
         [DirectMethod]
@@ -71,8 +71,7 @@ namespace ExtSurat
                 sm.Keterangan = txtKeterangan.Text;
                 sm.Berkas = "kosong";
                 sm.Lastedited = DateTime.Now;
-                sm.Save();
-                X.AddScript("parentAutoLoadControl.close();");
+                sm.Save();                
             }
             //EDIT
             else
@@ -95,16 +94,16 @@ namespace ExtSurat
                     sm.Keterangan = txtKeterangan.Text;
                     sm.Berkas = "kosong";
                     sm.Lastedited = DateTime.Now;
-                    sm.Save();
-                    X.AddScript("parentAutoLoadControl.close();");
+                    sm.Save();                    
                 }
             }
+            X.AddScript("parentAutoLoadControl.close(); Delay='2' ");
         }
 
         [DirectMethod]
         public void Cancel()
         {
-            X.AddScript("parentAutoLoadControl.close();");
+            X.AddScript("parentAutoLoadControl.close(); Delay='2' ");
         }
     }
 }

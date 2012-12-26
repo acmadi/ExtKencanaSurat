@@ -22,7 +22,7 @@
                         </ext:Button>
                         <ext:Button runat="server" ID="btnCancel" Text="CANCEL" Icon="Cancel">
                             <Listeners>
-                                <Click Handler="parentAutoLoadControl.close();" />
+                                <Click Handler="parentAutoLoadControl.close();" Delay="1" />
                             </Listeners>
                         </ext:Button>
                     </Items>

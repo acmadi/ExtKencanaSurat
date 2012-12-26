@@ -24,9 +24,9 @@
     <form id="form1" runat="server">  
         
         <ext:ResourceManager ID="ResourceManager1" runat="server" />
-        <ext:TabPanel ID="TabPanel1" runat="server" StyleSpec="margin-top:1px">
+        <ext:TabPanel ID="TabPanel1" ClientIDMode="Inherit" runat="server" StyleSpec="margin-top:1px">
                 <Items>
-                    <ext:Panel ID="Panel1" runat="server" Title="User">
+                    <ext:Panel ID="Panel1" ClientIDMode="Inherit" runat="server" Title="User">
                         <TopBar>
                             <ext:Toolbar ID="Toolbar1" runat="server">
                                 <Items>
@@ -42,7 +42,7 @@
                                             </ext:Button>
                                             <ext:Button runat="server" ID="btnMasterGroup" Text="Group Access" IconCls="group32" IconAlign="Top" Cls="x-btn-as-arrow" Scale="Large" Shadow="true" >
                                                 <Listeners>
-                                                    <Click Handler="#{DirectMethods}.btnMasterGroup_Click();" />
+                                                    <Click Handler="#{DirectMethods}.loadUserControl(#{btnMasterGroup}.id);" />
                                                 </Listeners>
                                             </ext:Button>
                                         </Items>
@@ -51,7 +51,7 @@
                             </ext:Toolbar>
                         </TopBar>
                     </ext:Panel>
-                    <ext:Panel ID="Panel2" runat="server" Title="Surat">
+                    <ext:Panel ID="Panel2" ClientIDMode="Inherit" runat="server" Title="Surat">
                         <TopBar>
                             <ext:Toolbar ID="Toolbar2" runat="server">
                                 <Items>
@@ -76,7 +76,7 @@
                             </ext:Toolbar>
                         </TopBar>
                     </ext:Panel>
-                    <ext:Panel ID="Panel3" runat="server" Title="Reports">
+                    <ext:Panel ID="Panel3" ClientIDMode="Inherit" runat="server" Title="Reports">
                         <TopBar>
                             <ext:Toolbar ID="Toolbar3" runat="server">
                                 <Items>
@@ -85,9 +85,21 @@
                                             <ext:TableLayoutConfig Columns="3" />
                                         </LayoutConfig>
                                         <Items>
-                                            <ext:Button runat="server" ID="Button3" Text="Master User" IconCls="add32" IconAlign="Top" Cls="x-btn-as-arrow" Scale="Large" Shadow="true" />
-                                            <ext:Button runat="server" ID="Button4" Text="Group Access" IconCls="group32" IconAlign="Top" Cls="x-btn-as-arrow" Scale="Large" Shadow="true" />
-                                            <ext:Button runat="server" ID="Button5" Text="Disposition" IconCls="group32" IconAlign="Top" Cls="x-btn-as-arrow" Scale="Large" Shadow="true" />
+                                            <ext:Button runat="server" ID="btnReportInbox" Text="Surat Masuk" IconCls="add32" IconAlign="Top" Cls="x-btn-as-arrow" Scale="Large" Shadow="true">
+                                                <Listeners>
+                                                    <Click Handler="#{DirectMethods}.loadUserControl(#{btnReportInbox}.id);" />                                                    
+                                                </Listeners>
+                                            </ext:Button>
+                                            <ext:Button runat="server" ID="btnReportOutbox" Text="Group Access" IconCls="group32" IconAlign="Top" Cls="x-btn-as-arrow" Scale="Large" Shadow="true" >
+                                                <Listeners>
+                                                    <Click Handler="#{DirectMethods}.loadUserControl(#{btnReportOutbox}.id);" />                                                    
+                                                </Listeners>
+                                            </ext:Button>
+                                            <ext:Button runat="server" ID="btnReportDisposition" Text="Disposition" IconCls="group32" IconAlign="Top" Cls="x-btn-as-arrow" Scale="Large" Shadow="true" >
+                                                <Listeners>
+                                                    <Click Handler="#{DirectMethods}.loadUserControl(#{btnReportDisposition}.id);" />                                                    
+                                                </Listeners>
+                                            </ext:Button>
                                         </Items>
                                     </ext:ButtonGroup>
                                 </Items>
@@ -109,6 +121,9 @@
                         </Items>
                     </ext:Toolbar>
                 </BottomBar>
+                <Listeners>
+                    <TabChange Handler="#{DirectMethods}.OnTabChange();" />                    
+                </Listeners>                
             </ext:TabPanel> 
             <%--<ext:Panel runat="server" ID="pnlMain" Title="Main Panel" Height="500">                
                 <Content>                     

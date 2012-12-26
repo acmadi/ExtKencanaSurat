@@ -24,7 +24,7 @@ namespace ExtSurat
                 TabPanel1.SetActiveTab(HttpContext.Current.Session["activetab"].ToString().Trim());
             }
         }
-
+        
         [DirectMethod]
         public void btnMasterUser_Click()
         {
@@ -56,15 +56,67 @@ namespace ExtSurat
             //this.pnlMain.ContentControls.Add(cc);
             //this.pnlMain.UpdateContent();
 
-            if (buttonID == "btnInbox")
+            //if (buttonID == "btnInbox")
+            //{
+            //    TabPanel1.ResumeEvents();
+            //    HttpContext.Current.Session["activetab"] = ((Ext.Net.Panel)TabPanel1.FindControl("Panel2")).ID;
+            //    this.Response.Redirect("~/frmInbox.aspx");
+            //}
+            //else if (buttonID == "btnOutbox")
+            //{
+            //    TabPanel1.ResumeEvents();
+            //    this.Response.Redirect("~/frmOutbox.aspx?activetab=" + ((Ext.Net.Panel)TabPanel1.FindControl("Panel2")).ID);
+            //}
+            //else
+            //    this.Response.Redirect("~/Default.aspx");
+
+            switch (buttonID)
             {
-                HttpContext.Current.Session["activetab"] = ((Ext.Net.Panel)TabPanel1.FindControl("Panel2")).ID;
-                this.Response.Redirect("~/frmInbox.aspx");
+                case "btnMasterUser":
+                    TabPanel1.ResumeEvents();
+                    HttpContext.Current.Session["activetab"] = ((Ext.Net.Panel)TabPanel1.FindControl("Panel1")).ID;
+                    this.Response.Redirect("~/frmMasterUser.aspx");
+                    break;
+                case "btnMasterGroup":
+                    TabPanel1.ResumeEvents();
+                    HttpContext.Current.Session["activetab"] = ((Ext.Net.Panel)TabPanel1.FindControl("Panel1")).ID;
+                    this.Response.Redirect("~/frmMasterGroup.aspx");
+                    break;
+                case "btnInbox":
+                    TabPanel1.ResumeEvents();
+                    HttpContext.Current.Session["activetab"] = ((Ext.Net.Panel)TabPanel1.FindControl("Panel2")).ID;
+                    this.Response.Redirect("~/frmInbox.aspx");
+                    break;
+                case "btnOutbox":
+                    TabPanel1.ResumeEvents();
+                    HttpContext.Current.Session["activetab"] = ((Ext.Net.Panel)TabPanel1.FindControl("Panel2")).ID;
+                    this.Response.Redirect("~/frmOutbox.aspx");
+                    break;
+                case "btnReportInbox":
+                    TabPanel1.ResumeEvents();
+                    HttpContext.Current.Session["activetab"] = ((Ext.Net.Panel)TabPanel1.FindControl("Panel3")).ID;
+                    this.Response.Redirect("~/frmReportInbox.aspx");
+                    break;
+                case "btnReportOutbox":
+                    TabPanel1.ResumeEvents();
+                    HttpContext.Current.Session["activetab"] = ((Ext.Net.Panel)TabPanel1.FindControl("Panel3")).ID;
+                    this.Response.Redirect("~/frmReportOutbox.aspx");
+                    break;
+                case "btnReportDisposition":
+                    TabPanel1.ResumeEvents();
+                    HttpContext.Current.Session["activetab"] = ((Ext.Net.Panel)TabPanel1.FindControl("Panel3")).ID;
+                    this.Response.Redirect("~/frmReportDisposition.aspx");
+                    break;
+                default:
+                    this.Response.Redirect("~/Default.aspx");
+                    break;
             }
-            else if (buttonID == "btnOutbox")
-                this.Response.Redirect("~/frmOutbox.aspx?activetab=" + ((Ext.Net.Panel)TabPanel1.FindControl("Panel2")).ID);
-            else
-                this.Response.Redirect("~/Default.aspx");
+        }
+
+        [DirectMethod]
+        public void OnTabChange()
+        {
+            TabPanel1.SuspendEvents(true);
         }
 
         [DirectMethod]
