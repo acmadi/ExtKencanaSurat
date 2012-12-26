@@ -38,19 +38,16 @@ namespace ExtSurat
         }
 
         [DirectMethod]
-        public void btnAddSurat()
-        {
- 
-        }
-
-        [DirectMethod]
         public void EditSurat(string masukid)
         {
+            taskManager1.StartAll();
+            HttpContext.Current.Session["isEditInbox"] = false;
             int masukId = 0;
             HttpContext.Current.Session["isEditInbox"] = false;
             if (!int.TryParse(masukid.Trim(), out masukId))
                 masukId = 0;
             Suratmasuk sm = new Suratmasuk();
+            //EDIT
             if (sm.LoadByPrimaryKey(masukId))
             {
                 var win = new Window()
@@ -65,15 +62,46 @@ namespace ExtSurat
                     Maximizable = false,
                     Hidden = true,
                     Draggable = false,
-                    Resizable = false
+                    Resizable = false,
+                    Closable = false
                 };
 
-                win.AutoLoad.Url = "~/frmInboxWindow.aspx";
+                win.AutoLoad.Url = "~/frmInboxWindow.aspx?masukid=" + masukid.Trim() + "&isadd=0";
+                win.AutoLoad.Mode = LoadMode.IFrame;
+                win.AutoLoad.ShowMask = true;
                 win.Render(this.Form);
                 win.Show();
             }
+            //ADD
             else
-                return;
+            {
+                if (masukid.Trim() != "new")
+                    return;
+                else
+                {
+                    var win = new Window()
+                    {
+                        ID = "EditSuratWindow",
+                        Title = "Add Surat Masuk",
+                        Width = Unit.Pixel(800),
+                        Height = Unit.Pixel(600),
+                        Modal = true,
+                        AutoRender = false,
+                        Collapsed = false,
+                        Maximizable = false,
+                        Hidden = true,
+                        Draggable = false,
+                        Resizable = false,
+                        Closable = false
+                    };
+
+                    win.AutoLoad.Url = "~/frmInboxWindow.aspx?masukid=new&isadd=1";
+                    win.AutoLoad.Mode = LoadMode.IFrame;
+                    win.AutoLoad.ShowMask = true;
+                    win.Render(this.Form);
+                    win.Show();
+                }
+            }
         }
 
         [DirectMethod]

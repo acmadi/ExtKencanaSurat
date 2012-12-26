@@ -40,7 +40,7 @@
                 <Items>
                     <ext:Button runat="server" ID="btnAddSuratMasuk" Icon="EmailAdd">
                         <Listeners>
-                            
+                            <Click Handler="Ext.net.DirectMethods.EditSurat('new');" />
                         </Listeners>
                     </ext:Button>
                 </Items>
@@ -49,7 +49,7 @@
         
         <ColumnModel runat="server">
             <Columns>
-                <ext:CommandColumn runat="server" Width="20" Header="">
+                <ext:CommandColumn runat="server" Width="25" Header="Edit">
                     <Commands>
                         <ext:GridCommand Icon="EmailEdit" CommandName="Edit">   
                             <ToolTip Text="Edit Surat" />
