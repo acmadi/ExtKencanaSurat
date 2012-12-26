@@ -16,3 +16,12 @@ D:\ExtSurat\ExtSurat.BusinessObjects\bin\Debug\EntitySpaces.Core.dll
 D:\ExtSurat\ExtSurat.BusinessObjects\bin\Debug\EntitySpaces.DynamicQuery.dll
 D:\ExtSurat\ExtSurat.BusinessObjects\bin\Debug\EntitySpaces.Interfaces.dll
 D:\ExtSurat\ExtSurat.BusinessObjects\bin\Debug\EntitySpaces.MySqlClientProvider.dll
+H:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\bin\Debug\ExtSurat.BusinessObjects.dll
+H:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\bin\Debug\ExtSurat.BusinessObjects.pdb
+H:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\bin\Debug\EntitySpaces.Core.dll
+H:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\bin\Debug\EntitySpaces.DynamicQuery.dll
+H:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\bin\Debug\EntitySpaces.Interfaces.dll
+H:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\bin\Debug\EntitySpaces.MySqlClientProvider.dll
+H:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\obj\Debug\ResolveAssemblyReference.cache
+H:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\obj\Debug\ExtSurat.BusinessObjects.dll
+H:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\obj\Debug\ExtSurat.BusinessObjects.pdb
