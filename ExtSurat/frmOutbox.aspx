@@ -34,23 +34,30 @@
         </Reader>
     </ext:Store>
 
-    <ext:GridPanel runat="server" ID="gpInbox" ClientIDMode="Inherit" Height="600" StoreID="storeOutbox" AutoExpandColumn="judul" >
+    <ext:GridPanel runat="server" ID="gpOutbox" ClientIDMode="Inherit" Height="600" StoreID="storeOutbox" AutoExpandColumn="judul" >
         <TopBar>
             <ext:Toolbar ID="Toolbar1" runat="server">
                 <Items>
                     <ext:Button runat="server" ID="btnAddSuratKeluar" Icon="EmailAdd">
                         <Listeners>
-                            
+                            <Click Handler="Ext.net.DirectMethods.EditSurat('new');" />   
                         </Listeners>
                     </ext:Button>
                 </Items>
             </ext:Toolbar>
         </TopBar>
-        <ColumnModel ID="ColumnModel1" runat="server">
+        <ColumnModel runat="server">
             <Columns>
-                <ext:Column ColumnID="IdSuratMasuk" Header="ID" DataIndex="masukid" Width="40" />
+                <ext:CommandColumn runat="server" Width="25" Header="Edit">
+                    <Commands>
+                        <ext:GridCommand Icon="EmailEdit" CommandName="Edit">   
+                            <ToolTip Text="Edit Surat" />
+                        </ext:GridCommand>
+                    </Commands>
+                </ext:CommandColumn>
+                <ext:Column ColumnID="IdSuratKeluar" Header="ID" DataIndex="keluarid" Width="40" />
                 <ext:Column ColumnID="IdUser" Header="ID User" DataIndex="userid" Width="80" />
-                <ext:Column ColumnID="Nomor" Header="Nomor Surat" DataIndex="nomor" Width="100" />
+                <ext:Column ColumnID="IdPenomoran" Header="ID Penomoran" DataIndex="nomor" Width="100" />
                 <ext:Column ColumnID="NomorAsli" Header="Nomor Asli Surat" DataIndex="noasal" Width="100" />
                 <ext:Column ColumnID="Penerima" Header="Penerima" DataIndex="kepada" Width="200" />
                 <ext:Column ColumnID="Judul" Header="Judul" DataIndex="judul" />
@@ -62,5 +69,18 @@
             <ext:RowSelectionModel ID="RowSelectionModel1" SingleSelect="true" runat="server" />
         </SelectionModel>
         <LoadMask ShowMask="true" />
+        <Listeners>
+            <Command Handler="Ext.net.DirectMethods.EditSurat(record.data.keluarid);" />
+        </Listeners>
     </ext:GridPanel>
+
+    <ext:TaskManager runat="server" ID="taskManager1" Enabled="true">
+        <Tasks>
+            <ext:Task TaskID="taskEdit" Interval="2000">
+                <Listeners>
+                    <Update Handler="Ext.net.DirectMethods.Refresh_Grid();" />
+                </Listeners>
+            </ext:Task>
+        </Tasks>
+    </ext:TaskManager>
 </asp:Content>

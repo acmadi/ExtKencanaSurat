@@ -59,8 +59,8 @@ namespace ExtSurat
             string nomor = txtNomorSuratKencana.Text;
             string noasal = txtNomorSuratAsli.Text;
             //ADD
-            if (isAdd)
-            {
+            //if (isAdd)
+            //{
                 if (string.IsNullOrEmpty(txtDari.Text) || string.IsNullOrEmpty(txtJudul.Text)
                     || string.IsNullOrEmpty(txtKeterangan.Text) 
                     || string.IsNullOrEmpty(txtNomorSurat.Text) || string.IsNullOrEmpty(txtNomorSuratAsli.Text)
@@ -79,39 +79,39 @@ namespace ExtSurat
                 sm.Lastedited = DateTime.Now;
                 sm.Save();
                 HttpContext.Current.Session["isEditInbox"] = true;
-            }
+            //}
             //EDIT
-            else
-            {
-                if (string.IsNullOrEmpty(txtDari.Text) || string.IsNullOrEmpty(txtJudul.Text)
-                    || string.IsNullOrEmpty(txtKeterangan.Text) || string.IsNullOrEmpty(txtMasukId.Text)
-                    || string.IsNullOrEmpty(txtNomorSurat.Text) || string.IsNullOrEmpty(txtNomorSuratAsli.Text)
-                    || string.IsNullOrEmpty(txtNomorSuratKencana.Text))
-                    return;
-                Suratmasuk sm = new Suratmasuk();
-                if (sm.LoadByPrimaryKey(masukid))
-                {
-                    try
-                    {
-                        sm.Userid = "toro";
-                        sm.Nomorid = nomorid;
-                        sm.Nomor = nomor;
-                        sm.Noasal = noasal;
-                        sm.Judul = txtJudul.Text;
-                        sm.Tanggal = dfTanggal.SelectedDate;
-                        sm.Dari = txtDari.Text;
-                        sm.Keterangan = txtKeterangan.Text;
-                        sm.Berkas = "kosong";
-                        sm.Lastedited = DateTime.Now;
-                        sm.Save();
-                        HttpContext.Current.Session["isEditInbox"] = true;
-                    }
-                    catch (Exception ex)
-                    {
-                        frmPanelMain.Title = ex.Message;
-                    }
-                }
-            }
+            //else
+            //{
+            //    if (string.IsNullOrEmpty(txtDari.Text) || string.IsNullOrEmpty(txtJudul.Text)
+            //        || string.IsNullOrEmpty(txtKeterangan.Text) || string.IsNullOrEmpty(txtMasukId.Text)
+            //        || string.IsNullOrEmpty(txtNomorSurat.Text) || string.IsNullOrEmpty(txtNomorSuratAsli.Text)
+            //        || string.IsNullOrEmpty(txtNomorSuratKencana.Text))
+            //        return;
+            //    Suratmasuk sm = new Suratmasuk();
+            //    if (sm.LoadByPrimaryKey(masukid))
+            //    {
+            //        try
+            //        {
+            //            sm.Userid = "toro";
+            //            sm.Nomorid = nomorid;
+            //            sm.Nomor = nomor;
+            //            sm.Noasal = noasal;
+            //            sm.Judul = txtJudul.Text;
+            //            sm.Tanggal = dfTanggal.SelectedDate;
+            //            sm.Dari = txtDari.Text;
+            //            sm.Keterangan = txtKeterangan.Text;
+            //            sm.Berkas = "kosong";
+            //            sm.Lastedited = DateTime.Now;
+            //            sm.Save();
+            //            HttpContext.Current.Session["isEditInbox"] = true;
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            frmPanelMain.Title = ex.Message;
+            //        }
+            //    }
+            //}
             X.AddScript("parentAutoLoadControl.close(); Delay='2' ");
         }
 

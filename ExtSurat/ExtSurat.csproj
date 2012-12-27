@@ -103,6 +103,8 @@
     <Content Include="frmInboxWindow.aspx" />
     <Content Include="frmInboxWindowEdit.aspx" />
     <Content Include="frmOutbox.aspx" />
+    <Content Include="frmOutboxWindowAdd.aspx" />
+    <Content Include="frmOutboxWindowEdit.aspx" />
     <Content Include="Images\add_user-32.png" />
     <Content Include="Images\group_access-32.jpg" />
     <Content Include="Master\frmMasterUser.aspx" />
@@ -201,6 +203,20 @@
     </Compile>
     <Compile Include="frmOutbox.aspx.designer.cs">
       <DependentUpon>frmOutbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmOutboxWindowAdd.aspx.cs">
+      <DependentUpon>frmOutboxWindowAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmOutboxWindowAdd.aspx.designer.cs">
+      <DependentUpon>frmOutboxWindowAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmOutboxWindowEdit.aspx.cs">
+      <DependentUpon>frmOutboxWindowEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmOutboxWindowEdit.aspx.designer.cs">
+      <DependentUpon>frmOutboxWindowEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

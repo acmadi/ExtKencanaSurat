@@ -22,13 +22,13 @@ namespace ExtSurat {
         protected global::Ext.Net.Store storeOutbox;
         
         /// <summary>
-        /// gpInbox control.
+        /// gpOutbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.GridPanel gpInbox;
+        protected global::Ext.Net.GridPanel gpOutbox;
         
         /// <summary>
         /// Toolbar1 control.
@@ -56,5 +56,14 @@ namespace ExtSurat {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Ext.Net.RowSelectionModel RowSelectionModel1;
+        
+        /// <summary>
+        /// taskManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Ext.Net.TaskManager taskManager1;
     }
 }
