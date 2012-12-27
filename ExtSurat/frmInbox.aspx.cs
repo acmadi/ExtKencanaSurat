@@ -66,7 +66,7 @@ namespace ExtSurat
                     Closable = false
                 };
 
-                win.AutoLoad.Url = "~/frmInboxWindow.aspx?masukid=" + masukid.Trim() + "&isadd=0";
+                win.AutoLoad.Url = "~/frmInboxWindowEdit.aspx?masukid=" + masukId.ToString().Trim() + "&isadd=0";
                 win.AutoLoad.Mode = LoadMode.IFrame;
                 win.AutoLoad.ShowMask = true;
                 win.Render(this.Form);

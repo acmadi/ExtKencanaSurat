@@ -1,19 +1,19 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmInboxWindow.aspx.cs" Inherits="ExtSurat.frmInboxWindow" %>
+﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeBehind="frmInboxWindowEdit.aspx.cs" Inherits="ExtSurat.frmInboxWindowEdit" %>
 <%@ Register Assembly="Ext.Net" Namespace="Ext.Net" TagPrefix="ext" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-    <ext:ResourceManager runat="server" />        
+    <ext:ResourceManager ID="ResourceManager1" runat="server" />        
         <ext:FormPanel runat="server" ID="frmPanelMain" AutoHeight="true" Padding="2" DefaultAnchor="0">
             <TopBar>
-                <ext:Toolbar runat="server">
+                <ext:Toolbar ID="Toolbar1" runat="server">
                     <Items>
                         <ext:Button runat="server" ID="btnSave" Text="SAVE" Icon="Disk">
                             <Listeners>
