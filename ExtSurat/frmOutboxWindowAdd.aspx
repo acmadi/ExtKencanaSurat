@@ -10,11 +10,11 @@
     <form id="form1" runat="server">
     <div>
         <ext:ResourceManager ID="ResourceManager1" runat="server" />        
-        <ext:FormPanel runat="server" ID="frmPanelMain" AutoHeight="true" Padding="2" DefaultAnchor="0">
+        <ext:FormPanel runat="server" ID="frmPanelMain" AutoHeight="true" Padding="2" DefaultAnchor="0" MonitorValid="true">
             <TopBar>
                 <ext:Toolbar ID="Toolbar1" runat="server">
                     <Items>
-                        <ext:Button runat="server" ID="btnSave" Text="SAVE" Icon="Disk">
+                        <ext:Button runat="server" ID="btnSave" ClientIDMode="Inherit" Text="SAVE" Icon="Disk" FormBind="true">
                             <Listeners>
                                 <Click Handler="#{DirectMethods}.SaveData();" />
                             </Listeners>
@@ -28,14 +28,17 @@
                 </ext:Toolbar>
             </TopBar>
             <Items>
-                <ext:TextField ID="txtKeluarId" runat="server" FieldLabel="ID Surat" AnchorHorizontal="-20" ReadOnly="true" Enabled="false" />
-                <ext:TextField ID="txtPenomoranSurat" runat="server" FieldLabel="ID Penomoran" AnchorHorizontal="-20" />
-                <ext:TextField ID="txtNomorSuratKencana" runat="server" FieldLabel="Nomor Surat" AnchorHorizontal="-20" />
-                <ext:TextField ID="txtKepada" runat="server" FieldLabel="Penerima" AnchorHorizontal="-20" />
-                <ext:TextField ID="txtJudul" runat="server" FieldLabel="Tittle Surat" AnchorHorizontal="-20" />                                
-                <ext:TextField ID="txtKeterangan" runat="server" FieldLabel="Keterangan" AnchorHorizontal="-20" />
-                <ext:DateField ID="dfTanggal" runat="server" FieldLabel="Tanggal" AnchorHorizontal="-20" />
+                <ext:TextField ID="txtKeluarId" runat="server" FieldLabel="ID Surat" AnchorHorizontal="-20" ReadOnly="true" Enabled="false" AllowBlank="true" />
+                <ext:TextField ID="txtPenomoranSurat" runat="server" FieldLabel="ID Penomoran" AnchorHorizontal="-20" AllowBlank="false" />
+                <ext:TextField ID="txtNomorSuratKencana" runat="server" FieldLabel="Nomor Surat" AnchorHorizontal="-20" AllowBlank="false" />
+                <ext:TextField ID="txtKepada" runat="server" FieldLabel="Penerima" AnchorHorizontal="-20" AllowBlank="false" />
+                <ext:TextField ID="txtJudul" runat="server" FieldLabel="Tittle Surat" AnchorHorizontal="-20" AllowBlank="false" />                                
+                <ext:TextField ID="txtKeterangan" runat="server" FieldLabel="Keterangan" AnchorHorizontal="-20" AllowBlank="false" />
+                <ext:DateField ID="dfTanggal" runat="server" FieldLabel="Tanggal" AnchorHorizontal="-20" AllowBlank="false" />
             </Items>
+            <Listeners>
+                <ClientValidation Handler="#{btnSave}.setDisabled(!valid);" />
+            </Listeners>
         </ext:FormPanel>
     </div>
     </form>
