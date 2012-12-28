@@ -102,6 +102,7 @@
     <Content Include="frmInbox.aspx" />
     <Content Include="frmInboxWindow.aspx" />
     <Content Include="frmInboxWindowEdit.aspx" />
+    <Content Include="frmNumbering.aspx" />
     <Content Include="frmOutbox.aspx" />
     <Content Include="frmOutboxWindowAdd.aspx" />
     <Content Include="frmOutboxWindowEdit.aspx" />
@@ -196,6 +197,13 @@
     </Compile>
     <Compile Include="frmInboxWindowEdit.aspx.designer.cs">
       <DependentUpon>frmInboxWindowEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmNumbering.aspx.cs">
+      <DependentUpon>frmNumbering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmNumbering.aspx.designer.cs">
+      <DependentUpon>frmNumbering.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmOutbox.aspx.cs">
       <DependentUpon>frmOutbox.aspx</DependentUpon>

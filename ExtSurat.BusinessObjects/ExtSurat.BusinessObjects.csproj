@@ -57,12 +57,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Custom\Disposisi.cs" />
+    <Compile Include="Custom\DisposisiCollection.cs" />
+    <Compile Include="Custom\DisposisiQuery.cs" />
     <Compile Include="Custom\Nomor.cs" />
     <Compile Include="Custom\NomorCollection.cs" />
     <Compile Include="Custom\NomorQuery.cs" />
     <Compile Include="Custom\Perusahaan.cs" />
     <Compile Include="Custom\PerusahaanCollection.cs" />
     <Compile Include="Custom\PerusahaanQuery.cs" />
+    <Compile Include="Custom\Sifatsurat.cs" />
+    <Compile Include="Custom\SifatsuratCollection.cs" />
+    <Compile Include="Custom\SifatsuratQuery.cs" />
     <Compile Include="Custom\Suratkeluar.cs" />
     <Compile Include="Custom\SuratkeluarCollection.cs" />
     <Compile Include="Custom\SuratkeluarQuery.cs" />
@@ -72,8 +78,10 @@
     <Compile Include="Custom\User.cs" />
     <Compile Include="Custom\UserCollection.cs" />
     <Compile Include="Custom\UserQuery.cs" />
+    <Compile Include="Generated\Disposisi.cs" />
     <Compile Include="Generated\Nomor.cs" />
     <Compile Include="Generated\Perusahaan.cs" />
+    <Compile Include="Generated\Sifatsurat.cs" />
     <Compile Include="Generated\Suratkeluar.cs" />
     <Compile Include="Generated\Suratmasuk.cs" />
     <Compile Include="Generated\User.cs" />
