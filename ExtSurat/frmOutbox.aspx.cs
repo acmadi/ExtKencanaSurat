@@ -18,6 +18,9 @@ namespace ExtSurat
             {
                 this.storeOutbox.DataSource = GetOutbox();
                 this.storeOutbox.DataBind();
+                SuratAutonumber sa = new SuratAutonumber();
+                gpOutbox.Title = sa.GenNumber("0001/RSCM-K/M/YY",9,DateTime.Now.Year);
+                btnAddSuratKeluar.Text = sa.GenNumber("001/RSCM-K/YANMED/M/YY", 11, DateTime.Now.Year);
             }
         }
 
