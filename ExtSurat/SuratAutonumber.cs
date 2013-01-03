@@ -24,9 +24,7 @@ namespace ExtSurat
                 if (nC.Count >= 1)
                 {
                     foreach (Nomor n in nC)
-                    {   
-                        //foreach (n.es
-
+                    {                          
                         string[] formatNumbering;
                         formatNumbering = new string[7];
                         for (int i = 1; i <= 6; i++)

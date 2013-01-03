@@ -30,6 +30,7 @@
             <Items>
                 <ext:TextField ID="txtKeluarId" runat="server" FieldLabel="ID Surat" AnchorHorizontal="-20" ReadOnly="true" Enabled="false" AllowBlank="false" />
                 <ext:TextField ID="txtPenomoranSurat" runat="server" FieldLabel="ID Penomoran" AnchorHorizontal="-20" AllowBlank="false" />
+                <ext:ComboBox ID="cmbFormatPenomoran" runat="server" FieldLabel="Format Penomoran" AnchorHorizontal="-20" AllowBlank="false" />
                 <ext:TextField ID="txtNomorSuratKencana" runat="server" FieldLabel="Nomor Surat" AnchorHorizontal="-20" AllowBlank="false" />
                 <ext:TextField ID="txtKepada" runat="server" FieldLabel="Penerima" AnchorHorizontal="-20" AllowBlank="false" />
                 <ext:TextField ID="txtJudul" runat="server" FieldLabel="Tittle Surat" AnchorHorizontal="-20" AllowBlank="false" />                                
