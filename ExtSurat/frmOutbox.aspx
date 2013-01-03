@@ -23,8 +23,8 @@
                 <Fields>
                     <ext:RecordField Name="keluarid" />
                     <ext:RecordField Name="userid" />
+                    <ext:RecordField Name="nomorid" />
                     <ext:RecordField Name="nomor" />
-                    <ext:RecordField Name="noasal" />
                     <ext:RecordField Name="kepada" />
                     <ext:RecordField Name="judul" />
                     <ext:RecordField Name="keterangan" />
@@ -56,9 +56,8 @@
                     </Commands>
                 </ext:CommandColumn>
                 <ext:Column ColumnID="IdSuratKeluar" Header="ID" DataIndex="keluarid" Width="40" />
-                <ext:Column ColumnID="IdUser" Header="ID User" DataIndex="userid" Width="80" />
-                <ext:Column ColumnID="IdPenomoran" Header="ID Penomoran" DataIndex="nomor" Width="100" />
-                <ext:Column ColumnID="NomorAsli" Header="Nomor Asli Surat" DataIndex="noasal" Width="100" />
+                <ext:Column ColumnID="IdUser" Header="ID User" DataIndex="userid" Width="80" />                
+                <ext:Column ColumnID="NomorAsli" Header="Nomor Surat" DataIndex="nomor" Width="200" />
                 <ext:Column ColumnID="Penerima" Header="Penerima" DataIndex="kepada" Width="200" />
                 <ext:Column ColumnID="Judul" Header="Judul" DataIndex="judul" />
                 <ext:Column ColumnID="Keterangan" Header="Keterangan" DataIndex="keterangan" Width="250" />

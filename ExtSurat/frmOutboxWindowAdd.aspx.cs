@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Ext.Net;
 using ExtSurat.BusinessObjects;
+using System.Data;
 
 namespace ExtSurat
 {
@@ -15,20 +16,41 @@ namespace ExtSurat
         {
             if (!X.IsAjaxRequest)
             {
-                
+                //load datasource for combo box
+                this.storeFormatSurat.DataSource = GetDataFormatSurat();
+                this.storeFormatSurat.DataBind();     
             }
+        }
+
+        [DirectMethod]
+        public DataTable GetDataFormatSurat()
+        {
+            NomorQuery n = new NomorQuery("a");
+            n.Select(n.Format, n.Keterangan);
+            DataTable dt = n.LoadDataTable();
+            return dt;
+        }
+
+        [DirectMethod]
+        public void storeFormatSurat_RefreshData(object sender, StoreRefreshDataEventArgs e)
+        {
+            this.storeFormatSurat.DataSource = GetDataFormatSurat();
+            this.storeFormatSurat.DataBind();
         }
 
         [DirectMethod]
         public void SaveData()
         {
             string keluarid = txtKeluarId.Text;
-            string penomoransurat = txtPenomoranSurat.Text;
+            string penomoransurat = cmbFormatPenomoran.SelectedItem.Value.Trim();
             string nomorsurat = txtNomorSuratKencana.Text;
+            //generate number
+            SuratAutonumber sa = new SuratAutonumber();
+            nomorsurat = sa.GenNumber(penomoransurat, dfTanggal.SelectedDate.Month, dfTanggal.SelectedDate.Year);
             //ADD
             //if (isAdd)
             //{
-            if (string.IsNullOrEmpty(txtPenomoranSurat.Text) || string.IsNullOrEmpty(txtNomorSuratKencana.Text)
+            if (string.IsNullOrEmpty(cmbFormatPenomoran.SelectedItem.Value) || string.IsNullOrEmpty(txtNomorSuratKencana.Text)
                 || string.IsNullOrEmpty(txtKepada.Text)
                 || string.IsNullOrEmpty(txtJudul.Text) || string.IsNullOrEmpty(txtKeterangan.Text))                
                 return;
@@ -39,9 +61,9 @@ namespace ExtSurat
             Suratkeluar sk = new Suratkeluar();
             //Suratmasuk sm = new Suratmasuk();
             sk.Userid = "toro";
-            sk.Nomorid = "1";
+            sk.Nomorid = penomoransurat;
             sk.Kepada = txtKepada.Text;
-            sk.Nomor = txtNomorSuratKencana.Text;
+            sk.Nomor = nomorsurat;
             sk.Judul = txtJudul.Text;
             sk.Tanggal = dfTanggal.SelectedDate;
             sk.Berkas = "path";
