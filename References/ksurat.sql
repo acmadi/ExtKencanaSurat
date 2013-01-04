@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50528
 File Encoding         : 65001
 
-Date: 2012-12-28 16:36:24
+Date: 2013-01-04 17:26:48
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -57,15 +57,23 @@ CREATE TABLE `nomor` (
   `reset` enum('bulan','tahun') NOT NULL DEFAULT 'tahun',
   `Keterangan` varchar(255) NOT NULL DEFAULT '-',
   PRIMARY KEY (`nomorid`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of nomor
 -- ----------------------------
-INSERT INTO `nomor` VALUES ('1', 'admin', '005-002/NL/X/2012', '/', '1,002', '2,NL', '-,-', '-,-', '3,X,Y', '4,2012,Y', '005-,kiri', 'suratkeluar', 'tahun', 'format surat keluar');
-INSERT INTO `nomor` VALUES ('2', 'admin', '005-002/NL/X/2012', '/', '1,002', '2,NL', '-,-', '-,-', '3,X,Y', '4,2012,Y', '005-,kiri', 'suratmasuk', 'bulan', 'format surat masuk');
-INSERT INTO `nomor` VALUES ('3', 'admin', '0001/RSCM-K/M/YY', '/', '1,0001', '2,RSCM-K', '-,-', '-,-', '3,X,Y', '4,12,Y', '-,-', 'suratkeluar', 'tahun', 'SURAT KELUAR UNIT');
-INSERT INTO `nomor` VALUES ('4', 'admin', '001/RSCM-K/YANMED/M/YY', '/', '1,001', '2,RSCM-K', '3,YANMED', '-,-', '4,X,Y', '5,12,Y', '-,-', 'suratkeluar', 'tahun', 'Surat Keluar Sub Unit Pelayanan Medik');
+INSERT INTO `nomor` VALUES ('1', 'admin', 'XXX/RSCM-K/KEU/M/YY', '/', '1,001', '2,RSCM-K', '3,KEU', '-,-', '4,X,Y', '5,13,Y', '', 'suratkeluar', 'tahun', 'Surat Keluar Sub Unit Keuangan');
+INSERT INTO `nomor` VALUES ('2', 'admin', 'RSCM-K/XXXXX/SM/M/YY', '/', '1,00002', '2,SM', '-,-', '-,-', '3,X,Y', '4,13,Y', 'RSCM-K/,kiri', 'suratmasuk', 'bulan', 'SURAT MASUK');
+INSERT INTO `nomor` VALUES ('3', 'admin', 'XXXX/RSCM-K/M/YY', '/', '1,0001', '2,RSCM-K', '-,-', '-,-', '3,X,Y', '4,13,Y', '-,-', 'suratkeluar', 'tahun', 'SURAT KELUAR UNIT');
+INSERT INTO `nomor` VALUES ('4', 'admin', 'XXX/RSCM-K/YANMED/M/YY', '/', '1,001', '2,RSCM-K', '3,YANMED', '-,-', '4,X,Y', '5,13,Y', '-,-', 'suratkeluar', 'tahun', 'Surat Keluar Sub Unit Pelayanan Medik');
+INSERT INTO `nomor` VALUES ('5', 'admin', 'XXX/RSCM-K/BMP/M/YY', '/', '1,001', '2,RSCM-K', '3,BMP', '-,-', '3,X,Y', '4,13,Y', '-,-', 'suratkeluar', 'tahun', 'Surat Keluar Sub Unit Pengembangan, Mutu & Pemasaran');
+INSERT INTO `nomor` VALUES ('6', 'admin', 'XXX/RSCM-K/UMOP/M/YY', '/', '1,001', '2,RSCM-K', '3,UMOP', '-,-', '4,X,Y', '5,13,Y', '-,-', 'suratkeluar', 'tahun', 'Surat Keluar Sub Unit Umum & Operasional');
+INSERT INTO `nomor` VALUES ('7', 'admin', 'XXX/RSCM-K/PB/M/YY', '/', '1,001', '2,RSCM-K', '3,PB', '-,-', '4,X,Y', '5,13,Y', '-,-', 'suratkeluar', 'tahun', 'SURAT PENGADAAN BARANG');
+INSERT INTO `nomor` VALUES ('8', 'admin', 'XXX/RSCM-K/SK/M/YY', '/', '1,001', '2,RSCM-K', '3,SK', '-,-', '4,X,Y', '5,13,Y', '-,-', 'suratkeluar', 'tahun', 'SURAT KEPUTUSAN');
+INSERT INTO `nomor` VALUES ('9', 'admin', 'XXX/RSCM-K/S.KUASA/M/YY', '/', '1,001', '2,RSCM-K', '3,S.KUASA', '-,-', '4,X,Y', '5,13,Y', '-,-', 'suratkeluar', 'tahun', 'SURAT KUASA');
+INSERT INTO `nomor` VALUES ('10', 'admin', 'XXX/RSCM-K/SKET/M/YY', '/', '1,001', '2,RSCM-K', '3,SKET', '-,-', '4,X,Y', '5,13,Y', '-,-', 'suratkeluar', 'tahun', 'SURAT KETERANGAN');
+INSERT INTO `nomor` VALUES ('11', 'admin', 'XXX/RSCM-K/ST/M/YY', '/', '1,001', '2,RSCM-K', '3,ST', '-,-', '4,X,Y', '5,13,Y', '-,-', 'suratkeluar', 'tahun', 'SURAT TUGAS');
+INSERT INTO `nomor` VALUES ('12', 'admin', 'XXX/RSCM-K/MEMO/M/YY', '/', '1,001', '2,RSCM-K', '3,MEMO', '-,-', '4,X,Y', '5,13,Y', '-,-', 'suratkeluar', 'tahun', 'MEMO');
 
 -- ----------------------------
 -- Table structure for `perusahaan`
@@ -121,15 +129,12 @@ CREATE TABLE `suratkeluar` (
   `keterangan` varchar(255) NOT NULL DEFAULT '-',
   `lastedited` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`keluarid`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of suratkeluar
 -- ----------------------------
-INSERT INTO `suratkeluar` VALUES ('1', 'admin', '1', 'kepada', '001/NakulaLabs/2012', 'judul surat', '2012-09-04', '001-NakulaLabs-2012.doc', 'keterangan surat', '2012-09-04 06:14:21');
-INSERT INTO `suratkeluar` VALUES ('2', 'toro', '1', 'Kementrian Kesehatan', '001/RSCM-K/12/12', 'Peminjaman Ruang ICU untuk syuting sinetron', '2012-12-01', 'path', 'Artis luar negeri mau main', '2012-12-28 14:56:32');
-INSERT INTO `suratkeluar` VALUES ('3', 'toro', '1', 'adadad', 'dadadad', 'dadadad', '2012-12-28', 'path', 'adadadada', '2012-12-28 14:56:19');
-INSERT INTO `suratkeluar` VALUES ('4', 'toro', '1', 'Kera', '001', 'Judul', '2012-12-28', 'path', 'Ketek', '2012-12-28 14:53:02');
+INSERT INTO `suratkeluar` VALUES ('5', 'toro', '001/RSCM-K/YANMED/M/YY', 'DD', '007/RSCM-K/YANMED/I/12', 'DD', '2013-01-03', 'path', 'DD', '2013-01-03 15:06:57');
 
 -- ----------------------------
 -- Table structure for `suratmasuk`
@@ -148,18 +153,12 @@ CREATE TABLE `suratmasuk` (
   `keterangan` varchar(255) NOT NULL DEFAULT '-',
   `lastedited` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`masukid`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of suratmasuk
 -- ----------------------------
-INSERT INTO `suratmasuk` VALUES ('1', 'toro', '2', '001/NakulaLabs/2012', 'nomor surat', 'judul surat', '2012-09-04', '-', 'kosong', 'keterangan surat', '2012-12-27 10:18:53');
-INSERT INTO `suratmasuk` VALUES ('2', 'toro', '1', '23323', '32232', '32323fgdgfh', '2012-12-26', 'tyytytytyt', 'kosong', 'ytytytytyty', '2012-12-27 09:49:04');
-INSERT INTO `suratmasuk` VALUES ('3', 'toro', '1', 'RTLE LABS', '1234567890', 'Asalaha asasalsasa\' asasasasa', '2012-12-26', 'Dewq', 'kosong', 'Opop', '2012-12-27 14:39:19');
-INSERT INTO `suratmasuk` VALUES ('4', 'toro', '1', 'HAL-2012-999', '2012/BBB/092121', 'Pengumuman', '2012-12-26', 'Bapak', 'kosong', 'Klonengan', '2012-12-26 16:13:46');
-INSERT INTO `suratmasuk` VALUES ('5', 'toro', '1', '555/XII/KENCANA', 'NPL/XII/DES/121', 'Penawaran Obat', '2012-12-01', 'Departemen Marketing NPL', 'kosong', 'Lampiran 3 Lembar', '2012-12-27 11:30:04');
-INSERT INTO `suratmasuk` VALUES ('6', 'toro', '1trt', 'IT/KENCANA/X11/12/12', 'XII/12/12/BAN', 'Penawaran', '2012-12-27', 'Vendort', 'kosong', 'dsdsdsd', '2012-12-27 14:10:33');
-INSERT INTO `suratmasuk` VALUES ('7', 'toro', '1', '2012', '2012', 'GATHERING', '2012-12-27', 'MARKETING', 'kosong', 'LAMPIRAN', '2012-12-27 14:39:52');
+INSERT INTO `suratmasuk` VALUES ('9', 'toro', 'RSCM-K/XXXXX/SM/M/YY', 'RSCM-K/00002/SM/I/13', '1234567890', 'Tutup', '2013-01-04', 'From', 'kosong', 'Keterangan', '2013-01-04 16:37:26');
 
 -- ----------------------------
 -- Table structure for `user`
