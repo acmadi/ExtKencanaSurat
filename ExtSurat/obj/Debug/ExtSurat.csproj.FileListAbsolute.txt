@@ -93,3 +93,6 @@ D:\Github\ExtKencanaSurat\ExtSurat\bin\Transformer.NET.xml
 D:\Github\ExtKencanaSurat\ExtSurat\obj\Debug\ResolveAssemblyReference.cache
 D:\Github\ExtKencanaSurat\ExtSurat\obj\Debug\ExtSurat.dll
 D:\Github\ExtKencanaSurat\ExtSurat\obj\Debug\ExtSurat.pdb
+D:\Github\ExtKencanaSurat\ExtSurat\bin\Web.config
+D:\Github\ExtKencanaSurat\ExtSurat\bin\Web.Debug.config
+D:\Github\ExtKencanaSurat\ExtSurat\bin\Web.Release.config

@@ -1,0 +1,9 @@
+D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\bin\Release\ExtSurat.BusinessObjects.dll
+D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\bin\Release\ExtSurat.BusinessObjects.pdb
+D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\bin\Release\EntitySpaces.Core.dll
+D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\bin\Release\EntitySpaces.DynamicQuery.dll
+D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\bin\Release\EntitySpaces.Interfaces.dll
+D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\bin\Release\EntitySpaces.MySqlClientProvider.dll
+D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\obj\Release\ResolveAssemblyReference.cache
+D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\obj\Release\ExtSurat.BusinessObjects.dll
+D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\obj\Release\ExtSurat.BusinessObjects.pdb

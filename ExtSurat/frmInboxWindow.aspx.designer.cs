@@ -22,6 +22,15 @@ namespace ExtSurat {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// storeFormatSurat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Ext.Net.Store storeFormatSurat;
+        
+        /// <summary>
         /// frmPanelMain control.
         /// </summary>
         /// <remarks>
@@ -58,13 +67,13 @@ namespace ExtSurat {
         protected global::Ext.Net.TextField txtMasukId;
         
         /// <summary>
-        /// txtNomorSurat control.
+        /// cmbFormatPenomoran control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.TextField txtNomorSurat;
+        protected global::Ext.Net.ComboBox cmbFormatPenomoran;
         
         /// <summary>
         /// txtNomorSuratKencana control.

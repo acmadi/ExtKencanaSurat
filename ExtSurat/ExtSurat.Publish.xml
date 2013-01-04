@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Users\tri\Documents\Generated" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/MySql.Data.dll" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="Default.aspx" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="frmOutboxWindowAdd.aspx" publishTime="01/03/2013 15:06:16" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="Site.Master" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="bin/ExtSurat.dll" publishTime="01/04/2013 16:42:17" />
+    <file relUrl="Account/ChangePassword.aspx" publishTime="12/27/2012 09:31:32" />
+    <file relUrl="Master/ucMasterAccess.ascx" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="Master/ucMasterUser.ascx" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="About.aspx" publishTime="12/27/2012 09:31:32" />
+    <file relUrl="frmInbox.aspx" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="bin/ExtSurat.BusinessObjects.dll" publishTime="01/04/2013 16:42:16" />
+    <file relUrl="frmNumbering.aspx" publishTime="12/28/2012 15:34:55" />
+    <file relUrl="bin/EntitySpaces.Core.dll" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="Global.asax" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="frmInboxWindow.aspx" publishTime="01/04/2013 16:34:00" />
+    <file relUrl="bin/Newtonsoft.Json.xml" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="bin/EntitySpaces.DynamicQuery.dll" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="bin/EntitySpaces.MySqlClientProvider.dll" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="Images/add_user-32.png" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="Master/frmMasterUser.aspx" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="Account/Login.aspx" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="bin/Newtonsoft.Json.pdb" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="bin/Ext.Net.dll" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="ExtSurat.Master" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="frmInboxWindowEdit.aspx" publishTime="01/04/2013 16:39:46" />
+    <file relUrl="bin/Transformer.NET.dll" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="bin/Web.config" publishTime="01/04/2013 16:42:18" />
+    <file relUrl="bin/Newtonsoft.Json.dll" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="Images/group_access-32.jpg" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="frmOutboxWindowEdit.aspx" publishTime="01/04/2013 16:40:35" />
+    <file relUrl="bin/Ext.Net.pdb" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="Account/Register.aspx" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="frmOutbox.aspx" publishTime="01/03/2013 15:56:02" />
+    <file relUrl="bin/Ext.Net.Utilities.dll" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="Account/Web.config" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="bin/ExtSurat.BusinessObjects.pdb" publishTime="01/04/2013 16:42:16" />
+    <file relUrl="bin/EntitySpaces.Interfaces.dll" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="bin/EntitySpaces.SqlClientProvider.dll" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="bin/Ext.Net.xml" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="bin/Ext.Net.Utilities.xml" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="bin/EntitySpaces.Loader.dll" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="Styles/Site.css" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="bin/ExtSurat.pdb" publishTime="01/04/2013 16:42:17" />
+    <file relUrl="Scripts/jquery-1.4.1.js" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="bin/Transformer.NET.xml" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="Account/ChangePasswordSuccess.aspx" publishTime="12/27/2012 09:31:33" />
+    <file relUrl="Web.config" publishTime="01/04/2013 16:42:18" />
+  </publishProfile>
+</publishData>

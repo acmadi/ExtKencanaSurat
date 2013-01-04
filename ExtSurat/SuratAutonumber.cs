@@ -10,14 +10,19 @@ namespace ExtSurat
 {
     public class SuratAutonumber
     {
-        public string GenNumber(string numberingId,int month,int year)
+        public string GenNumber(string numberingId,int month,int year,int typeSurat)
         {
+            string tipeSurat = string.Empty;
+            if (typeSurat == 0)
+                tipeSurat = "suratmasuk";
+            else
+                tipeSurat = "suratkeluar";
             string autonumber = string.Empty;
             string batas = string.Empty;
             NomorQuery nQ = new NomorQuery("a");
             NomorCollection nC = new NomorCollection();
             nQ.SelectAll()
-                .Where(nQ.Format == numberingId);
+                .Where(nQ.Format == numberingId && nQ.Jenis == tipeSurat);
             nQ.es.Top = 1;
             if (nC.Load(nQ))
             {
@@ -108,6 +113,15 @@ namespace ExtSurat
                         if (autonumber.Substring(autonumber.Length - 1, 1).Trim() == batas)
                         {
                             autonumber = autonumber.Substring(0, autonumber.Length - 1);
+                        }
+
+                        if (n.Prefix != "-,-" || !string.IsNullOrEmpty(n.Prefix))
+                        {
+                            string[] prefiks = n.Prefix.Split(',');
+                            if (prefiks[1] == "kiri")
+                                autonumber = prefiks[0] + autonumber;
+                            else
+                                autonumber = autonumber + prefiks[0];
                         }
                     }
                     return autonumber;

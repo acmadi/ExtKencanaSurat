@@ -87,7 +87,7 @@ namespace ExtSurat
                 sk.Userid = "toro";
                 //sk.Nomorid = txtPenomoranSurat.Text;
                 sk.Kepada = txtKepada.Text;
-                sk.Nomor = txtNomorSuratKencana.Text;
+                //sk.Nomor = txtNomorSuratKencana.Text;
                 sk.Judul = txtJudul.Text;
                 sk.Tanggal = dfTanggal.SelectedDate;
                 sk.Berkas = "path";

@@ -18,6 +18,10 @@ namespace ExtSurat
         {
             if (!X.IsAjaxRequest)
             {
+                //load datasource for combo box
+                this.storeFormatSurat.DataSource = GetDataFormatSurat();
+                this.storeFormatSurat.DataBind(); 
+
                 if (Request.QueryString["masukid"] != null)
                 {
                     if (Request.QueryString["isadd"] != null)
@@ -36,7 +40,7 @@ namespace ExtSurat
                         if (!isAdd)
                         {
                             txtMasukId.Text = sm.Masukid.ToString();
-                            txtNomorSurat.Text = sm.Nomorid;
+                            //txtNomorSurat.Text = sm.Nomorid;
                             txtNomorSuratKencana.Text = sm.Nomor;
                             txtNomorSuratAsli.Text = sm.Noasal;
                             txtJudul.Text = sm.Judul;
@@ -53,23 +57,45 @@ namespace ExtSurat
         }
 
         [DirectMethod]
+        public DataTable GetDataFormatSurat()
+        {
+            NomorQuery n = new NomorQuery("a");
+            n.Select(n.Format, n.Keterangan);
+            n.Where(n.Jenis == "suratmasuk");
+            DataTable dt = n.LoadDataTable();
+            return dt;
+        }
+
+        [DirectMethod]
+        public void storeFormatSurat_RefreshData(object sender, StoreRefreshDataEventArgs e)
+        {
+            this.storeFormatSurat.DataSource = GetDataFormatSurat();
+            this.storeFormatSurat.DataBind();
+        }
+
+        [DirectMethod]
         public void SaveData()
         {
-            string nomorid = txtNomorSurat.Text;
+            //string nomorid = txtNomorSurat.Text;
+            string penomoransurat = cmbFormatPenomoran.SelectedItem.Value.Trim();
             string nomor = txtNomorSuratKencana.Text;
             string noasal = txtNomorSuratAsli.Text;
+            string nomorsurat = string.Empty;
+            //generate number
+            SuratAutonumber sa = new SuratAutonumber();
+            nomorsurat = sa.GenNumber(penomoransurat, dfTanggal.SelectedDate.Month, dfTanggal.SelectedDate.Year, 0);
             //ADD
             //if (isAdd)
             //{
-                if (string.IsNullOrEmpty(txtDari.Text) || string.IsNullOrEmpty(txtJudul.Text)
-                    || string.IsNullOrEmpty(txtKeterangan.Text) 
-                    || string.IsNullOrEmpty(txtNomorSurat.Text) || string.IsNullOrEmpty(txtNomorSuratAsli.Text)
-                    || string.IsNullOrEmpty(txtNomorSuratKencana.Text))
-                    return;
+                //if (string.IsNullOrEmpty(txtDari.Text) || string.IsNullOrEmpty(txtJudul.Text)
+                //    || string.IsNullOrEmpty(txtKeterangan.Text) 
+                //    || string.IsNullOrEmpty(cmbFormatPenomoran.SelectedItem.Value) || string.IsNullOrEmpty(txtNomorSuratAsli.Text)
+                //    || string.IsNullOrEmpty(txtNomorSuratKencana.Text))
+                //    return;
                 Suratmasuk sm = new Suratmasuk();
                 sm.Userid = "toro";
-                sm.Nomorid = "1";
-                sm.Nomor = txtNomorSuratKencana.Text;
+                sm.Nomorid = penomoransurat;
+                sm.Nomor = nomorsurat;
                 sm.Noasal = txtNomorSuratAsli.Text;
                 sm.Judul = txtJudul.Text;
                 sm.Tanggal = dfTanggal.SelectedDate;

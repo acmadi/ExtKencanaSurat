@@ -27,6 +27,7 @@ namespace ExtSurat
         {
             NomorQuery n = new NomorQuery("a");
             n.Select(n.Format, n.Keterangan);
+            n.Where(n.Jenis == "suratkeluar");
             DataTable dt = n.LoadDataTable();
             return dt;
         }
@@ -46,7 +47,7 @@ namespace ExtSurat
             string nomorsurat = txtNomorSuratKencana.Text;
             //generate number
             SuratAutonumber sa = new SuratAutonumber();
-            nomorsurat = sa.GenNumber(penomoransurat, dfTanggal.SelectedDate.Month, dfTanggal.SelectedDate.Year);
+            nomorsurat = sa.GenNumber(penomoransurat, dfTanggal.SelectedDate.Month, dfTanggal.SelectedDate.Year,1);
             //ADD
             //if (isAdd)
             //{
