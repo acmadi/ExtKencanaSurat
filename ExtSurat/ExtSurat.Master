@@ -21,8 +21,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">  
-        
+    <form id="form1" runat="server"> 
         <ext:ResourceManager ID="ResourceManager1" runat="server" />
         <ext:TabPanel ID="TabPanel1" ClientIDMode="Inherit" runat="server" StyleSpec="margin-top:1px">
                 <Items>
@@ -124,14 +123,9 @@
                 <Listeners>
                     <TabChange Handler="#{DirectMethods}.OnTabChange();" />                    
                 </Listeners>                
-            </ext:TabPanel> 
-            <%--<ext:Panel runat="server" ID="pnlMain" Title="Main Panel" Height="500">                
-                <Content>                     
-                </Content>
-            </ext:Panel>--%>      
+            </ext:TabPanel>    
         <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                  
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">                  
         </asp:ContentPlaceHolder>
     </div>
     </form>

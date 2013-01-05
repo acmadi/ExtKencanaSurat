@@ -33,7 +33,6 @@
             </ext:JsonReader>
         </Reader>
     </ext:Store>
-
     <ext:GridPanel runat="server" ID="gpInbox" ClientIDMode="Inherit" Height="600" StoreID="storeInbox" AutoExpandColumn="judul" >
         <TopBar>
             <ext:Toolbar runat="server">
@@ -45,8 +44,7 @@
                     </ext:Button>
                 </Items>
             </ext:Toolbar>
-        </TopBar>
-        
+        </TopBar>        
         <ColumnModel runat="server">
             <Columns>
                 <ext:CommandColumn runat="server" Width="25" Header="Edit">
@@ -74,7 +72,6 @@
             <Command Handler="Ext.net.DirectMethods.EditSurat(record.data.masukid);" />
         </Listeners>
     </ext:GridPanel>
-
     <ext:TaskManager runat="server" ID="taskManager1" Enabled="true">
         <Tasks>
             <ext:Task TaskID="taskEdit" Interval="2000">

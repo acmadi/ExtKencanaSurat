@@ -96,3 +96,6 @@ D:\Github\ExtKencanaSurat\ExtSurat\obj\Debug\ExtSurat.pdb
 D:\Github\ExtKencanaSurat\ExtSurat\bin\Web.config
 D:\Github\ExtKencanaSurat\ExtSurat\bin\Web.Debug.config
 D:\Github\ExtKencanaSurat\ExtSurat\bin\Web.Release.config
+H:\Github\ExtKencanaSurat\ExtSurat\bin\Web.config
+H:\Github\ExtKencanaSurat\ExtSurat\bin\Web.Debug.config
+H:\Github\ExtKencanaSurat\ExtSurat\bin\Web.Release.config
