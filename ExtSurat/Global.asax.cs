@@ -15,6 +15,16 @@ namespace ExtSurat
         {
             // Code that runs on application startup
             EntitySpaces.Interfaces.esProviderFactory.Factory = new esDataProviderFactory();
+            AuthorizeRequest += new EventHandler(Global_AuthorizeRequest);
+        }
+
+        void Global_AuthorizeRequest(object sender, EventArgs e)
+        {
+            string url = HttpContext.Current.Request.RawUrl.ToLower();
+            if (url.Contains("ext.axd"))
+            {
+                HttpContext.Current.SkipAuthorization = true;
+            }
         }
 
         void Application_End(object sender, EventArgs e)
