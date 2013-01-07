@@ -15,7 +15,7 @@
             <Items>
                 <ext:TextField runat="server" FieldLabel="Agenda No." AnchorHorizontal="30" Width="300" />
                 <ext:DateField runat="server" FieldLabel="Tanggal" AnchorHorizontal="30" Width="300" />
-
+                
             </Items>
         </ext:Panel>
     </form>
