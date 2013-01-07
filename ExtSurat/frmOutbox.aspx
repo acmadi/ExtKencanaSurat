@@ -43,6 +43,46 @@
                             <Click Handler="Ext.net.DirectMethods.EditSurat('new');" />   
                         </Listeners>
                     </ext:Button>
+                    <ext:ToolbarSpacer />
+                    <ext:ToolbarSpacer />
+                    <ext:ToolbarSpacer />
+                    <ext:ToolbarSpacer />
+                    <ext:ToolbarSeparator />
+                    <ext:ToolbarSeparator />
+                    <ext:Label ID="Label1" runat="server" Text="From" />
+                    <ext:ToolbarSeparator />
+                    <ext:DateField runat="server" ID="dfFrom" Width="90" />
+                    <ext:ToolbarSeparator />
+                    <ext:Label runat="server" Text="To" />
+                    <ext:ToolbarSeparator />
+                    <ext:DateField runat="server" ID="dfTo" Width="90" />
+                    <ext:ToolbarSeparator />
+                    <ext:ToolbarSeparator />
+                    <ext:Label Text="Nomor Surat" runat="server" ID="lblNomorSurat" />
+                    <ext:ToolbarSeparator />
+                    <ext:TextField runat="server" ID="txtNomorSurat" EmptyText="Nomor Surat" Width="150" />
+                    <ext:ToolbarSeparator />
+                    <ext:ToolbarSeparator />
+                    <ext:Label Text="Penerima" runat="server" />
+                    <ext:ToolbarSeparator />
+                    <ext:TextField runat="server" ID="txtPenerima" EmptyText="Penerima Surat" Width="150" />
+                    <ext:ToolbarSeparator />
+                    <ext:ToolbarSeparator />
+                    <ext:Label Text="Judul" runat="server" />
+                    <ext:ToolbarSeparator />
+                    <ext:TextField runat="server" ID="txtJudul" EmptyText="Judul Surat" Width="150" />
+                    <ext:ToolbarSeparator />
+                    <ext:ToolbarSeparator />
+                     <ext:Label ID="Label2" Text="Keterangan" runat="server" />
+                    <ext:ToolbarSeparator />
+                    <ext:TextField runat="server" ID="txtKeterangan" EmptyText="Ket. Surat" Width="150" />
+                    <ext:ToolbarSeparator />
+                    <ext:ToolbarSeparator />
+                    <ext:Button runat="server" ID="btnSearch" Icon="Zoom" ToolTip="Search">
+                        <Listeners>
+                            <Click Handler="Ext.net.DirectMethods.btnSearch_Click();" />
+                        </Listeners>
+                    </ext:Button>
                 </Items>
             </ext:Toolbar>
         </TopBar>
@@ -59,9 +99,9 @@
                 <ext:Column ColumnID="IdUser" Header="ID User" DataIndex="userid" Width="80" />                
                 <ext:Column ColumnID="NomorAsli" Header="Nomor Surat" DataIndex="nomor" Width="200" />
                 <ext:Column ColumnID="Penerima" Header="Penerima" DataIndex="kepada" Width="200" />
-                <ext:Column ColumnID="Judul" Header="Judul" DataIndex="judul" />
-                <ext:Column ColumnID="Keterangan" Header="Keterangan" DataIndex="keterangan" Width="250" />
-                <ext:DateColumn ColumnID="Tanggal" Header="Tanggal" DataIndex="tanggal" Width="90" />
+                <ext:Column ColumnID="Judul" Header="Judul" DataIndex="judul" Width="300" />
+                <ext:Column ColumnID="Keterangan" Header="Keterangan" DataIndex="keterangan" Width="300" />
+                <ext:DateColumn ColumnID="Tanggal" Header="Tanggal" DataIndex="tanggal" Width="100" />
             </Columns>
         </ColumnModel>
         <SelectionModel>

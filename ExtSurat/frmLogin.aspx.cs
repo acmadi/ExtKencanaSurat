@@ -39,12 +39,8 @@ namespace ExtSurat
                     if (strRedirect == null)
                         strRedirect = "default.aspx";
                     Response.Redirect(strRedirect, true);
-                }
-                else
-                    this.pnlLogin.Title = HelperCrypto.MD5(txtPassword.Text.Trim());
+                }                
             }
-            else
-                this.pnlLogin.Title = HelperCrypto.MD5(txtPassword.Text.Trim());
         }
     }
 }

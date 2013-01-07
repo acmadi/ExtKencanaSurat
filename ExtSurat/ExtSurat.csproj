@@ -100,6 +100,7 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="frmInbox.aspx" />
+    <Content Include="frmInboxDisposisiAdd.aspx" />
     <Content Include="frmInboxWindow.aspx" />
     <Content Include="frmInboxWindowEdit.aspx" />
     <Content Include="frmLogin.aspx" />
@@ -187,6 +188,13 @@
     </Compile>
     <Compile Include="frmInbox.aspx.designer.cs">
       <DependentUpon>frmInbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmInboxDisposisiAdd.aspx.cs">
+      <DependentUpon>frmInboxDisposisiAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmInboxDisposisiAdd.aspx.designer.cs">
+      <DependentUpon>frmInboxDisposisiAdd.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmInboxWindow.aspx.cs">
       <DependentUpon>frmInboxWindow.aspx</DependentUpon>

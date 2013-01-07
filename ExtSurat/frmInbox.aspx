@@ -56,12 +56,12 @@
                 </ext:CommandColumn>
                 <ext:Column ColumnID="IdSuratMasuk" Header="ID" DataIndex="masukid" Width="40" />
                 <ext:Column ColumnID="IdUser" Header="ID User" DataIndex="userid" Width="80" />
-                <ext:Column ColumnID="Nomor" Header="Nomor Surat" DataIndex="nomor" Width="100" />
-                <ext:Column ColumnID="NomorAsli" Header="Nomor Asli Surat" DataIndex="noasal" Width="100" />
+                <ext:Column ColumnID="Nomor" Header="Nomor Surat" DataIndex="nomor" Width="200" />
+                <ext:Column ColumnID="NomorAsli" Header="Nomor Asli Surat" DataIndex="noasal" Width="200" />
                 <ext:Column ColumnID="Dari" Header="Pengirim" DataIndex="dari" Width="200" />
-                <ext:Column ColumnID="Judul" Header="Judul" DataIndex="judul" />
-                <ext:Column ColumnID="Keterangan" Header="Keterangan" DataIndex="keterangan" Width="250" />
-                <ext:DateColumn ColumnID="Tanggal" Header="Tanggal" DataIndex="tanggal" Width="90" />
+                <ext:Column ColumnID="Judul" Header="Judul" DataIndex="judul" Width="300" />
+                <ext:Column ColumnID="Keterangan" Header="Keterangan" DataIndex="keterangan" Width="300" />
+                <ext:DateColumn ColumnID="Tanggal" Header="Tanggal" DataIndex="tanggal" Width="100" />
             </Columns>
         </ColumnModel>
         <SelectionModel>
