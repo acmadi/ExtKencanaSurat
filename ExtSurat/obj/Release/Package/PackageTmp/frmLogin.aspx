@@ -8,8 +8,12 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <ext:ResourceManager ID="ResourceManager1" runat="server" />
+    <div>                
+        <ext:ResourceManager ID="ResourceManager1" runat="server">
+            <Listeners>
+                <WindowResize Handler="btnLogin.el.center(pnlButton.body);" Buffer="20" /> 
+            </Listeners>
+        </ext:ResourceManager>
         <ext:Viewport runat="server" Layout="HBoxLayout"> 
             <LayoutConfig>
                 <ext:HBoxLayoutConfig Pack="Center" Align="Stretch" />
@@ -20,17 +24,22 @@
                         <ext:VBoxLayoutConfig Pack="Center" />
                     </LayoutConfig>
                     <Items>
-                        <ext:Panel runat="server" ID="pnlLogin" Title="RSCM KENCANA'S LETTER APLICATION LOGIN PAGE" Height =" 120" Width="320">                
+                        <ext:Panel runat="server" ID="pnlLogin" Title="RSCM KENCANA'S LETTER APLICATION LOGIN PAGE" Height =" 90" Width="320" Padding="5">                
                             <Items>
                                 <ext:TextField runat="server" ID="txtUser" FieldLabel="Username" AnchorHorizontal="20" Width="270"/>
-                                <ext:TextField runat="server" ID="txtPassword" FieldLabel="Password" AnchorHorizontal="20" Width="270" InputType="Password"/>
-                                <ext:Button runat="server" ID="btnLogin" Text="LOGIN" X="25" >
-                                    <Listeners>
-                                        <Click Handler="#{DirectMethods}.btnLogin_Click();" />
-                                    </Listeners>
-                                </ext:Button>
+                                <ext:TextField runat="server" ID="txtPassword" FieldLabel="Password" AnchorHorizontal="20" Width="270" InputType="Password"/>                                
                             </Items>
                         </ext:Panel>  
+                        <ext:Panel runat="server" ID="pnlButton" Height="35" Width="320">                                                        
+                            <Items>   
+                                <ext:Button runat="server" ID="btnLogin" Text="LOGIN" >
+                                    <Listeners>
+                                        <Click Handler="#{DirectMethods}.btnLogin_Click();" />
+                                        <Render Handler="this.el.center(pnlButton.body);" />
+                                    </Listeners>
+                                </ext:Button>                                                          
+                            </Items>
+                        </ext:Panel>
                     </Items>
                 </ext:Container>            
             </Items>       

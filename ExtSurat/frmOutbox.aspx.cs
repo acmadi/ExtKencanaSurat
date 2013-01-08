@@ -48,11 +48,11 @@ namespace ExtSurat
             int masukId = 0;
             HttpContext.Current.Session["isEditInbox"] = false;
             if (!int.TryParse(keluarid.Trim(), out masukId))
-                masukId = 0;
-            Suratmasuk sm = new Suratmasuk();
-            //EDIT
+                masukId = 0;            
+            Suratkeluar sm = new Suratkeluar();
+            //EDIT 
             if (sm.LoadByPrimaryKey(masukId))
-            {
+            {                
                 var win = new Window()
                 {
                     ID = "EditSuratWindow",

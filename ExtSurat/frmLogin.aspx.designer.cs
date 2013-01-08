@@ -58,6 +58,15 @@ namespace ExtSurat {
         protected global::Ext.Net.TextField txtPassword;
         
         /// <summary>
+        /// pnlButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Ext.Net.Panel pnlButton;
+        
+        /// <summary>
         /// btnLogin control.
         /// </summary>
         /// <remarks>

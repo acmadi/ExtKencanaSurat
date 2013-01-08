@@ -118,10 +118,7 @@
                             <ext:TextField runat="server" Width="100" Enabled="false" ReadOnly="true" />
                         </Items>
                     </ext:Toolbar>
-                </BottomBar>
-                <Listeners>
-                    <TabChange Handler="#{DirectMethods}.OnTabChange();" />                    
-                </Listeners>                
+                </BottomBar>                               
             </ext:TabPanel>    
         <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">                  
