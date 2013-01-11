@@ -38,17 +38,18 @@ namespace ExtSurat
         }
 
         [DirectMethod]
-        public void EditSurat(string masukid)
+        public void EditSurat(string commandName, string masukid )
         {
             taskManager1.StartAll();
             HttpContext.Current.Session["isEditInbox"] = false;
             int masukId = 0;
             HttpContext.Current.Session["isEditInbox"] = false;
+            HttpContext.Current.Session["isAddDisposition"] = false;
             if (!int.TryParse(masukid.Trim(), out masukId))
                 masukId = 0;
             Suratmasuk sm = new Suratmasuk();
             //EDIT
-            if (sm.LoadByPrimaryKey(masukId))
+            if (sm.LoadByPrimaryKey(masukId) && commandName.Trim() == "Edit")
             {
                 var win = new Window()
                 {
@@ -113,14 +114,40 @@ namespace ExtSurat
                 return;
             }
 
-            if ((bool)HttpContext.Current.Session["isEditInbox"] == false)
+            if ((bool)HttpContext.Current.Session["isEditInbox"] == false && (bool)HttpContext.Current.Session["isAddDisposition"] == false)
                 return;
-            else
+            //Finish add new letter and no add disposition
+            if ((bool)HttpContext.Current.Session["isEditInbox"] == true && (bool)HttpContext.Current.Session["isAddDisposition"] == false)
             {
                 this.storeInbox.DataSource = GetInbox();
                 this.storeInbox.DataBind();
                 HttpContext.Current.Session["isEditInbox"] = false;
                 taskManager1.StopAll();
+            }
+            //Finish add new letter and create new disposition
+            if ((bool)HttpContext.Current.Session["isEditInbox"] == false && (bool)HttpContext.Current.Session["isAddDisposition"] == true)
+            {
+                var win = new Window()
+                {
+                    ID = "AddDisposition",
+                    Title = "Add Disposisi",
+                    Width = Unit.Pixel(800),
+                    Height = Unit.Pixel(600),
+                    Modal = true,
+                    AutoRender = false,
+                    Collapsed = false,
+                    Maximizable = false,
+                    Hidden = true,
+                    Draggable = false,
+                    Resizable = false,
+                    Closable = false
+                };
+
+                win.AutoLoad.Url = "~/frmInboxDisposisiAdd.aspx?nomorsurat=" + HttpContext.Current.Session["nomorsurat"].ToString().Trim();
+                win.AutoLoad.Mode = LoadMode.IFrame;
+                win.AutoLoad.ShowMask = true;
+                win.Render(this.Form);
+                win.Show();
             }
         }
     }

@@ -29,6 +29,7 @@
                 <ext:TextArea runat="server" FieldLabel="Asal Surat" ID="txtAsalSurat" AnchorHorizontal="50" Width="600" Height="51" AllowBlank="false" />
                 <ext:TextArea runat="server" FieldLabel="Diteruskan Ke" ID="txtDiteruskanKe" AnchorHorizontal="50" Width="600" Height="51" AllowBlank="false" />
                 <ext:TextArea runat="server" FieldLabel="Tanggapan/Catatan" ID="txtCatatan" AnchorHorizontal="50" Width="600" Height="136" AllowBlank="false" />
+                <ext:HtmlEditor runat="server" FieldLabel="Catatan" ID="txtHtmlCatatan" AnchorHorizontal="50" Width="600" Height="136" />
             </Items>
             <Listeners>
                 <ClientValidation Handler="#{btnSave}.setDisabled(!valid);" />

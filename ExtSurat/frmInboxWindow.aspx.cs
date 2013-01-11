@@ -92,19 +92,28 @@ namespace ExtSurat
                 //    || string.IsNullOrEmpty(cmbFormatPenomoran.SelectedItem.Value) || string.IsNullOrEmpty(txtNomorSuratAsli.Text)
                 //    || string.IsNullOrEmpty(txtNomorSuratKencana.Text))
                 //    return;
-                Suratmasuk sm = new Suratmasuk();
-                sm.Userid = "toro";
-                sm.Nomorid = penomoransurat;
-                sm.Nomor = nomorsurat;
-                sm.Noasal = txtNomorSuratAsli.Text;
-                sm.Judul = txtJudul.Text;
-                sm.Tanggal = dfTanggal.SelectedDate;
-                sm.Dari = txtDari.Text;
-                sm.Keterangan = txtKeterangan.Text;
-                sm.Berkas = "kosong";
-                sm.Lastedited = DateTime.Now;
-                sm.Save();
-                HttpContext.Current.Session["isEditInbox"] = true;
+            Suratmasuk sm = new Suratmasuk();
+            sm.Userid = "toro";
+            sm.Nomorid = penomoransurat;
+            sm.Nomor = nomorsurat;
+            sm.Noasal = txtNomorSuratAsli.Text;
+            sm.Judul = txtJudul.Text;
+            sm.Tanggal = dfTanggal.SelectedDate;
+            sm.Dari = txtDari.Text;
+            sm.Keterangan = txtKeterangan.Text;
+            sm.Berkas = "kosong";
+            sm.Lastedited = DateTime.Now;
+            sm.Save();
+            HttpContext.Current.Session["isEditInbox"] = true;
+
+            if (chkCreateDisposition.Checked)
+            {
+                HttpContext.Current.Session["isAddDisposition"] = true;
+                HttpContext.Current.Session["isEditInbox"] = false;
+                HttpContext.Current.Session["nomorsurat"] = nomorsurat;
+            }
+            else
+                HttpContext.Current.Session["isAddDisposition"] = false;
             //}
             //EDIT
             //else

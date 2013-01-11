@@ -51,6 +51,7 @@
                 <ext:DateField ID="dfTanggal" runat="server" FieldLabel="Tanggal" AnchorHorizontal="-20" AllowBlank="false" />
                 <ext:TextField ID="txtDari" runat="server" FieldLabel="Dari" AnchorHorizontal="-20" AllowBlank="false" />
                 <ext:TextField ID="txtKeterangan" runat="server" FieldLabel="Keterangan" AnchorHorizontal="-20" AllowBlank="false" />
+                <ext:Checkbox ID="chkCreateDisposition" runat="server" FieldLabel="Buat Disposisi?" Checked="true" AnchorHorizontal="-20" />
             </Items>
             <Listeners>
                 <ClientValidation Handler="#{btnSave}.setDisabled(!valid);" />

@@ -157,6 +157,15 @@ namespace ExtSurat {
         protected global::Ext.Net.TextArea txtCatatan;
         
         /// <summary>
+        /// txtHtmlCatatan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Ext.Net.HtmlEditor txtHtmlCatatan;
+        
+        /// <summary>
         /// pnlButton control.
         /// </summary>
         /// <remarks>

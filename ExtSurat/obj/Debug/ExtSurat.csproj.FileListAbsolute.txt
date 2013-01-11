@@ -67,7 +67,6 @@ D:\Github\ExtKencanaSurat\ExtSurat\bin\Ext.Net.Utilities.xml
 D:\Github\ExtKencanaSurat\ExtSurat\bin\Newtonsoft.Json.pdb
 D:\Github\ExtKencanaSurat\ExtSurat\bin\Newtonsoft.Json.xml
 D:\Github\ExtKencanaSurat\ExtSurat\bin\Transformer.NET.xml
-D:\Github\ExtKencanaSurat\ExtSurat\obj\Debug\ResolveAssemblyReference.cache
 D:\Github\ExtKencanaSurat\ExtSurat\obj\Debug\ExtSurat.dll
 D:\Github\ExtKencanaSurat\ExtSurat\obj\Debug\ExtSurat.pdb
 D:\Github\ExtKencanaSurat\ExtSurat\bin\Web.config
@@ -99,3 +98,4 @@ H:\Github\ExtKencanaSurat\ExtSurat\bin\Transformer.NET.xml
 H:\Github\ExtKencanaSurat\ExtSurat\obj\Debug\ResolveAssemblyReference.cache
 H:\Github\ExtKencanaSurat\ExtSurat\obj\Debug\ExtSurat.dll
 H:\Github\ExtKencanaSurat\ExtSurat\obj\Debug\ExtSurat.pdb
+D:\Github\ExtKencanaSurat\ExtSurat\obj\Debug\ExtSurat.csprojResolveAssemblyReference.cache
