@@ -11,16 +11,31 @@ namespace ExtSurat
 {
     public partial class frmInboxDisposisiAdd : System.Web.UI.Page
     {
-        private string nomorsurat = string.Empty;
+        private string masukid = string.Empty;
+        private int masukID = 0;
         protected void Page_Load(object sender, EventArgs e)
         {            
             if (!X.IsAjaxRequest)
             {
-                if (Request.QueryString["nomorsurat"] != null)
-                    nomorsurat = Request.QueryString["nomorsurat"].ToString().Trim();
+                if (Request.QueryString["masukid"] != null)
+                    masukid = Request.QueryString["nomorsurat"].ToString().Trim();
                 HttpContext.Current.Session["isEditInbox"] = false;
                 HttpContext.Current.Session["isAddDisposition"] = false;
-                this.txtSuratNo.Text = nomorsurat;
+
+                if (!int.TryParse(masukid, out masukID))
+                    masukID = 0;
+                Suratmasuk sm = new Suratmasuk();
+                if (sm.LoadByPrimaryKey(masukID))                
+                    this.txtSuratNo.Text = sm.Nomor;                    
+                else
+                {
+                    HttpContext.Current.Session["isEditInbox"] = true;
+                    HttpContext.Current.Session["isAddDisposition"] = false;
+                    X.AddScript("parentAutoLoadControl.close(); Delay='2' ");       
+                }
+                DisposisiQuery dQ = new DisposisiQuery("a");
+                dQ.SelectAll();
+                dQ.Where(dQ.Nomorsurat == sm.Nomor);
             }
         }
 
@@ -33,8 +48,8 @@ namespace ExtSurat
                 catatan = catatan + " " + s;
             }
             Disposisi d = new Disposisi();
-            d.Agendanomor = txtAgendaNo.Text;            
-            d.Nomorsurat = txtSuratNo.Text;            
+            d.Agendanomor = txtAgendaNo.Text;
+            d.Nomorsurat = txtSuratNo.Text;
             d.Tanggal = dfTanggal.SelectedDate;
             if (rdoBiasa.Checked)
                 d.Sifatsuratid = 1;
@@ -46,7 +61,7 @@ namespace ExtSurat
                 d.Sifatsuratid = 2;
             d.Asalsurat = txtAsalSurat.Text;
             d.Diteruskanke = txtDiteruskanKe.Text;
-            d.Catatan = txtHtmlCatatan.Html;
+            d.Catatan = txtHtmlCatatan.Text;
             d.Save();
             HttpContext.Current.Session["isEditInbox"] = true;
             HttpContext.Current.Session["isAddDisposition"] = false;

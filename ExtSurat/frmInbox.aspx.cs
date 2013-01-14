@@ -73,8 +73,8 @@ namespace ExtSurat
                 win.Render(this.Form);
                 win.Show();
             }
-            //ADD
-            else
+            //ADD new surat
+            if (commandName.Trim() == "New")
             {
                 if (masukid.Trim() != "new")
                     return;
@@ -102,6 +102,31 @@ namespace ExtSurat
                     win.Render(this.Form);
                     win.Show();
                 }
+            }
+            //Add new Disposition
+            if (commandName.Trim() == "Disposition")
+            {
+                var win = new Window()
+                {
+                    ID = "AddDisposition",
+                    Title = "Add Disposisi",
+                    Width = Unit.Pixel(800),
+                    Height = Unit.Pixel(600),
+                    Modal = true,
+                    AutoRender = false,
+                    Collapsed = false,
+                    Maximizable = false,
+                    Hidden = true,
+                    Draggable = false,
+                    Resizable = false,
+                    Closable = false
+                };
+
+                win.AutoLoad.Url = "~/frmInboxDisposisiAdd.aspx?masukid=" + masukId.ToString().Trim();
+                win.AutoLoad.Mode = LoadMode.IFrame;
+                win.AutoLoad.ShowMask = true;
+                win.Render(this.Form);
+                win.Show();
             }
         }
 

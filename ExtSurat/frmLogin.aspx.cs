@@ -28,7 +28,7 @@ namespace ExtSurat
                     FormsAuthenticationTicket tkt;
                     string cookiestr;
                     HttpCookie ck;
-                    tkt = new FormsAuthenticationTicket(1, txtUser.Text, DateTime.Now, DateTime.Now.AddHours(2), true, "");
+                    tkt = new FormsAuthenticationTicket(1, txtUser.Text, DateTime.Now, DateTime.Now.AddHours(2), false, "");
                     cookiestr = FormsAuthentication.Encrypt(tkt);
                     ck = new HttpCookie(FormsAuthentication.FormsCookieName, cookiestr);
                     ck.Expires = tkt.Expiration;
