@@ -25,27 +25,48 @@
                                     <ext:Radio ID="rdoRahasia" runat="server" BoxLabel="Rahasia" Flex="1" />  
                                 </Items>
                             </ext:RadioGroup>                        
-                <ext:TextArea runat="server" FieldLabel="Perihal" ID="txtPerihal" AnchorHorizontal="100%" Flex="1" Height="51" AllowBlank="false"  />
-                <ext:TextArea runat="server" FieldLabel="Asal Surat" ID="txtAsalSurat" AnchorHorizontal="100%" Flex="1" Height="51" AllowBlank="false" />
-                <ext:TextArea runat="server" FieldLabel="Diteruskan Ke" ID="txtDiteruskanKe" AnchorHorizontal="100%" Flex="1" Height="51" AllowBlank="false" />
-                <ext:TextArea runat="server" FieldLabel="Tanggapan/Catatan" ID="txtCatatan" AnchorHorizontal="100%" Flex="1" Height="136" AllowBlank="false" />
-                <ext:HtmlEditor runat="server" FieldLabel="Catatan" ID="txtHtmlCatatan" AnchorHorizontal="100%" Flex="1" Height="136"
-                 EnableAlignments="false" EnableColors="false" EnableLinks="false" EnableLists="false" EnableSourceEdit="false" EnableTheming="false"
-                 EnableFontSize="false" EnableFont="false"/>
+                <ext:HtmlEditor runat="server" FieldLabel="Perihal" ID="txtPerihal" AnchorHorizontal="100%" Flex="1" Height="80" AllowBlank="true"  
+                    EnableAlignments="false" EnableColors="false" EnableLinks="false" EnableLists="false" EnableSourceEdit="false" EnableTheming="false"
+                    EnableFontSize="false" EnableFont="false" EnableFormat="false">
+                        <Listeners>
+                            <Initialize Handler="Ext.DomHelper.applyStyles(this.getEditorBody(), {'background-position' : 'top right', 'margin':'0px', padding:'0px'});" />
+                        </Listeners>
+                    </ext:HtmlEditor>
+                <ext:HtmlEditor runat="server" FieldLabel="Asal Surat" ID="txtAsalSurat" AnchorHorizontal="100%" Flex="1" Height="80" AllowBlank="false" 
+                    EnableAlignments="false" EnableColors="false" EnableLinks="false" EnableLists="false" EnableSourceEdit="false" EnableTheming="false"
+                    EnableFontSize="false" EnableFont="false" EnableFormat="false">
+                        <Listeners>
+                            <Initialize Handler="Ext.DomHelper.applyStyles(this.getEditorBody(), {'background-position' : 'top right', 'margin':'0px', padding:'0px'});" />
+                        </Listeners>
+                    </ext:HtmlEditor>
+                <ext:HtmlEditor runat="server" FieldLabel="Diteruskan Ke" ID="txtDiteruskanKe" AnchorHorizontal="100%" Flex="1" Height="80" AllowBlank="false" 
+                    EnableAlignments="false" EnableColors="false" EnableLinks="false" EnableLists="false" EnableSourceEdit="false" EnableTheming="false"
+                    EnableFontSize="false" EnableFont="false" EnableFormat="false">
+                        <Listeners>
+                            <Initialize Handler="Ext.DomHelper.applyStyles(this.getEditorBody(), {'background-position' : 'top right', 'margin':'0px', padding:'0px'});" />
+                        </Listeners>
+                    </ext:HtmlEditor>          
+                <ext:HtmlEditor runat="server" FieldLabel="Catatan" ID="txtHtmlCatatan" AnchorHorizontal="100%" Flex="1" Height="100" AllowBlank="false"
+                    EnableAlignments="false" EnableColors="false" EnableLinks="false" EnableLists="false" EnableSourceEdit="false" EnableTheming="false"
+                    EnableFontSize="false" EnableFont="false" EnableFormat="false">
+                        <Listeners>
+                            <Initialize Handler="Ext.DomHelper.applyStyles(this.getEditorBody(), {'background-position' : 'top right', 'margin':'0px', padding:'0px'});" />
+                        </Listeners>
+                    </ext:HtmlEditor>
             </Items>
             <Listeners>
                 <ClientValidation Handler="#{btnSave}.setDisabled(!valid);" />
             </Listeners>
         </ext:FormPanel>
         <ext:Panel runat="server" ID="pnlButton" Padding="8">
-            <Items>
-                <ext:Button runat="server" ID="btnSave" Text="SAVE" >
+            <Items>                
+                <ext:Button runat="server" ID="btnSave" Text="SAVE" Icon="Disk" >
                     <Listeners>
                         <Render Handler="this.el.center(pnlButton.body);" />
                         <Click Handler="#{DirectMethods}.btnSave_Click();" />
                     </Listeners>
-                </ext:Button>
-            </Items>
+                </ext:Button>                               
+            </Items>            
         </ext:Panel>
     </form>
 </body>

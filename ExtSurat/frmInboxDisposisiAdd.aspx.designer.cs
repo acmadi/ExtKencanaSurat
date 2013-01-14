@@ -127,7 +127,7 @@ namespace ExtSurat {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.TextArea txtPerihal;
+        protected global::Ext.Net.HtmlEditor txtPerihal;
         
         /// <summary>
         /// txtAsalSurat control.
@@ -136,7 +136,7 @@ namespace ExtSurat {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.TextArea txtAsalSurat;
+        protected global::Ext.Net.HtmlEditor txtAsalSurat;
         
         /// <summary>
         /// txtDiteruskanKe control.
@@ -145,16 +145,7 @@ namespace ExtSurat {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.TextArea txtDiteruskanKe;
-        
-        /// <summary>
-        /// txtCatatan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Ext.Net.TextArea txtCatatan;
+        protected global::Ext.Net.HtmlEditor txtDiteruskanKe;
         
         /// <summary>
         /// txtHtmlCatatan control.

@@ -119,7 +119,7 @@ namespace ExtSurat
                     Hidden = true,
                     Draggable = false,
                     Resizable = false,
-                    Closable = false
+                    Closable = true                    
                 };
 
                 win.AutoLoad.Url = "~/frmInboxDisposisiAdd.aspx?masukid=" + masukId.ToString().Trim();
