@@ -76,6 +76,8 @@ namespace ExtSurat
         [DirectMethod]
         public void btnSave_Click()
         {
+            if (string.IsNullOrEmpty(txtPerihal.Text) || string.IsNullOrEmpty(txtAsalSurat.Text) || string.IsNullOrEmpty(txtDiteruskanKe.Text) || string.IsNullOrEmpty(txtHtmlCatatan.Text))
+                return;
             int disposisiId = 0;
             DisposisiQuery dQ = new DisposisiQuery("a");
             dQ.SelectAll();
@@ -105,6 +107,7 @@ namespace ExtSurat
                     d.Sifatsuratid = 4;
                 if (rdoSegera.Checked)
                     d.Sifatsuratid = 2;
+                d.Perihal = txtPerihal.Text;
                 d.Asalsurat = txtAsalSurat.Text;
                 d.Diteruskanke = txtDiteruskanKe.Text;
                 d.Catatan = txtHtmlCatatan.Text;
@@ -126,6 +129,7 @@ namespace ExtSurat
                         d.Sifatsuratid = 4;
                     if (rdoSegera.Checked)
                         d.Sifatsuratid = 2;
+                    d.Perihal = txtPerihal.Text;
                     d.Asalsurat = txtAsalSurat.Text;
                     d.Diteruskanke = txtDiteruskanKe.Text;
                     d.Catatan = txtHtmlCatatan.Text;

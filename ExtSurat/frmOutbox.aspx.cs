@@ -56,7 +56,7 @@ namespace ExtSurat
                 var win = new Window()
                 {
                     ID = "EditSuratWindow",
-                    Title = "Edit Surat Masuk No. " + sm.Nomor,
+                    Title = "Edit Surat Keluar No. " + sm.Nomor,
                     Width = Unit.Pixel(800),
                     Height = Unit.Pixel(600),
                     Modal = true,
@@ -85,7 +85,7 @@ namespace ExtSurat
                     var win = new Window()
                     {
                         ID = "EditSuratWindow",
-                        Title = "Add Surat Masuk",
+                        Title = "Add Surat Keluar",
                         Width = Unit.Pixel(800),
                         Height = Unit.Pixel(600),
                         Modal = true,

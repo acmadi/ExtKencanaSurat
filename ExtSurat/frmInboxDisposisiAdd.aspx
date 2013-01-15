@@ -27,9 +27,9 @@
                             </ext:RadioGroup>                        
                 <ext:HtmlEditor runat="server" FieldLabel="Perihal" ID="txtPerihal" AnchorHorizontal="100%" Flex="1" Height="80" AllowBlank="true"  
                     EnableAlignments="false" EnableColors="false" EnableLinks="false" EnableLists="false" EnableSourceEdit="false" EnableTheming="false"
-                    EnableFontSize="false" EnableFont="false" EnableFormat="false">
+                    EnableFontSize="false" EnableFont="false" EnableFormat="false" >
                         <Listeners>
-                            <Initialize Handler="Ext.DomHelper.applyStyles(this.getEditorBody(), {'background-position' : 'top right', 'margin':'0px', padding:'0px'});" />
+                            <Initialize Handler="Ext.DomHelper.applyStyles(this.getEditorBody(), {'background-position' : 'top right', 'margin':'0px', padding:'0px'});" />                            
                         </Listeners>
                     </ext:HtmlEditor>
                 <ext:HtmlEditor runat="server" FieldLabel="Asal Surat" ID="txtAsalSurat" AnchorHorizontal="100%" Flex="1" Height="80" AllowBlank="false" 

@@ -8,7 +8,7 @@
 ===============================================================================
 EntitySpaces Version : 2012.1.0930.0
 EntitySpaces Driver  : MySql
-Date Generated       : 28/12/2012 15:29:57
+Date Generated       : 15/01/2013 10:01:22
 ===============================================================================
 */
 
@@ -295,6 +295,26 @@ namespace ExtSurat.BusinessObjects
 		}		
 		
 		/// <summary>
+		/// Maps to disposisi.perihal
+		/// </summary>
+		[DataMember(EmitDefaultValue=false)]
+		virtual public System.String Perihal
+		{
+			get
+			{
+				return base.GetSystemString(DisposisiMetadata.ColumnNames.Perihal);
+			}
+			
+			set
+			{
+				if(base.SetSystemString(DisposisiMetadata.ColumnNames.Perihal, value))
+				{
+					OnPropertyChanged(DisposisiMetadata.PropertyNames.Perihal);
+				}
+			}
+		}		
+		
+		/// <summary>
 		/// Maps to disposisi.asalsurat
 		/// </summary>
 		[DataMember(EmitDefaultValue=false)]
@@ -421,6 +441,7 @@ namespace ExtSurat.BusinessObjects
 						case "Nomorsurat": this.str().Nomorsurat = (string)value; break;							
 						case "Tanggal": this.str().Tanggal = (string)value; break;							
 						case "Sifatsuratid": this.str().Sifatsuratid = (string)value; break;							
+						case "Perihal": this.str().Perihal = (string)value; break;							
 						case "Asalsurat": this.str().Asalsurat = (string)value; break;							
 						case "Diteruskanke": this.str().Diteruskanke = (string)value; break;							
 						case "Catatan": this.str().Catatan = (string)value; break;							
@@ -565,6 +586,21 @@ namespace ExtSurat.BusinessObjects
 				{
 					if (value == null || value.Length == 0) entity.Sifatsuratid = null;
 					else entity.Sifatsuratid = Convert.ToSByte(value);
+				}
+			}
+				
+			public System.String Perihal
+			{
+				get
+				{
+					System.String data = entity.Perihal;
+					return (data == null) ? String.Empty : Convert.ToString(data);
+				}
+
+				set
+				{
+					if (value == null || value.Length == 0) entity.Perihal = null;
+					else entity.Perihal = Convert.ToString(value);
 				}
 			}
 				
@@ -804,6 +840,7 @@ namespace ExtSurat.BusinessObjects
 				case "Nomorsurat": return this.Nomorsurat;
 				case "Tanggal": return this.Tanggal;
 				case "Sifatsuratid": return this.Sifatsuratid;
+				case "Perihal": return this.Perihal;
 				case "Asalsurat": return this.Asalsurat;
 				case "Diteruskanke": return this.Diteruskanke;
 				case "Catatan": return this.Catatan;
@@ -841,6 +878,11 @@ namespace ExtSurat.BusinessObjects
 		public esQueryItem Sifatsuratid
 		{
 			get { return new esQueryItem(this, DisposisiMetadata.ColumnNames.Sifatsuratid, esSystemType.SByte); }
+		} 
+		
+		public esQueryItem Perihal
+		{
+			get { return new esQueryItem(this, DisposisiMetadata.ColumnNames.Perihal, esSystemType.String); }
 		} 
 		
 		public esQueryItem Asalsurat
@@ -896,6 +938,7 @@ namespace ExtSurat.BusinessObjects
 			c = new esColumnMetadata(DisposisiMetadata.ColumnNames.Disposisiid, 0, typeof(System.Int32), esSystemType.Int32);
 			c.PropertyName = DisposisiMetadata.PropertyNames.Disposisiid;
 			c.IsInPrimaryKey = true;
+			c.IsAutoIncrement = true;
 			c.NumericPrecision = 11;
 			m_columns.Add(c);
 				
@@ -918,27 +961,32 @@ namespace ExtSurat.BusinessObjects
 			c.NumericPrecision = 2;
 			m_columns.Add(c);
 				
-			c = new esColumnMetadata(DisposisiMetadata.ColumnNames.Asalsurat, 5, typeof(System.String), esSystemType.String);
+			c = new esColumnMetadata(DisposisiMetadata.ColumnNames.Perihal, 5, typeof(System.String), esSystemType.String);
+			c.PropertyName = DisposisiMetadata.PropertyNames.Perihal;
+			c.CharacterMaxLength = 512;
+			m_columns.Add(c);
+				
+			c = new esColumnMetadata(DisposisiMetadata.ColumnNames.Asalsurat, 6, typeof(System.String), esSystemType.String);
 			c.PropertyName = DisposisiMetadata.PropertyNames.Asalsurat;
 			c.CharacterMaxLength = 512;
 			m_columns.Add(c);
 				
-			c = new esColumnMetadata(DisposisiMetadata.ColumnNames.Diteruskanke, 6, typeof(System.String), esSystemType.String);
+			c = new esColumnMetadata(DisposisiMetadata.ColumnNames.Diteruskanke, 7, typeof(System.String), esSystemType.String);
 			c.PropertyName = DisposisiMetadata.PropertyNames.Diteruskanke;
 			c.CharacterMaxLength = 512;
 			m_columns.Add(c);
 				
-			c = new esColumnMetadata(DisposisiMetadata.ColumnNames.Catatan, 7, typeof(System.String), esSystemType.String);
+			c = new esColumnMetadata(DisposisiMetadata.ColumnNames.Catatan, 8, typeof(System.String), esSystemType.String);
 			c.PropertyName = DisposisiMetadata.PropertyNames.Catatan;
 			c.IsNullable = true;
 			m_columns.Add(c);
 				
-			c = new esColumnMetadata(DisposisiMetadata.ColumnNames.Lastedit, 8, typeof(System.DateTime), esSystemType.DateTime);
+			c = new esColumnMetadata(DisposisiMetadata.ColumnNames.Lastedit, 9, typeof(System.DateTime), esSystemType.DateTime);
 			c.PropertyName = DisposisiMetadata.PropertyNames.Lastedit;
 			c.IsNullable = true;
 			m_columns.Add(c);
 				
-			c = new esColumnMetadata(DisposisiMetadata.ColumnNames.Userid, 9, typeof(System.String), esSystemType.String);
+			c = new esColumnMetadata(DisposisiMetadata.ColumnNames.Userid, 10, typeof(System.String), esSystemType.String);
 			c.PropertyName = DisposisiMetadata.PropertyNames.Userid;
 			c.CharacterMaxLength = 50;
 			c.IsNullable = true;
@@ -975,6 +1023,7 @@ namespace ExtSurat.BusinessObjects
 			 public const string Nomorsurat = "nomorsurat";
 			 public const string Tanggal = "tanggal";
 			 public const string Sifatsuratid = "sifatsuratid";
+			 public const string Perihal = "perihal";
 			 public const string Asalsurat = "asalsurat";
 			 public const string Diteruskanke = "diteruskanke";
 			 public const string Catatan = "catatan";
@@ -991,6 +1040,7 @@ namespace ExtSurat.BusinessObjects
 			 public const string Nomorsurat = "Nomorsurat";
 			 public const string Tanggal = "Tanggal";
 			 public const string Sifatsuratid = "Sifatsuratid";
+			 public const string Perihal = "Perihal";
 			 public const string Asalsurat = "Asalsurat";
 			 public const string Diteruskanke = "Diteruskanke";
 			 public const string Catatan = "Catatan";
@@ -1045,6 +1095,7 @@ namespace ExtSurat.BusinessObjects
 				meta.AddTypeMap("Nomorsurat", new esTypeMap("VARCHAR", "System.String"));
 				meta.AddTypeMap("Tanggal", new esTypeMap("DATE", "System.DateTime"));
 				meta.AddTypeMap("Sifatsuratid", new esTypeMap("TINYINT", "System.SByte"));
+				meta.AddTypeMap("Perihal", new esTypeMap("VARCHAR", "System.String"));
 				meta.AddTypeMap("Asalsurat", new esTypeMap("VARCHAR", "System.String"));
 				meta.AddTypeMap("Diteruskanke", new esTypeMap("VARCHAR", "System.String"));
 				meta.AddTypeMap("Catatan", new esTypeMap("TEXT", "System.String"));

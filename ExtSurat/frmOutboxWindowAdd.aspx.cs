@@ -85,5 +85,17 @@ namespace ExtSurat
             HttpContext.Current.Session["isEditInbox"] = true;            
             X.AddScript("parentAutoLoadControl.close(); Delay='2' ");
         }
+
+        [DirectMethod]
+        public void dfTanggal_Select()
+        {
+            if (cmbFormatPenomoran.IsEmpty)
+                return;
+            int year = dfTanggal.SelectedDate.Year;
+            int month = dfTanggal.SelectedDate.Month;
+            string numberingId = cmbFormatPenomoran.SelectedItem.Value.Trim();
+            SuratAutonumber sa = new SuratAutonumber();
+            txtNomorSuratKencana.Text = sa.GenPredictedNumber(numberingId, month, year, 1);
+        }
     }
 }

@@ -62,6 +62,9 @@
     <Compile Include="Custom\DisposisiQuery.cs" />
     <Compile Include="Custom\Nomor.cs" />
     <Compile Include="Custom\NomorCollection.cs" />
+    <Compile Include="Custom\Nomorlastnumber.cs" />
+    <Compile Include="Custom\NomorlastnumberCollection.cs" />
+    <Compile Include="Custom\NomorlastnumberQuery.cs" />
     <Compile Include="Custom\NomorQuery.cs" />
     <Compile Include="Custom\Perusahaan.cs" />
     <Compile Include="Custom\PerusahaanCollection.cs" />
@@ -80,6 +83,7 @@
     <Compile Include="Custom\UserQuery.cs" />
     <Compile Include="Generated\Disposisi.cs" />
     <Compile Include="Generated\Nomor.cs" />
+    <Compile Include="Generated\Nomorlastnumber.cs" />
     <Compile Include="Generated\Perusahaan.cs" />
     <Compile Include="Generated\Sifatsurat.cs" />
     <Compile Include="Generated\Suratkeluar.cs" />

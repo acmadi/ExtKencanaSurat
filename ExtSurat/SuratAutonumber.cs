@@ -12,6 +12,7 @@ namespace ExtSurat
     {
         public string GenNumber(string numberingId,int month,int year,int typeSurat)
         {
+            int lastNomor = 0;
             string tipeSurat = string.Empty;
             if (typeSurat == 0)
                 tipeSurat = "suratmasuk";
@@ -48,6 +49,19 @@ namespace ExtSurat
                                     inomor = 0;                                    
                                 }
                                 inomor++;
+                                lastNomor = inomor;
+
+                                //save to lastautonumber
+                                Nomorlastnumber nlst = new Nomorlastnumber();
+                                if (nlst.LoadByPrimaryKey(numberingId, year.ToString().Trim()))
+                                    nlst.Lastnumber = lastNomor;
+                                else
+                                {
+                                    nlst.Format = numberingId;
+                                    nlst.Tahun = year.ToString().Trim();
+                                    nlst.Lastnumber = lastNomor;
+                                }
+
                                 nomor = inomor.ToString().Trim();
                                 for (int x = nomor.Length; x < Length; x++)
                                     nomor = "0" + nomor;
@@ -115,7 +129,7 @@ namespace ExtSurat
                             autonumber = autonumber.Substring(0, autonumber.Length - 1);
                         }
 
-                        if (n.Prefix != "-,-" || !string.IsNullOrEmpty(n.Prefix))
+                        if (n.Prefix != "-,-")
                         {
                             string[] prefiks = n.Prefix.Split(',');
                             if (prefiks[1] == "kiri")
@@ -197,6 +211,132 @@ namespace ExtSurat
             }
 
             return sb.ToString();
+        }
+
+        //This Won't save the generated number
+        public string GenPredictedNumber(string numberingId, int month, int year, int typeSurat)
+        {
+            int lastnomor = 0;
+            string tipeSurat = string.Empty;
+            if (typeSurat == 0)
+                tipeSurat = "suratmasuk";
+            else
+                tipeSurat = "suratkeluar";
+            string autonumber = string.Empty;
+            string batas = string.Empty;
+            NomorQuery nQ = new NomorQuery("a");
+            NomorCollection nC = new NomorCollection();
+            nQ.SelectAll()
+                .Where(nQ.Format == numberingId && nQ.Jenis == tipeSurat);
+            nQ.es.Top = 1;
+            if (nC.Load(nQ))
+            {
+                if (nC.Count >= 1)
+                {
+                    foreach (Nomor n in nC)
+                    {
+                        string[] formatNumbering;
+                        formatNumbering = new string[7];
+                        for (int i = 1; i <= 6; i++)
+                        {
+                            batas = n.Batas.Trim();
+                            string[] nomors = n.Nomor.Split(',');
+                            string nomor = string.Empty;
+                            int inomor = 0;
+                            int Length = 0;
+                            if (nomors[0].ToString().Trim() == i.ToString().Trim())
+                            {
+                                nomor = nomors[1].ToString().Trim();
+                                Length = nomor.Length;
+                                if (!int.TryParse(nomor, out inomor))
+                                {
+                                    inomor = 0;
+                                }
+                                inomor++;
+                                lastnomor = inomor;
+                                nomor = inomor.ToString().Trim();
+                                for (int x = nomor.Length; x < Length; x++)
+                                    nomor = "0" + nomor;
+                                Nomor nmr = new Nomor();
+                                if (nmr.LoadByPrimaryKey((int)n.Nomorid))
+                                {
+                                    nmr.Nomor = nmr.Nomor.Trim().Substring(0, 2) + nomor.Trim();
+                                    //nmr.Save();
+                                    formatNumbering[i] = nomor;
+                                }
+                                continue;
+                            }
+
+                            string[] organisasis = n.Organisasi.Split(',');
+                            string organisasi = string.Empty;
+                            if (organisasis[0].ToString().Trim() == i.ToString().Trim())
+                            {
+                                organisasi = organisasis[1].ToString().Trim();
+                                formatNumbering[i] = organisasi;
+                                continue;
+                            }
+
+                            string[] bagians = n.Bagian.Split(',');
+                            string bagian = string.Empty;
+                            if (bagians[0].ToString().Trim() == i.ToString().Trim())
+                            {
+                                bagian = bagians[1].ToString().Trim();
+                                formatNumbering[i] = bagian;
+                                continue;
+                            }
+
+                            string[] subbagians = n.Subagian.Split(',');
+                            string subbagian = string.Empty;
+                            if (subbagians[0].ToString().Trim() == i.ToString().Trim())
+                            {
+                                subbagian = subbagians[1].ToString().Trim();
+                                formatNumbering[i] = subbagian;
+                                continue;
+                            }
+
+                            string[] bulans = n.Bulan.Split(',');
+                            string bulan = string.Empty;
+                            if (bulans[0].ToString().Trim() == i.ToString().Trim())
+                            {
+                                bulan = bulans[1].ToString().Trim();
+                                formatNumbering[i] = FromNumberToRoman(month);
+                            }
+
+                            string[] tahuns = n.Tahun.Split(',');
+                            string tahun = string.Empty;
+                            if (tahuns[0].ToString().Trim() == i.ToString().Trim())
+                            {
+                                tahun = tahuns[1].ToString().Trim();
+                                formatNumbering[i] = tahun;
+                            }
+                        }
+                        for (int j = 1; j < formatNumbering.Length; j++)
+                        {
+                            if (string.IsNullOrEmpty(formatNumbering[j]))
+                                continue;
+                            autonumber = autonumber + formatNumbering[j] + batas;
+                        }
+                        if (autonumber.Substring(autonumber.Length - 1, 1).Trim() == batas)
+                        {
+                            autonumber = autonumber.Substring(0, autonumber.Length - 1);
+                        }
+
+                        if (n.Prefix != "-,-")
+                        {
+                            string[] prefiks = n.Prefix.Split(',');
+                            if (prefiks[1] == "kiri")
+                                autonumber = prefiks[0] + autonumber;
+                            else
+                                autonumber = autonumber + prefiks[0];
+                        }
+                    }
+                    return autonumber;
+                }
+                else
+                    return "e";
+            }
+            else
+                return "e";
         }
     }
 }

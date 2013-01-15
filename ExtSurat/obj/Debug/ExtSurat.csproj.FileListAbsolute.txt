@@ -57,7 +57,6 @@ D:\Github\ExtKencanaSurat\ExtSurat\bin\EntitySpaces.SqlClientProvider.dll
 D:\Github\ExtKencanaSurat\ExtSurat\bin\Ext.Net.dll
 D:\Github\ExtKencanaSurat\ExtSurat\bin\Ext.Net.Utilities.dll
 D:\Github\ExtKencanaSurat\ExtSurat\bin\ExtSurat.BusinessObjects.dll
-D:\Github\ExtKencanaSurat\ExtSurat\bin\MySql.Data.dll
 D:\Github\ExtKencanaSurat\ExtSurat\bin\Newtonsoft.Json.dll
 D:\Github\ExtKencanaSurat\ExtSurat\bin\Transformer.NET.dll
 D:\Github\ExtKencanaSurat\ExtSurat\bin\ExtSurat.BusinessObjects.pdb
@@ -99,3 +98,5 @@ H:\Github\ExtKencanaSurat\ExtSurat\obj\Debug\ResolveAssemblyReference.cache
 H:\Github\ExtKencanaSurat\ExtSurat\obj\Debug\ExtSurat.dll
 H:\Github\ExtKencanaSurat\ExtSurat\obj\Debug\ExtSurat.pdb
 D:\Github\ExtKencanaSurat\ExtSurat\obj\Debug\ExtSurat.csprojResolveAssemblyReference.cache
+D:\Github\ExtKencanaSurat\ExtSurat\bin\ExtSurat.Reports.dll
+D:\Github\ExtKencanaSurat\ExtSurat\bin\ExtSurat.Reports.pdb

@@ -292,6 +292,10 @@
       <Project>{89B1F661-CB77-4A18-B25A-7701996F0D48}</Project>
       <Name>ExtSurat.BusinessObjects</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ExtSurat.Reports\ExtSurat.Reports.csproj">
+      <Project>{2C4D81EB-DFDA-4B0D-9FA9-87B92B2C7BFB}</Project>
+      <Name>ExtSurat.Reports</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="ExtSurat.Master" />
