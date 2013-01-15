@@ -8,7 +8,7 @@
 ===============================================================================
 EntitySpaces Version : 2012.1.0930.0
 EntitySpaces Driver  : MySql
-Date Generated       : 15/01/2013 10:01:22
+Date Generated       : 15/01/2013 17:00:33
 ===============================================================================
 */
 
@@ -414,6 +414,86 @@ namespace ExtSurat.BusinessObjects
 			}
 		}		
 		
+		/// <summary>
+		/// Maps to disposisi.biasa
+		/// </summary>
+		[DataMember(EmitDefaultValue=false)]
+		virtual public System.Boolean? Biasa
+		{
+			get
+			{
+				return base.GetSystemBoolean(DisposisiMetadata.ColumnNames.Biasa);
+			}
+			
+			set
+			{
+				if(base.SetSystemBoolean(DisposisiMetadata.ColumnNames.Biasa, value))
+				{
+					OnPropertyChanged(DisposisiMetadata.PropertyNames.Biasa);
+				}
+			}
+		}		
+		
+		/// <summary>
+		/// Maps to disposisi.segera
+		/// </summary>
+		[DataMember(EmitDefaultValue=false)]
+		virtual public System.Boolean? Segera
+		{
+			get
+			{
+				return base.GetSystemBoolean(DisposisiMetadata.ColumnNames.Segera);
+			}
+			
+			set
+			{
+				if(base.SetSystemBoolean(DisposisiMetadata.ColumnNames.Segera, value))
+				{
+					OnPropertyChanged(DisposisiMetadata.PropertyNames.Segera);
+				}
+			}
+		}		
+		
+		/// <summary>
+		/// Maps to disposisi.penting
+		/// </summary>
+		[DataMember(EmitDefaultValue=false)]
+		virtual public System.Boolean? Penting
+		{
+			get
+			{
+				return base.GetSystemBoolean(DisposisiMetadata.ColumnNames.Penting);
+			}
+			
+			set
+			{
+				if(base.SetSystemBoolean(DisposisiMetadata.ColumnNames.Penting, value))
+				{
+					OnPropertyChanged(DisposisiMetadata.PropertyNames.Penting);
+				}
+			}
+		}		
+		
+		/// <summary>
+		/// Maps to disposisi.rahasia
+		/// </summary>
+		[DataMember(EmitDefaultValue=false)]
+		virtual public System.Boolean? Rahasia
+		{
+			get
+			{
+				return base.GetSystemBoolean(DisposisiMetadata.ColumnNames.Rahasia);
+			}
+			
+			set
+			{
+				if(base.SetSystemBoolean(DisposisiMetadata.ColumnNames.Rahasia, value))
+				{
+					OnPropertyChanged(DisposisiMetadata.PropertyNames.Rahasia);
+				}
+			}
+		}		
+		
 		#endregion	
 
 		#region .str() Properties
@@ -446,7 +526,11 @@ namespace ExtSurat.BusinessObjects
 						case "Diteruskanke": this.str().Diteruskanke = (string)value; break;							
 						case "Catatan": this.str().Catatan = (string)value; break;							
 						case "Lastedit": this.str().Lastedit = (string)value; break;							
-						case "Userid": this.str().Userid = (string)value; break;
+						case "Userid": this.str().Userid = (string)value; break;							
+						case "Biasa": this.str().Biasa = (string)value; break;							
+						case "Segera": this.str().Segera = (string)value; break;							
+						case "Penting": this.str().Penting = (string)value; break;							
+						case "Rahasia": this.str().Rahasia = (string)value; break;
 					}
 				}
 				else
@@ -479,6 +563,34 @@ namespace ExtSurat.BusinessObjects
 							if (value == null || value is System.DateTime)
 								this.Lastedit = (System.DateTime?)value;
 								OnPropertyChanged(DisposisiMetadata.PropertyNames.Lastedit);
+							break;
+						
+						case "Biasa":
+						
+							if (value == null || value is System.Boolean)
+								this.Biasa = (System.Boolean?)value;
+								OnPropertyChanged(DisposisiMetadata.PropertyNames.Biasa);
+							break;
+						
+						case "Segera":
+						
+							if (value == null || value is System.Boolean)
+								this.Segera = (System.Boolean?)value;
+								OnPropertyChanged(DisposisiMetadata.PropertyNames.Segera);
+							break;
+						
+						case "Penting":
+						
+							if (value == null || value is System.Boolean)
+								this.Penting = (System.Boolean?)value;
+								OnPropertyChanged(DisposisiMetadata.PropertyNames.Penting);
+							break;
+						
+						case "Rahasia":
+						
+							if (value == null || value is System.Boolean)
+								this.Rahasia = (System.Boolean?)value;
+								OnPropertyChanged(DisposisiMetadata.PropertyNames.Rahasia);
 							break;
 					
 
@@ -678,6 +790,66 @@ namespace ExtSurat.BusinessObjects
 					else entity.Userid = Convert.ToString(value);
 				}
 			}
+				
+			public System.String Biasa
+			{
+				get
+				{
+					System.Boolean? data = entity.Biasa;
+					return (data == null) ? String.Empty : Convert.ToString(data);
+				}
+
+				set
+				{
+					if (value == null || value.Length == 0) entity.Biasa = null;
+					else entity.Biasa = Convert.ToBoolean(value);
+				}
+			}
+				
+			public System.String Segera
+			{
+				get
+				{
+					System.Boolean? data = entity.Segera;
+					return (data == null) ? String.Empty : Convert.ToString(data);
+				}
+
+				set
+				{
+					if (value == null || value.Length == 0) entity.Segera = null;
+					else entity.Segera = Convert.ToBoolean(value);
+				}
+			}
+				
+			public System.String Penting
+			{
+				get
+				{
+					System.Boolean? data = entity.Penting;
+					return (data == null) ? String.Empty : Convert.ToString(data);
+				}
+
+				set
+				{
+					if (value == null || value.Length == 0) entity.Penting = null;
+					else entity.Penting = Convert.ToBoolean(value);
+				}
+			}
+				
+			public System.String Rahasia
+			{
+				get
+				{
+					System.Boolean? data = entity.Rahasia;
+					return (data == null) ? String.Empty : Convert.ToString(data);
+				}
+
+				set
+				{
+					if (value == null || value.Length == 0) entity.Rahasia = null;
+					else entity.Rahasia = Convert.ToBoolean(value);
+				}
+			}
 			
 
 			private esDisposisi entity;
@@ -846,6 +1018,10 @@ namespace ExtSurat.BusinessObjects
 				case "Catatan": return this.Catatan;
 				case "Lastedit": return this.Lastedit;
 				case "Userid": return this.Userid;
+				case "Biasa": return this.Biasa;
+				case "Segera": return this.Segera;
+				case "Penting": return this.Penting;
+				case "Rahasia": return this.Rahasia;
 
                 default: return null;
             }
@@ -908,6 +1084,26 @@ namespace ExtSurat.BusinessObjects
 		public esQueryItem Userid
 		{
 			get { return new esQueryItem(this, DisposisiMetadata.ColumnNames.Userid, esSystemType.String); }
+		} 
+		
+		public esQueryItem Biasa
+		{
+			get { return new esQueryItem(this, DisposisiMetadata.ColumnNames.Biasa, esSystemType.Boolean); }
+		} 
+		
+		public esQueryItem Segera
+		{
+			get { return new esQueryItem(this, DisposisiMetadata.ColumnNames.Segera, esSystemType.Boolean); }
+		} 
+		
+		public esQueryItem Penting
+		{
+			get { return new esQueryItem(this, DisposisiMetadata.ColumnNames.Penting, esSystemType.Boolean); }
+		} 
+		
+		public esQueryItem Rahasia
+		{
+			get { return new esQueryItem(this, DisposisiMetadata.ColumnNames.Rahasia, esSystemType.Boolean); }
 		} 
 		
 		#endregion
@@ -992,6 +1188,38 @@ namespace ExtSurat.BusinessObjects
 			c.IsNullable = true;
 			m_columns.Add(c);
 				
+			c = new esColumnMetadata(DisposisiMetadata.ColumnNames.Biasa, 11, typeof(System.Boolean), esSystemType.Boolean);
+			c.PropertyName = DisposisiMetadata.PropertyNames.Biasa;
+			c.NumericPrecision = 1;
+			c.HasDefault = true;
+			c.Default = @"b'0'";
+			c.IsNullable = true;
+			m_columns.Add(c);
+				
+			c = new esColumnMetadata(DisposisiMetadata.ColumnNames.Segera, 12, typeof(System.Boolean), esSystemType.Boolean);
+			c.PropertyName = DisposisiMetadata.PropertyNames.Segera;
+			c.NumericPrecision = 1;
+			c.HasDefault = true;
+			c.Default = @"b'0'";
+			c.IsNullable = true;
+			m_columns.Add(c);
+				
+			c = new esColumnMetadata(DisposisiMetadata.ColumnNames.Penting, 13, typeof(System.Boolean), esSystemType.Boolean);
+			c.PropertyName = DisposisiMetadata.PropertyNames.Penting;
+			c.NumericPrecision = 1;
+			c.HasDefault = true;
+			c.Default = @"b'0'";
+			c.IsNullable = true;
+			m_columns.Add(c);
+				
+			c = new esColumnMetadata(DisposisiMetadata.ColumnNames.Rahasia, 14, typeof(System.Boolean), esSystemType.Boolean);
+			c.PropertyName = DisposisiMetadata.PropertyNames.Rahasia;
+			c.NumericPrecision = 1;
+			c.HasDefault = true;
+			c.Default = @"b'0'";
+			c.IsNullable = true;
+			m_columns.Add(c);
+				
 		}
 		#endregion	
 	
@@ -1029,6 +1257,10 @@ namespace ExtSurat.BusinessObjects
 			 public const string Catatan = "catatan";
 			 public const string Lastedit = "lastedit";
 			 public const string Userid = "userid";
+			 public const string Biasa = "biasa";
+			 public const string Segera = "segera";
+			 public const string Penting = "penting";
+			 public const string Rahasia = "rahasia";
 		}
 		#endregion	
 		
@@ -1046,6 +1278,10 @@ namespace ExtSurat.BusinessObjects
 			 public const string Catatan = "Catatan";
 			 public const string Lastedit = "Lastedit";
 			 public const string Userid = "Userid";
+			 public const string Biasa = "Biasa";
+			 public const string Segera = "Segera";
+			 public const string Penting = "Penting";
+			 public const string Rahasia = "Rahasia";
 		}
 		#endregion	
 
@@ -1100,7 +1336,11 @@ namespace ExtSurat.BusinessObjects
 				meta.AddTypeMap("Diteruskanke", new esTypeMap("VARCHAR", "System.String"));
 				meta.AddTypeMap("Catatan", new esTypeMap("TEXT", "System.String"));
 				meta.AddTypeMap("Lastedit", new esTypeMap("DATE", "System.DateTime"));
-				meta.AddTypeMap("Userid", new esTypeMap("VARCHAR", "System.String"));			
+				meta.AddTypeMap("Userid", new esTypeMap("VARCHAR", "System.String"));
+				meta.AddTypeMap("Biasa", new esTypeMap("BIT", "System.Boolean"));
+				meta.AddTypeMap("Segera", new esTypeMap("BIT", "System.Boolean"));
+				meta.AddTypeMap("Penting", new esTypeMap("BIT", "System.Boolean"));
+				meta.AddTypeMap("Rahasia", new esTypeMap("BIT", "System.Boolean"));			
 				
 				
 				

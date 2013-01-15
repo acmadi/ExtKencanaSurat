@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\Github\ExtKencanaSurat\ExtSurat\ExtSurat.csproj" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\About.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\About.aspx" />
+  <event action="Analyze" type="Success" name="About.aspx" path="D:\Github\ExtKencanaSurat\ExtSurat\About.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\ChangePassword.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\ChangePassword.aspx" />
+  <event action="Analyze" type="Success" name="ChangePassword.aspx" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\ChangePassword.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\ChangePasswordSuccess.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\ChangePasswordSuccess.aspx" />
+  <event action="Analyze" type="Success" name="ChangePasswordSuccess.aspx" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\ChangePasswordSuccess.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\Login.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\Login.aspx" />
+  <event action="Analyze" type="Success" name="Login.aspx" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\Login.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\Register.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\Register.aspx" />
+  <event action="Analyze" type="Success" name="Register.aspx" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\Register.aspx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\Web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\Web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\Web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\Web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\Web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\Web.config" />
+  <event action="Analyze" type="Success" name="Web.config" path="D:\Github\ExtKencanaSurat\ExtSurat\Account\Web.config" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\Default.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\Default.aspx" />
+  <event action="Analyze" type="Success" name="Default.aspx" path="D:\Github\ExtKencanaSurat\ExtSurat\Default.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\ExtSurat.Master" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\ExtSurat.Master" />
+  <event action="Analyze" type="Success" name="ExtSurat.Master" path="D:\Github\ExtKencanaSurat\ExtSurat\ExtSurat.Master" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\frmInbox.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\frmInbox.aspx" />
+  <event action="Analyze" type="Success" name="frmInbox.aspx" path="D:\Github\ExtKencanaSurat\ExtSurat\frmInbox.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\frmInboxDisposisiAdd.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\frmInboxDisposisiAdd.aspx" />
+  <event action="Analyze" type="Success" name="frmInboxDisposisiAdd.aspx" path="D:\Github\ExtKencanaSurat\ExtSurat\frmInboxDisposisiAdd.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\frmInboxWindow.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\frmInboxWindow.aspx" />
+  <event action="Analyze" type="Success" name="frmInboxWindow.aspx" path="D:\Github\ExtKencanaSurat\ExtSurat\frmInboxWindow.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\frmInboxWindowEdit.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\frmInboxWindowEdit.aspx" />
+  <event action="Analyze" type="Success" name="frmInboxWindowEdit.aspx" path="D:\Github\ExtKencanaSurat\ExtSurat\frmInboxWindowEdit.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\frmLogin.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\frmLogin.aspx" />
+  <event action="Analyze" type="Success" name="frmLogin.aspx" path="D:\Github\ExtKencanaSurat\ExtSurat\frmLogin.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\frmNumbering.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\frmNumbering.aspx" />
+  <event action="Analyze" type="Success" name="frmNumbering.aspx" path="D:\Github\ExtKencanaSurat\ExtSurat\frmNumbering.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\frmOutbox.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\frmOutbox.aspx" />
+  <event action="Analyze" type="Success" name="frmOutbox.aspx" path="D:\Github\ExtKencanaSurat\ExtSurat\frmOutbox.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\frmOutboxWindowAdd.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\frmOutboxWindowAdd.aspx" />
+  <event action="Analyze" type="Success" name="frmOutboxWindowAdd.aspx" path="D:\Github\ExtKencanaSurat\ExtSurat\frmOutboxWindowAdd.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\frmOutboxWindowEdit.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\frmOutboxWindowEdit.aspx" />
+  <event action="Analyze" type="Success" name="frmOutboxWindowEdit.aspx" path="D:\Github\ExtKencanaSurat\ExtSurat\frmOutboxWindowEdit.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\Master\frmMasterUser.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\Master\frmMasterUser.aspx" />
+  <event action="Analyze" type="Success" name="frmMasterUser.aspx" path="D:\Github\ExtKencanaSurat\ExtSurat\Master\frmMasterUser.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\Master\ucMasterAccess.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\Master\ucMasterAccess.ascx" />
+  <event action="Analyze" type="Success" name="ucMasterAccess.ascx" path="D:\Github\ExtKencanaSurat\ExtSurat\Master\ucMasterAccess.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\Master\ucMasterUser.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\Master\ucMasterUser.ascx" />
+  <event action="Analyze" type="Success" name="ucMasterUser.ascx" path="D:\Github\ExtKencanaSurat\ExtSurat\Master\ucMasterUser.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\Site.Master" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\Github\ExtKencanaSurat\ExtSurat\Site.Master" />
+  <event action="Analyze" type="Success" name="Site.Master" path="D:\Github\ExtKencanaSurat\ExtSurat\Site.Master" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.config" />
+  <event action="Analyze" type="Success" name="Web.config" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Web.Debug.config" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Web.Release.config" path="D:\Github\ExtKencanaSurat\ExtSurat\Web.Release.config" />
+  <event action="Analyze" type="Success" name="ExtSurat" path="D:\Github\ExtKencanaSurat\ExtSurat\ExtSurat.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\ExtSurat.BusinessObjects.csproj" />
+  <event action="Analyze" type="Success" name="ExtSurat.BusinessObjects" path="D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\ExtSurat.BusinessObjects.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\Github\ExtKencanaSurat\ExtSurat.Reports\ExtSurat.Reports.csproj" />
+  <event action="Analyze" type="Success" name="rptInbox.resx" path="D:\Github\ExtKencanaSurat\ExtSurat.Reports\rptInbox.resx" />
+  <event action="Analyze" type="Success" name="rptPrintOutDisposisi.resx" path="D:\Github\ExtKencanaSurat\ExtSurat.Reports\rptPrintOutDisposisi.resx" />
+  <event action="Analyze" type="Success" name="ExtSurat.Reports" path="D:\Github\ExtKencanaSurat\ExtSurat.Reports\ExtSurat.Reports.csproj" />
+  <event action="Analyze" type="Success" name="ExtSurat" path="D:\Github\ExtKencanaSurat\ExtSurat.sln" />
+  <event action="Upgrade" type="Success" name="Assembly References" path="D:\Github\ExtKencanaSurat\ExtSurat.Reports\ExtSurat.Reports.csproj" />
+  <event action="Upgrade" type="Success" name="ExtSurat.Reports" path="D:\Github\ExtKencanaSurat\ExtSurat.Reports\ExtSurat.Reports.csproj" />
+  <event action="Upgrade" type="Success" name="ExtSurat" path="D:\Github\ExtKencanaSurat\ExtSurat.sln" />
+</log>

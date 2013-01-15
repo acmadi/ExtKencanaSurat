@@ -100,7 +100,10 @@ namespace ExtSurat
                 d.Nomorsurat = txtSuratNo.Text;
                 d.Tanggal = dfTanggal.SelectedDate;
                 if (rdoBiasa.Checked)
+                {
                     d.Sifatsuratid = 1;
+                    
+                }
                 if (rdoPenting.Checked)
                     d.Sifatsuratid = 3;
                 if (rdoRahasia.Checked)

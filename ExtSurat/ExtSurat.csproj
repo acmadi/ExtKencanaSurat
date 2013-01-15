@@ -88,6 +88,13 @@
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Telerik.Reporting, Version=6.2.13.109, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.WebForms, Version=6.2.13.109, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Transformer.NET, Version=2.0.0.3590, Culture=neutral, PublicKeyToken=e274d618e7c603a7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\Transformer.NET.dll</HintPath>
@@ -108,6 +115,7 @@
     <Content Include="frmOutbox.aspx" />
     <Content Include="frmOutboxWindowAdd.aspx" />
     <Content Include="frmOutboxWindowEdit.aspx" />
+    <Content Include="frmReportDisposition.aspx" />
     <Content Include="Images\add_user-32.png" />
     <Content Include="Images\group_access-32.jpg" />
     <Content Include="Master\frmMasterUser.aspx" />
@@ -244,6 +252,13 @@
     </Compile>
     <Compile Include="frmOutboxWindowEdit.aspx.designer.cs">
       <DependentUpon>frmOutboxWindowEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportDisposition.aspx.cs">
+      <DependentUpon>frmReportDisposition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmReportDisposition.aspx.designer.cs">
+      <DependentUpon>frmReportDisposition.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

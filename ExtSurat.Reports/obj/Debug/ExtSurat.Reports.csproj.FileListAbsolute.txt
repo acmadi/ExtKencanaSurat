@@ -19,3 +19,9 @@ D:\Github\ExtKencanaSurat\ExtSurat.Reports\bin\Debug\Newtonsoft.Json.xml
 D:\Github\ExtKencanaSurat\ExtSurat.Reports\obj\Debug\ExtSurat.Reports.csprojResolveAssemblyReference.cache
 D:\Github\ExtKencanaSurat\ExtSurat.Reports\obj\Debug\ExtSurat.Reports.dll
 D:\Github\ExtKencanaSurat\ExtSurat.Reports\obj\Debug\ExtSurat.Reports.pdb
+D:\Github\ExtKencanaSurat\ExtSurat.Reports\obj\Debug\ExtSurat.Reports.rptInbox.resources
+D:\Github\ExtKencanaSurat\ExtSurat.Reports\obj\Debug\ExtSurat.Reports.rptPrintOutDisposisi.resources
+D:\Github\ExtKencanaSurat\ExtSurat.Reports\obj\Debug\ExtSurat.Reports.csproj.GenerateResource.Cache
+D:\Github\ExtKencanaSurat\ExtSurat.Reports\bin\Debug\Telerik.Reporting.dll
+D:\Github\ExtKencanaSurat\ExtSurat.Reports\bin\Debug\Telerik.Reporting.pdb
+D:\Github\ExtKencanaSurat\ExtSurat.Reports\bin\Debug\Telerik.Reporting.xml

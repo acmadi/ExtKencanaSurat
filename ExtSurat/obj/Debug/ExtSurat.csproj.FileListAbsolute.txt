@@ -100,3 +100,9 @@ H:\Github\ExtKencanaSurat\ExtSurat\obj\Debug\ExtSurat.pdb
 D:\Github\ExtKencanaSurat\ExtSurat\obj\Debug\ExtSurat.csprojResolveAssemblyReference.cache
 D:\Github\ExtKencanaSurat\ExtSurat\bin\ExtSurat.Reports.dll
 D:\Github\ExtKencanaSurat\ExtSurat\bin\ExtSurat.Reports.pdb
+D:\Github\ExtKencanaSurat\ExtSurat\bin\Telerik.Reporting.dll
+D:\Github\ExtKencanaSurat\ExtSurat\bin\Telerik.ReportViewer.WebForms.dll
+D:\Github\ExtKencanaSurat\ExtSurat\bin\Telerik.Reporting.pdb
+D:\Github\ExtKencanaSurat\ExtSurat\bin\Telerik.Reporting.xml
+D:\Github\ExtKencanaSurat\ExtSurat\bin\Telerik.ReportViewer.WebForms.pdb
+D:\Github\ExtKencanaSurat\ExtSurat\bin\Telerik.ReportViewer.WebForms.xml
