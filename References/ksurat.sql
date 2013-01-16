@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50528
 File Encoding         : 65001
 
-Date: 2013-01-04 17:26:48
+Date: 2013-01-16 14:58:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,22 +20,28 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `disposisi`;
 CREATE TABLE `disposisi` (
-  `disposisiid` int(11) NOT NULL,
+  `disposisiid` int(11) NOT NULL AUTO_INCREMENT,
   `agendanomor` varchar(512) COLLATE latin1_general_ci NOT NULL,
   `nomorsurat` varchar(50) COLLATE latin1_general_ci NOT NULL,
   `tanggal` date NOT NULL,
   `sifatsuratid` tinyint(2) NOT NULL,
+  `perihal` varchar(512) COLLATE latin1_general_ci DEFAULT NULL,
   `asalsurat` varchar(512) COLLATE latin1_general_ci NOT NULL,
   `diteruskanke` varchar(512) COLLATE latin1_general_ci NOT NULL,
   `catatan` text COLLATE latin1_general_ci,
   `lastedit` date DEFAULT NULL,
   `userid` varchar(50) COLLATE latin1_general_ci DEFAULT NULL,
+  `biasa` bit(1) DEFAULT b'0',
+  `segera` bit(1) DEFAULT b'0',
+  `penting` bit(1) DEFAULT b'0',
+  `rahasia` bit(1) DEFAULT b'0',
   PRIMARY KEY (`disposisiid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 -- ----------------------------
 -- Records of disposisi
 -- ----------------------------
+INSERT INTO `disposisi` VALUES ('1', '12345', 'RSCM-K/00002/SM/I/13', '2013-01-16', '1', 'biasa', 'PT TransCorp', 'Kasub UMPO', 'Penting<br>Harus segera di FU', null, null, '', '', '', '');
 
 -- ----------------------------
 -- Table structure for `nomor`
@@ -74,6 +80,21 @@ INSERT INTO `nomor` VALUES ('9', 'admin', 'XXX/RSCM-K/S.KUASA/M/YY', '/', '1,001
 INSERT INTO `nomor` VALUES ('10', 'admin', 'XXX/RSCM-K/SKET/M/YY', '/', '1,001', '2,RSCM-K', '3,SKET', '-,-', '4,X,Y', '5,13,Y', '-,-', 'suratkeluar', 'tahun', 'SURAT KETERANGAN');
 INSERT INTO `nomor` VALUES ('11', 'admin', 'XXX/RSCM-K/ST/M/YY', '/', '1,001', '2,RSCM-K', '3,ST', '-,-', '4,X,Y', '5,13,Y', '-,-', 'suratkeluar', 'tahun', 'SURAT TUGAS');
 INSERT INTO `nomor` VALUES ('12', 'admin', 'XXX/RSCM-K/MEMO/M/YY', '/', '1,001', '2,RSCM-K', '3,MEMO', '-,-', '4,X,Y', '5,13,Y', '-,-', 'suratkeluar', 'tahun', 'MEMO');
+
+-- ----------------------------
+-- Table structure for `nomorlastnumber`
+-- ----------------------------
+DROP TABLE IF EXISTS `nomorlastnumber`;
+CREATE TABLE `nomorlastnumber` (
+  `format` varchar(255) COLLATE latin1_general_ci NOT NULL,
+  `tahun` varchar(50) COLLATE latin1_general_ci NOT NULL,
+  `lastnumber` int(10) NOT NULL,
+  PRIMARY KEY (`format`,`tahun`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+-- ----------------------------
+-- Records of nomorlastnumber
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for `perusahaan`

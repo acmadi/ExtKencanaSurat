@@ -48,9 +48,14 @@
                 <ext:TextField ID="txtNomorSuratKencana" runat="server" FieldLabel="Nomor Surat Internal" AnchorHorizontal="-20" AllowBlank="true" ReadOnly="true" />
                 <ext:TextField ID="txtNomorSuratAsli" runat="server" FieldLabel="Nomor Surat Asal" AnchorHorizontal="-20" AllowBlank="false" />
                 <ext:TextField ID="txtJudul" runat="server" FieldLabel="Tittle Surat" AnchorHorizontal="-20" AllowBlank="false" />
-                <ext:DateField ID="dfTanggal" runat="server" FieldLabel="Tanggal" AnchorHorizontal="-20" AllowBlank="false" />
+                <ext:DateField ID="dfTanggal" runat="server" FieldLabel="Tanggal" AnchorHorizontal="-20" AllowBlank="false" >
+                    <Listeners>
+                        <Select Handler="#{DirectMethods}.dfTanggal_Select();" />
+                    </Listeners>
+                </ext:DateField>
                 <ext:TextField ID="txtDari" runat="server" FieldLabel="Dari" AnchorHorizontal="-20" AllowBlank="false" />
                 <ext:TextField ID="txtKeterangan" runat="server" FieldLabel="Keterangan" AnchorHorizontal="-20" AllowBlank="false" />
+                <ext:Checkbox ID="chkCreateDisposition" runat="server" FieldLabel="Buat Disposisi?" Checked="true" AnchorHorizontal="-20" />
             </Items>
             <Listeners>
                 <ClientValidation Handler="#{btnSave}.setDisabled(!valid);" />

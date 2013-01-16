@@ -13,6 +13,20 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script type="text/javascript">
+        var RowCommand = function (cmd, record) {
+            switch (cmd) {
+                case "Edit":
+                    //            The real application calls a directmethod here
+                    Ext.net.DirectMethods.EditSurat("Edit", record.data.masukid);
+                    break;
+                case "Disposition":
+                    Ext.net.DirectMethods.EditSurat("Disposition", record.data.masukid);
+                    break;
+            }
+        };
+    </script>
+
     <ext:Store 
         ID="storeInbox"
         runat="server"
@@ -39,7 +53,7 @@
                 <Items>
                     <ext:Button runat="server" ID="btnAddSuratMasuk" Icon="EmailAdd">
                         <Listeners>
-                            <Click Handler="Ext.net.DirectMethods.EditSurat('new');" />
+                            <Click Handler="Ext.net.DirectMethods.EditSurat('New', 'new');" />
                         </Listeners>
                     </ext:Button>
                 </Items>
@@ -47,14 +61,18 @@
         </TopBar>        
         <ColumnModel runat="server">
             <Columns>
-                <ext:CommandColumn runat="server" Width="25" Header="Edit">
+                <ext:CommandColumn runat="server" Width="70" Header="Edit">
                     <Commands>
                         <ext:GridCommand Icon="EmailEdit" CommandName="Edit">   
                             <ToolTip Text="Edit Surat" />
                         </ext:GridCommand>
+                        <ext:CommandSeparator />
+                        <ext:GridCommand Icon="EmailAttach" CommandName="Disposition">
+                            <ToolTip Text="Add Disposition" />
+                        </ext:GridCommand>
                     </Commands>
                 </ext:CommandColumn>
-                <ext:Column ColumnID="IdSuratMasuk" Header="ID" DataIndex="masukid" Width="40" />
+                <ext:Column ColumnID="IdSuratMasuk" Header="ID" DataIndex="masukid" Width="40" Hidden="true" />
                 <ext:Column ColumnID="IdUser" Header="ID User" DataIndex="userid" Width="80" />
                 <ext:Column ColumnID="Nomor" Header="Nomor Surat" DataIndex="nomor" Width="200" />
                 <ext:Column ColumnID="NomorAsli" Header="Nomor Asli Surat" DataIndex="noasal" Width="200" />
@@ -69,7 +87,8 @@
         </SelectionModel>
         <LoadMask ShowMask="true" />
         <Listeners>
-            <Command Handler="Ext.net.DirectMethods.EditSurat(record.data.masukid);" />
+            <%--<Command Handler="Ext.net.DirectMethods.EditSurat(command, record.data.masukid);" />--%>
+            <Command Fn="RowCommand" />
         </Listeners>
     </ext:GridPanel>
     <ext:TaskManager runat="server" ID="taskManager1" Enabled="true">

@@ -34,7 +34,7 @@
         </Reader>
     </ext:Store>
 
-    <ext:GridPanel runat="server" ID="gpOutbox" ClientIDMode="Inherit" Height="600" StoreID="storeOutbox" AutoExpandColumn="judul" >
+    <ext:GridPanel runat="server" ID="gpOutbox" ClientIDMode="Inherit" Height="600" StoreID="storeOutbox" AutoExpandColumn="judul" Title="Surat Keluar">
         <TopBar>
             <ext:Toolbar ID="Toolbar1" runat="server">
                 <Items>

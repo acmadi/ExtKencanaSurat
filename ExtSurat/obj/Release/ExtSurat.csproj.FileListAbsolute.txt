@@ -22,6 +22,14 @@ D:\Github\ExtKencanaSurat\ExtSurat\bin\Ext.Net.Utilities.xml
 D:\Github\ExtKencanaSurat\ExtSurat\bin\Newtonsoft.Json.pdb
 D:\Github\ExtKencanaSurat\ExtSurat\bin\Newtonsoft.Json.xml
 D:\Github\ExtKencanaSurat\ExtSurat\bin\Transformer.NET.xml
-D:\Github\ExtKencanaSurat\ExtSurat\obj\Release\ResolveAssemblyReference.cache
 D:\Github\ExtKencanaSurat\ExtSurat\obj\Release\ExtSurat.dll
 D:\Github\ExtKencanaSurat\ExtSurat\obj\Release\ExtSurat.pdb
+D:\Github\ExtKencanaSurat\ExtSurat\bin\ExtSurat.Reports.dll
+D:\Github\ExtKencanaSurat\ExtSurat\bin\Telerik.Reporting.dll
+D:\Github\ExtKencanaSurat\ExtSurat\bin\Telerik.ReportViewer.WebForms.dll
+D:\Github\ExtKencanaSurat\ExtSurat\bin\ExtSurat.Reports.pdb
+D:\Github\ExtKencanaSurat\ExtSurat\bin\Telerik.Reporting.pdb
+D:\Github\ExtKencanaSurat\ExtSurat\bin\Telerik.Reporting.xml
+D:\Github\ExtKencanaSurat\ExtSurat\bin\Telerik.ReportViewer.WebForms.pdb
+D:\Github\ExtKencanaSurat\ExtSurat\bin\Telerik.ReportViewer.WebForms.xml
+D:\Github\ExtKencanaSurat\ExtSurat\obj\Release\ExtSurat.csprojResolveAssemblyReference.cache

@@ -50,7 +50,12 @@ namespace ExtSurat
 
                         foreach (Disposisi d in dC)
                         {
+                            rdoBiasa.Checked = (bool)d.Biasa;
+                            rdoPenting.Checked = (bool)d.Penting;
+                            rdoRahasia.Checked = (bool)d.Rahasia;
+                            rdoSegera.Checked = (bool)d.Segera;
                             this.pnlMain.Title = "Edit Disposition for letter : " + d.Nomorsurat;
+                            txtPerihal.Text = d.Perihal;
                             txtAgendaNo.Text = d.Agendanomor;
                             txtAsalSurat.Text = d.Asalsurat;
                             txtDiteruskanKe.Text = d.Diteruskanke;
@@ -110,6 +115,10 @@ namespace ExtSurat
                     d.Sifatsuratid = 4;
                 if (rdoSegera.Checked)
                     d.Sifatsuratid = 2;
+                d.Biasa = rdoBiasa.Checked;
+                d.Segera = rdoSegera.Checked;
+                d.Penting = rdoPenting.Checked;
+                d.Rahasia = rdoRahasia.Checked;
                 d.Perihal = txtPerihal.Text;
                 d.Asalsurat = txtAsalSurat.Text;
                 d.Diteruskanke = txtDiteruskanKe.Text;

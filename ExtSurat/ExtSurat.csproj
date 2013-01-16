@@ -68,6 +68,7 @@
     <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\MySql.Data.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -111,6 +112,7 @@
     <Content Include="frmInboxWindow.aspx" />
     <Content Include="frmInboxWindowEdit.aspx" />
     <Content Include="frmLogin.aspx" />
+    <Content Include="frmMasterUser.aspx" />
     <Content Include="frmNumbering.aspx" />
     <Content Include="frmOutbox.aspx" />
     <Content Include="frmOutboxWindowAdd.aspx" />
@@ -224,6 +226,13 @@
     </Compile>
     <Compile Include="frmLogin.aspx.designer.cs">
       <DependentUpon>frmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmMasterUser.aspx.cs">
+      <DependentUpon>frmMasterUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmMasterUser.aspx.designer.cs">
+      <DependentUpon>frmMasterUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmNumbering.aspx.cs">
       <DependentUpon>frmNumbering.aspx</DependentUpon>

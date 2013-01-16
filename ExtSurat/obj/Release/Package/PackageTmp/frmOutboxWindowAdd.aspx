@@ -48,7 +48,11 @@
                 <ext:TextField ID="txtKepada" runat="server" FieldLabel="Penerima" AnchorHorizontal="-20" AllowBlank="false" />
                 <ext:TextField ID="txtJudul" runat="server" FieldLabel="Tittle Surat" AnchorHorizontal="-20" AllowBlank="false" />                                
                 <ext:TextField ID="txtKeterangan" runat="server" FieldLabel="Keterangan" AnchorHorizontal="-20" AllowBlank="false" />
-                <ext:DateField ID="dfTanggal" runat="server" FieldLabel="Tanggal" AnchorHorizontal="-20" AllowBlank="false" />
+                <ext:DateField ID="dfTanggal" runat="server" FieldLabel="Tanggal" AnchorHorizontal="-20" AllowBlank="false" >
+                    <Listeners>
+                        <Select Handler="#{DirectMethods}.dfTanggal_Select();" />
+                    </Listeners>
+                </ext:DateField>
             </Items>
             <Listeners>
                 <ClientValidation Handler="#{btnSave}.setDisabled(!valid);" />
