@@ -13,6 +13,20 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script type="text/javascript">
+        var RowCommand = function (cmd, record) {
+            switch (cmd) {
+                case "Edit":
+                    //            The real application calls a directmethod here
+                    Ext.net.DirectMethods.EditUser("Edit", record.data.masukid);
+                    break;
+                case "Delete":
+                    Ext.net.DirectMethods.EditUser("Delete", record.data.masukid);
+                    break;
+            }
+        };
+    </script>
+
     <ext:Store 
         ID="storeUser"
         runat="server"
@@ -61,8 +75,9 @@
                 <ext:Column ColumnID="IdUser" Header="Login User" DataIndex="userid" Width="40" />                
                 <ext:Column ColumnID="Nama" Header="Nama User" DataIndex="nama" Width="200" />
                 <ext:Column ColumnID="Jabatan" Header="Jabatan" DataIndex="jabatan" Width="200" />
-                <ext:Column ColumnID="Dari" Header="Pengirim" DataIndex="dari" Width="200" />
-                <ext:Column ColumnID="Judul" Header="Judul" DataIndex="judul" Width="300" />
+                <ext:Column ColumnID="Divisi" Header="Divisi" DataIndex="divisi" Width="200" />
+                <ext:Column ColumnID="Level" Header="Level" DataIndex="level" Width="300" />
+                <ext:Column ColumnID="Aktif" Header="Aktif" DataIndex="aktif" Width="300" />
                 <ext:Column ColumnID="Keterangan" Header="Keterangan" DataIndex="keterangan" Width="300" />
                 <ext:DateColumn ColumnID="Tanggal" Header="Tanggal" DataIndex="tanggal" Width="100" />
             </Columns>
@@ -71,8 +86,7 @@
             <ext:RowSelectionModel ID="RowSelectionModel1" SingleSelect="true" runat="server" />
         </SelectionModel>
         <LoadMask ShowMask="true" />
-        <Listeners>
-            <%--<Command Handler="Ext.net.DirectMethods.EditSurat(command, record.data.masukid);" />--%>
+        <Listeners>            
             <Command Fn="RowCommand" />
         </Listeners>
     </ext:GridPanel>

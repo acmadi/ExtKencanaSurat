@@ -6,4 +6,3 @@ D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\bin\Release\EntitySpaces.Inte
 D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\bin\Release\EntitySpaces.MySqlClientProvider.dll
 D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\obj\Release\ExtSurat.BusinessObjects.dll
 D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\obj\Release\ExtSurat.BusinessObjects.pdb
-D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\obj\Release\ExtSurat.BusinessObjects.csprojResolveAssemblyReference.cache
