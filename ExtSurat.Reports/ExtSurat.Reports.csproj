@@ -70,6 +70,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rptChartInboxMonthly.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptChartInboxMonthly.Designer.cs">
+      <DependentUpon>rptChartInboxMonthly.cs</DependentUpon>
+    </Compile>
     <Compile Include="rptInbox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="rptChartInboxMonthly.resx">
+      <DependentUpon>rptChartInboxMonthly.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptInbox.resx">
       <DependentUpon>rptInbox.cs</DependentUpon>
     </EmbeddedResource>
