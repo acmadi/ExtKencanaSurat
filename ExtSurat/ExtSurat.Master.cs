@@ -100,7 +100,7 @@ namespace ExtSurat
                 case "btnReportOutbox":
                     //TabPanel1.ResumeEvents();
                     HttpContext.Current.Session["activetab"] = ((Ext.Net.Panel)TabPanel1.FindControl("Panel3")).ID;
-                    this.Response.Redirect("~/frmReportOutbox.aspx");
+                    this.Response.Redirect("~/frmReportChartOutbox.aspx");
                     break;
                 case "btnReportDisposition":
                     //TabPanel1.ResumeEvents();

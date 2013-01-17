@@ -12,36 +12,40 @@ namespace ExtSurat.Reports
             Telerik.Reporting.Drawing.StyleRule styleRule1 = new Telerik.Reporting.Drawing.StyleRule();
             this.pageHeaderSection1 = new Telerik.Reporting.PageHeaderSection();
             this.detail = new Telerik.Reporting.DetailSection();
+            this.chartSuratMasuk = new Telerik.Reporting.Chart();
             this.pageFooterSection1 = new Telerik.Reporting.PageFooterSection();
-            this.chart1 = new Telerik.Reporting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // pageHeaderSection1
             // 
-            this.pageHeaderSection1.Height = Telerik.Reporting.Drawing.Unit.Cm(3D);
+            this.pageHeaderSection1.Height = Telerik.Reporting.Drawing.Unit.Cm(0.13229165971279144D);
             this.pageHeaderSection1.Name = "pageHeaderSection1";
             // 
             // detail
             // 
             this.detail.Height = Telerik.Reporting.Drawing.Unit.Cm(7.2999997138977051D);
             this.detail.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
-            this.chart1});
+            this.chartSuratMasuk});
             this.detail.Name = "detail";
+            // 
+            // chartSuratMasuk
+            // 
+            this.chartSuratMasuk.BitmapResolution = 96F;
+            this.chartSuratMasuk.ChartTitle.TextBlock.Text = "Jumlah Surat Masuk per Bagian";
+            this.chartSuratMasuk.ImageFormat = System.Drawing.Imaging.ImageFormat.Emf;
+            this.chartSuratMasuk.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.00010002215276472271D), Telerik.Reporting.Drawing.Unit.Cm(0.00010002215276472271D));
+            this.chartSuratMasuk.Name = "chartSuratMasuk";
+            this.chartSuratMasuk.PlotArea.EmptySeriesMessage.Appearance.Visible = true;
+            this.chartSuratMasuk.PlotArea.EmptySeriesMessage.Visible = true;
+            this.chartSuratMasuk.PlotArea.XAxis.MinValue = 1D;
+            this.chartSuratMasuk.PlotArea.YAxis.MaxValue = 100D;
+            this.chartSuratMasuk.PlotArea.YAxis.Step = 10D;
+            this.chartSuratMasuk.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(14.999799728393555D), Telerik.Reporting.Drawing.Unit.Cm(7.299799919128418D));
             // 
             // pageFooterSection1
             // 
-            this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Cm(3D);
+            this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Cm(0.13229165971279144D);
             this.pageFooterSection1.Name = "pageFooterSection1";
-            // 
-            // chart1
-            // 
-            this.chart1.BitmapResolution = 96F;
-            this.chart1.ImageFormat = System.Drawing.Imaging.ImageFormat.Emf;
-            this.chart1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.30000004172325134D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
-            this.chart1.Name = "chart1";
-            this.chart1.PlotArea.EmptySeriesMessage.Appearance.Visible = true;
-            this.chart1.PlotArea.EmptySeriesMessage.Visible = true;
-            this.chart1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(13.5D), Telerik.Reporting.Drawing.Unit.Cm(4D));
             // 
             // rptChartInboxMonthly
             // 
@@ -64,6 +68,7 @@ namespace ExtSurat.Reports
             this.StyleSheet.AddRange(new Telerik.Reporting.Drawing.StyleRule[] {
             styleRule1});
             this.Width = Telerik.Reporting.Drawing.Unit.Cm(15D);
+            this.NeedDataSource += new System.EventHandler(this.rptChartInboxMonthly_NeedDataSource);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -72,6 +77,6 @@ namespace ExtSurat.Reports
         private Telerik.Reporting.PageHeaderSection pageHeaderSection1;
         private Telerik.Reporting.DetailSection detail;
         private Telerik.Reporting.PageFooterSection pageFooterSection1;
-        private Telerik.Reporting.Chart chart1;
+        private Telerik.Reporting.Chart chartSuratMasuk;
     }
 }
