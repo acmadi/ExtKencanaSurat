@@ -17,11 +17,14 @@
         var RowCommand = function (cmd, record) {
             switch (cmd) {
                 case "Edit":
-                    //            The real application calls a directmethod here
-                    Ext.net.DirectMethods.EditUser("Edit", record.data.masukid);
+                    //The real application calls a directmethod here
+                    Ext.net.DirectMethods.EditUser("Edit", record.data.userid);
                     break;
                 case "Delete":
-                    Ext.net.DirectMethods.EditUser("Delete", record.data.masukid);
+                    Ext.net.DirectMethods.EditUser("Delete", record.data.userid);
+                    break;
+                default:
+                    Ext.net.DirectMethods.EditUser("New", "new");
                     break;
             }
         };
@@ -51,9 +54,9 @@
         <TopBar>
             <ext:Toolbar ID="Toolbar1" runat="server">
                 <Items>
-                    <ext:Button runat="server" ID="btnAddUser" Icon="UserAdd">
+                    <ext:Button runat="server" ID="btnAddUser" Icon="UserAdd" ToolTip="Add User">                        
                         <Listeners>
-                            <Click Handler="Ext.net.DirectMethods.EditUser('New', 'new');" />
+                            <Click Fn="RowCommand" />
                         </Listeners>
                     </ext:Button>
                 </Items>
@@ -68,7 +71,7 @@
                         </ext:GridCommand>
                         <ext:CommandSeparator />
                         <ext:GridCommand Icon="UserDelete" CommandName="Delete">
-                            <ToolTip Text="Add User" />
+                            <ToolTip Text="Delete User" />
                         </ext:GridCommand>
                     </Commands>
                 </ext:CommandColumn>

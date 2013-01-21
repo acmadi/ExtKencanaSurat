@@ -69,17 +69,55 @@ namespace ExtSurat
                 win.Render(this.Form);
                 win.Show();
             }
-            else if (u.LoadByPrimaryKey(userid.Trim()) && commandName.Trim() == "Delete")
+            //DELETE
+            else if (u.LoadByPrimaryKey(userid.Trim()) && commandName.Trim() == "Delete")            
             {
                 u.MarkAsDeleted();
                 u.AcceptChanges();
+            }
+            else if (commandName.Trim() == "New")
+            {
+                var win = new Window()
+                {
+                    ID = "AddUserWindow",
+                    Title = "Add User",
+                    Width = Unit.Pixel(800),
+                    Height = Unit.Pixel(600),
+                    Modal = true,
+                    AutoRender = false,
+                    Collapsed = false,
+                    Maximizable = false,
+                    Hidden = true,
+                    Draggable = false,
+                    Resizable = false,
+                    Closable = true
+                };
+
+                win.AutoLoad.Url = "~/frmUserWindowAdd.aspx?userid=new";
+                win.AutoLoad.Mode = LoadMode.IFrame;
+                win.AutoLoad.ShowMask = true;
+                win.Render(this.Form);
+                win.Show();
             }
         }
 
         [DirectMethod]
         public void Refresh_Grid()
         {
- 
+            if (HttpContext.Current.Session["isEditUser"] == null)
+            {
+                taskManager1.StopAll();
+                return;
+            }
+            if ((bool)HttpContext.Current.Session["isEditUser"] == false)
+                return;
+            else
+            {
+                this.storeUser.DataSource = GetUser();
+                this.storeUser.DataBind();
+                HttpContext.Current.Session["isEditUser"] = false;
+                taskManager1.StopAll();
+            }
         }
     }
 }

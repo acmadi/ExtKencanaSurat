@@ -119,6 +119,8 @@
     <Content Include="frmOutboxWindowEdit.aspx" />
     <Content Include="frmReportChartOutbox.aspx" />
     <Content Include="frmReportDisposition.aspx" />
+    <Content Include="frmUserWindowAdd.aspx" />
+    <Content Include="frmUserWindowEdit.aspx" />
     <Content Include="Images\add_user-32.png" />
     <Content Include="Images\group_access-32.jpg" />
     <Content Include="Master\frmMasterUser.aspx" />
@@ -276,6 +278,20 @@
     </Compile>
     <Compile Include="frmReportDisposition.aspx.designer.cs">
       <DependentUpon>frmReportDisposition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserWindowAdd.aspx.cs">
+      <DependentUpon>frmUserWindowAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmUserWindowAdd.aspx.designer.cs">
+      <DependentUpon>frmUserWindowAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserWindowEdit.aspx.cs">
+      <DependentUpon>frmUserWindowEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmUserWindowEdit.aspx.designer.cs">
+      <DependentUpon>frmUserWindowEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
