@@ -72,9 +72,21 @@ namespace ExtSurat
             //DELETE
             else if (u.LoadByPrimaryKey(userid.Trim()) && commandName.Trim() == "Delete")            
             {
-                u.MarkAsDeleted();
-                u.AcceptChanges();
+                X.Msg.Confirm("Warning", "Are you sure want to DELETE user : " + userid.Trim(), new MessageBoxButtonsConfig
+                {
+                    Yes = new MessageBoxButtonConfig
+                    {
+                        Handler = "Ext.net.DirectMethods.DoYes('" + userid + "')",
+                        Text = "Yes, DELETE user: " + userid
+                    },
+                    No = new MessageBoxButtonConfig
+                    {
+                        Handler = "Ext.net.DirectMethods.DoNo()",
+                        Text = "No"
+                    }
+                }).Show(); 
             }
+            //ADD NEW
             else if (commandName.Trim() == "New")
             {
                 var win = new Window()
@@ -118,6 +130,24 @@ namespace ExtSurat
                 HttpContext.Current.Session["isEditUser"] = false;
                 taskManager1.StopAll();
             }
+        }
+
+        [DirectMethod]
+        public void DoYes(string userid)
+        {
+            BusinessObjects.User u = new User();
+            if (u.LoadByPrimaryKey(userid.Trim()))
+            {
+                u.MarkAsDeleted();
+                u.Save();
+                HttpContext.Current.Session["isEditUser"] = true; 
+            }
+        }
+
+        [DirectMethod]
+        public void DoNo()
+        {
+            HttpContext.Current.Session["isEditUser"] = true;
         }
     }
 }

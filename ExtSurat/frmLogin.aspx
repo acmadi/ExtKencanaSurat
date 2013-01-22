@@ -44,6 +44,16 @@
                 </ext:Container>            
             </Items>       
         </ext:Viewport>
+        <ext:KeyMap runat="server" Target="={Ext.isGecko ? Ext.getDoc() : Ext.getBody()}">
+            <ext:KeyBinding StopEvent="false">
+                <Keys>
+                    <ext:Key Code="ENTER" />                    
+                </Keys>
+                <Listeners>
+                    <Event Handler="#{btnLogin}.fireEvent('click')" />
+                </Listeners>
+            </ext:KeyBinding>
+        </ext:KeyMap>
     </div>
     </form>
 </body>

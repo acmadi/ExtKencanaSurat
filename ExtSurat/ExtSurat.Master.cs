@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 using Ext.Net;
+using System.Web.Security;
 
 namespace ExtSurat
 {
@@ -132,6 +133,27 @@ namespace ExtSurat
             //cc.ID = "ucMasterAccess";
             //this.pnlMain.ContentControls.Add(cc);            
             //this.pnlMain.UpdateContent();  
+        }
+
+        [DirectMethod]
+        public void btnLogout_Click()
+        {
+            FormsAuthentication.SignOut();
+            // clear authentication cookie
+            HttpCookie cookie1 = new HttpCookie(FormsAuthentication.FormsCookieName, "");
+            cookie1.Expires = DateTime.Now.AddYears(-1);
+            Response.Cookies.Add(cookie1);
+
+            // clear session cookie (not necessary for your current problem but i would recommend you do it anyway)
+            HttpCookie cookie2 = new HttpCookie("ASP.NET_SessionId", "");
+            cookie2.Expires = DateTime.Now.AddYears(-1);
+            Response.Cookies.Add(cookie2);
+            Session.Clear();
+            Session.Abandon();
+            Response.Cache.SetExpires(DateTime.Now);
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetNoStore();
+            Response.Redirect("frmLogin.aspx");
         }
     }
 }

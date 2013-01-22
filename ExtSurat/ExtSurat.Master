@@ -6,6 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <ext:ResourcePlaceHolder ID="ResourcePlaceHolder1" runat="server" />
     <style type="text/css">
         .add32 
         {
@@ -16,6 +17,7 @@
             background-image : url(Images/group_access-32.jpg) !important;
         }
     </style>
+    <link rel="stylesheet" type="text/css" href="Styles/css/xtheme-toro.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">         
     </asp:ContentPlaceHolder>
 </head>
@@ -113,7 +115,11 @@
                             <ext:ToolbarSeparator />
                             <ext:ToolbarFill />
                             <ext:ToolbarSeparator />
-                            <ext:Button runat="server" Text="Logout" ID="btnLogout" Border="true" StyleSpec="margin-right:5px" />
+                            <ext:Button runat="server" Text="Logout" ID="btnLogout" Border="true" StyleSpec="margin-right:5px" >
+                                <Listeners>
+                                    <Click Handler="#{DirectMethods}.btnLogout_Click();" />
+                                </Listeners>
+                            </ext:Button>
                             <ext:ToolbarSeparator />
                             <ext:TextField runat="server" Width="100" Enabled="false" ReadOnly="true" />
                         </Items>
