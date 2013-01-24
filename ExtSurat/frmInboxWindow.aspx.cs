@@ -93,7 +93,7 @@ namespace ExtSurat
                 //    || string.IsNullOrEmpty(txtNomorSuratKencana.Text))
                 //    return;
             Suratmasuk sm = new Suratmasuk();
-            sm.Userid = "toro";
+            sm.Userid = HttpContext.Current.Session["user"].ToString().Trim();
             sm.Nomorid = penomoransurat;
             sm.Nomor = nomorsurat;
             sm.Noasal = txtNomorSuratAsli.Text;

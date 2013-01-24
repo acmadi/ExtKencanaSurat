@@ -64,7 +64,7 @@
         </TopBar>        
         <ColumnModel ID="ColumnModel1" runat="server">
             <Columns>
-                <ext:CommandColumn runat="server" Width="70" Header="Edit">
+                <ext:CommandColumn runat="server" Width="80" Header="Add/Edit">
                     <Commands>
                         <ext:GridCommand Icon="UserEdit" CommandName="Edit">   
                             <ToolTip Text="Edit User" />
@@ -75,14 +75,12 @@
                         </ext:GridCommand>
                     </Commands>
                 </ext:CommandColumn>
-                <ext:Column ColumnID="IdUser" Header="Login User" DataIndex="userid" Width="40" />                
+                <ext:Column ColumnID="IdUser" Header="Login User" DataIndex="userid" Width="100" />                
                 <ext:Column ColumnID="Nama" Header="Nama User" DataIndex="nama" Width="200" />
                 <ext:Column ColumnID="Jabatan" Header="Jabatan" DataIndex="jabatan" Width="200" />
                 <ext:Column ColumnID="Divisi" Header="Divisi" DataIndex="divisi" Width="200" />
-                <ext:Column ColumnID="Level" Header="Level" DataIndex="level" Width="300" />
-                <ext:Column ColumnID="Aktif" Header="Aktif" DataIndex="aktif" Width="300" />
-                <ext:Column ColumnID="Keterangan" Header="Keterangan" DataIndex="keterangan" Width="300" />
-                <ext:DateColumn ColumnID="Tanggal" Header="Tanggal" DataIndex="tanggal" Width="100" />
+                <ext:Column ColumnID="Level" Header="Level" DataIndex="level" Width="60" />
+                <ext:Column ColumnID="Aktif" Header="Aktif" DataIndex="aktif" Width="60" />                
             </Columns>
         </ColumnModel>
         <SelectionModel>

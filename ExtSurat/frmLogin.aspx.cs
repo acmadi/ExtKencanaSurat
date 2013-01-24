@@ -25,6 +25,8 @@ namespace ExtSurat
             {
                 if (HelperCrypto.MD5(txtPassword.Text.Trim()) == u.Password.Trim())
                 {
+                    HttpContext.Current.Session["user"] = txtUser.Text;
+
                     FormsAuthenticationTicket tkt;
                     string cookiestr;
                     HttpCookie ck;

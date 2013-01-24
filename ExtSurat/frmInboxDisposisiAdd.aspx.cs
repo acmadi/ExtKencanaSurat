@@ -123,6 +123,8 @@ namespace ExtSurat
                 d.Asalsurat = txtAsalSurat.Text;
                 d.Diteruskanke = txtDiteruskanKe.Text;
                 d.Catatan = txtHtmlCatatan.Text;
+                d.Userid = HttpContext.Current.Session["user"].ToString().Trim();
+                d.Lastedit = DateTime.Now;
                 d.Save();
             }
             //SAVE EDIT
@@ -145,6 +147,8 @@ namespace ExtSurat
                     d.Asalsurat = txtAsalSurat.Text;
                     d.Diteruskanke = txtDiteruskanKe.Text;
                     d.Catatan = txtHtmlCatatan.Text;
+                    d.Userid = HttpContext.Current.Session["user"].ToString().Trim();
+                    d.Lastedit = DateTime.Now;
                     d.Save();
                 }
             }

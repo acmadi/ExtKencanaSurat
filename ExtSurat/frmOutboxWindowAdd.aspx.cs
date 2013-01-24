@@ -61,7 +61,7 @@ namespace ExtSurat
                 return;
             Suratkeluar sk = new Suratkeluar();
             //Suratmasuk sm = new Suratmasuk();
-            sk.Userid = "toro";
+            sk.Userid = HttpContext.Current.Session["user"].ToString().Trim();
             sk.Nomorid = penomoransurat;
             sk.Kepada = txtKepada.Text;
             sk.Nomor = nomorsurat;

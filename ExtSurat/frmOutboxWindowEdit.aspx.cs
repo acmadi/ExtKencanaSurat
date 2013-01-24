@@ -84,7 +84,7 @@ namespace ExtSurat
             Suratkeluar sk = new Suratkeluar();
             if (sk.LoadByPrimaryKey(keluarid))
             {
-                sk.Userid = "toro";
+                sk.Userid = HttpContext.Current.Session["user"].ToString().Trim();
                 //sk.Nomorid = txtPenomoranSurat.Text;
                 sk.Kepada = txtKepada.Text;
                 //sk.Nomor = txtNomorSuratKencana.Text;

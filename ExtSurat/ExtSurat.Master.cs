@@ -24,6 +24,24 @@ namespace ExtSurat
             {
                 //TabPanel1.SetActiveTab(HttpContext.Current.Session["activetab"].ToString().Trim());
             }
+
+            if (HttpContext.Current.Session["user"] != null)
+            {
+                string userid = HttpContext.Current.Session["user"].ToString().Trim();
+                BusinessObjects.User u = new BusinessObjects.User();
+                if (u.LoadByPrimaryKey(userid))
+                {
+                    HttpContext.Current.Session["username"] = u.Nama.Trim();
+                    HttpContext.Current.Session["level"] = u.Level.Trim();
+                    lblWelcome.Text = "Welcome " + HttpContext.Current.Session["username"].ToString().Trim();
+
+                    if (HttpContext.Current.Session["level"].ToString().Trim() == "User")
+                    {
+                        btnMasterUser.Visible = false;
+                        btnMasterGroup.Visible = false;
+                    }
+                }
+            }
         }
         
         [DirectMethod]

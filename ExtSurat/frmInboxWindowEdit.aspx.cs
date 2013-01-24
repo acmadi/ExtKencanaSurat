@@ -75,7 +75,7 @@ namespace ExtSurat
                 {
                     try
                     {
-                        smt.Userid = "toro";
+                        smt.Userid = HttpContext.Current.Session["user"].ToString().Trim();
                         smt.Nomorid = nomorid;
                         smt.Nomor = nomor;
                         smt.Noasal = noasal;

@@ -40,8 +40,8 @@
             </TopBar>
             <Items>
                 <ext:TextField ID="txtUserId" runat="server" FieldLabel="ID User" AnchorHorizontal="-20" AllowBlank="true" ReadOnly="true" Enabled="false" />
-                <ext:TextField ID="txtPassword" runat="server" FieldLabel="Password" AnchorHorizontal="-20" AllowBlank="false" InputType="Password" />
-                <ext:TextField ID="txtPasswordConfirm" runat="server" FieldLabel="Confirm Password" AnchorHorizontal="-20" AllowBlank="false" InputType="Password" />
+                <%--<ext:TextField ID="txtPassword" runat="server" FieldLabel="Password" AnchorHorizontal="-20" AllowBlank="false" InputType="Password" />
+                <ext:TextField ID="txtPasswordConfirm" runat="server" FieldLabel="Confirm Password" AnchorHorizontal="-20" AllowBlank="false" InputType="Password" />--%>
                 <ext:ComboBox ID="cmbLevel" runat="server" FieldLabel="Level User" AnchorHorizontal="-20" AllowBlank="false" StoreID="Store1" DisplayField="Text" ValueField="Value" />
                 <ext:TextField ID="txtNama" runat="server" FieldLabel="Nama" AnchorHorizontal="-20" AllowBlank="false" />
                 <ext:TextField ID="txtJabatan" runat="server" FieldLabel="Jabatan" AnchorHorizontal="-20" AllowBlank="false" />
