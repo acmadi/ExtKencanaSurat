@@ -18,6 +18,8 @@ namespace ExtSurat
         {
             if (!X.IsAjaxRequest)
             {
+                if (Request.QueryString.Count == 0)
+                    Response.Redirect("Default.aspx");
                 if (Request.QueryString["masukid"] != null)
                 {
                     if (Request.QueryString["isadd"] != null)

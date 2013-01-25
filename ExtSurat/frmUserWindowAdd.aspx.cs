@@ -15,6 +15,8 @@ namespace ExtSurat
         {
             if (!X.IsAjaxRequest)
             {
+                if (Request.QueryString.Count == 0)
+                    Response.Redirect("Default.aspx");
                 List<object> list = new List<object>
                 {
                     new {Text = "User", Value = "User"},

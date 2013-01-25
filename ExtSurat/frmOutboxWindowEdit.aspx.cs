@@ -16,6 +16,8 @@ namespace ExtSurat
         {
             if (!X.IsAjaxRequest)
             {
+                if (Request.QueryString.Count == 0)
+                    Response.Redirect("Default.aspx");
                 //load datasource for combo box
                 this.storeFormatSurat.DataSource = GetDataFormatSurat();
                 this.storeFormatSurat.DataBind();

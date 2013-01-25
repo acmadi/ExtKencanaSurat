@@ -18,6 +18,8 @@ namespace ExtSurat
         {            
             if (!X.IsAjaxRequest)
             {
+                if (Request.QueryString.Count == 0)
+                    Response.Redirect("Default.aspx");
                 //Show disposition from main surat masuk form
                 if (Request.QueryString["masukid"] != null)
                     masukid = Request.QueryString["masukid"].ToString().Trim();

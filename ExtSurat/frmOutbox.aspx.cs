@@ -98,7 +98,7 @@ namespace ExtSurat
                         Closable = false
                     };
 
-                    win.AutoLoad.Url = "~/frmOutboxWindowAdd.aspx";
+                    win.AutoLoad.Url = "~/frmOutboxWindowAdd.aspx?keluarid=new";
                     win.AutoLoad.Mode = LoadMode.IFrame;
                     win.AutoLoad.ShowMask = true;
                     win.Render(this.Form);

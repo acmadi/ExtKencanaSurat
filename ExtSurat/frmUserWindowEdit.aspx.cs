@@ -16,6 +16,8 @@ namespace ExtSurat
         {
             if (!X.IsAjaxRequest)
             {
+                if (Request.QueryString.Count == 0)
+                    Response.Redirect("Default.aspx");
                 if (Request.QueryString["userid"] == null)
                     X.AddScript("parentAutoLoadControl.close(); Delay='2' ");
                 else
