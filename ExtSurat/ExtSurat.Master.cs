@@ -42,6 +42,9 @@ namespace ExtSurat
                     }
                 }
             }
+
+            if (!X.IsAjaxRequest)
+                taskLocalTime.StartAll();
         }
         
         [DirectMethod]

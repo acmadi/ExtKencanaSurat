@@ -121,11 +121,20 @@
                                 </Listeners>
                             </ext:Button>
                             <ext:ToolbarSeparator />
-                            <ext:TextField runat="server" Width="100" Enabled="false" ReadOnly="true" />
+                            <ext:TextField runat="server" ID="txtLocalTime" Width="100" Enabled="false" ReadOnly="true" />
                         </Items>
                     </ext:Toolbar>
                 </BottomBar>                               
-            </ext:TabPanel>    
+            </ext:TabPanel>   
+            <ext:TaskManager ID="taskLocalTime" runat="server">
+                <Tasks>
+                    <ext:Task>
+                        <Listeners>
+                            <Update Handler="#{txtLocalTime}.setValue(new Date().dateFormat('H:i:s'));" />
+                        </Listeners>
+                    </ext:Task>
+                </Tasks>
+            </ext:TaskManager> 
         <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">                  
         </asp:ContentPlaceHolder>
