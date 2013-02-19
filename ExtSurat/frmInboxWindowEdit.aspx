@@ -30,6 +30,13 @@
             </TopBar>
             <Items>
                 <ext:TextField ID="txtMasukId" runat="server" FieldLabel="ID Surat" AnchorHorizontal="-20" ReadOnly="true" Enabled="false" />
+                <ext:CompositeField runat="server" FieldLabel="ID Surat" AnchorHorizontal="-20">
+                    <Items>
+                        <ext:TextField ID="txtIdSuratMasuk" runat="server" Width="200" />
+                        <ext:DisplayField runat="server" Text="Extended Number" />
+                        <ext:TextField ID="txtIdSuratMasukExtended" runat="server" Width="8" />
+                    </Items>
+                </ext:CompositeField>
                 <ext:TextField ID="txtNomorSurat" runat="server" FieldLabel="Format Penomoran" AnchorHorizontal="-20" ReadOnly="true" />
                 <ext:TextField ID="txtNomorSuratKencana" runat="server" FieldLabel="Nomor Surat Internal" AnchorHorizontal="-20" ReadOnly="true" />
                 <ext:TextField ID="txtNomorSuratAsli" runat="server" FieldLabel="Nomor Surat Asal" AnchorHorizontal="-20" />

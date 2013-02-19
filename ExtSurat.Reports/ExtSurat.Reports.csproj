@@ -83,6 +83,12 @@
     <Compile Include="rptInbox.Designer.cs">
       <DependentUpon>rptInbox.cs</DependentUpon>
     </Compile>
+    <Compile Include="rptInboxOutbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptInboxOutbox.Designer.cs">
+      <DependentUpon>rptInboxOutbox.cs</DependentUpon>
+    </Compile>
     <Compile Include="rptPrintOutDisposisi.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="rptInbox.resx">
       <DependentUpon>rptInbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptInboxOutbox.resx">
+      <DependentUpon>rptInboxOutbox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rptPrintOutDisposisi.resx">
       <DependentUpon>rptPrintOutDisposisi.cs</DependentUpon>

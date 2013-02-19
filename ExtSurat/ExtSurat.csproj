@@ -119,10 +119,12 @@
     <Content Include="frmOutboxWindowEdit.aspx" />
     <Content Include="frmReportChartOutbox.aspx" />
     <Content Include="frmReportDisposition.aspx" />
+    <Content Include="frmReportListLetter.aspx" />
     <Content Include="frmUserWindowAdd.aspx" />
     <Content Include="frmUserWindowEdit.aspx" />
     <Content Include="Images\add_user-32.png" />
     <Content Include="Images\group_access-32.jpg" />
+    <Content Include="Images\LogoCompany.gif" />
     <Content Include="Master\frmMasterUser.aspx" />
     <Content Include="Master\ucMasterAccess.ascx" />
     <Content Include="Master\ucMasterUser.ascx" />
@@ -278,6 +280,13 @@
     </Compile>
     <Compile Include="frmReportDisposition.aspx.designer.cs">
       <DependentUpon>frmReportDisposition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportListLetter.aspx.cs">
+      <DependentUpon>frmReportListLetter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmReportListLetter.aspx.designer.cs">
+      <DependentUpon>frmReportListLetter.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmUserWindowAdd.aspx.cs">
       <DependentUpon>frmUserWindowAdd.aspx</DependentUpon>

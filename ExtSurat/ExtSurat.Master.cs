@@ -117,12 +117,12 @@ namespace ExtSurat
                 case "btnReportInbox":
                     //TabPanel1.ResumeEvents();
                     HttpContext.Current.Session["activetab"] = ((Ext.Net.Panel)TabPanel1.FindControl("Panel3")).ID;
-                    this.Response.Redirect("~/frmReportInbox.aspx");
+                    this.Response.Redirect("~/frmReportListLetter.aspx?inbox=1");
                     break;
                 case "btnReportOutbox":
                     //TabPanel1.ResumeEvents();
                     HttpContext.Current.Session["activetab"] = ((Ext.Net.Panel)TabPanel1.FindControl("Panel3")).ID;
-                    this.Response.Redirect("~/frmReportChartOutbox.aspx");
+                    this.Response.Redirect("~/frmReportListLetter.aspx?inbox=0");
                     break;
                 case "btnReportDisposition":
                     //TabPanel1.ResumeEvents();

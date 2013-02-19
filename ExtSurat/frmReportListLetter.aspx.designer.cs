@@ -10,43 +10,16 @@
 namespace ExtSurat {
     
     
-    public partial class frmInboxWindowEdit {
+    public partial class frmReportListLetter {
         
         /// <summary>
-        /// Head1 control.
+        /// pnlMain control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// ResourceManager1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Ext.Net.ResourceManager ResourceManager1;
-        
-        /// <summary>
-        /// frmPanelMain control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Ext.Net.FormPanel frmPanelMain;
+        protected global::Ext.Net.FormPanel pnlMain;
         
         /// <summary>
         /// Toolbar1 control.
@@ -58,111 +31,102 @@ namespace ExtSurat {
         protected global::Ext.Net.Toolbar Toolbar1;
         
         /// <summary>
-        /// btnSave control.
+        /// Toolbar2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.Button btnSave;
+        protected global::Ext.Net.Toolbar Toolbar2;
         
         /// <summary>
-        /// btnCancel control.
+        /// lblFrom control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.Button btnCancel;
+        protected global::Ext.Net.Label lblFrom;
         
         /// <summary>
-        /// txtMasukId control.
+        /// dfFrom control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.TextField txtMasukId;
+        protected global::Ext.Net.DateField dfFrom;
         
         /// <summary>
-        /// txtIdSuratMasuk control.
+        /// lblTo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.TextField txtIdSuratMasuk;
+        protected global::Ext.Net.Label lblTo;
         
         /// <summary>
-        /// txtIdSuratMasukExtended control.
+        /// dfTo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.TextField txtIdSuratMasukExtended;
+        protected global::Ext.Net.DateField dfTo;
         
         /// <summary>
-        /// txtNomorSurat control.
+        /// lblTypeInbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.TextField txtNomorSurat;
+        protected global::Ext.Net.Label lblTypeInbox;
         
         /// <summary>
-        /// txtNomorSuratKencana control.
+        /// chkInbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.TextField txtNomorSuratKencana;
+        protected global::Ext.Net.Checkbox chkInbox;
         
         /// <summary>
-        /// txtNomorSuratAsli control.
+        /// lblTypeOutbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.TextField txtNomorSuratAsli;
+        protected global::Ext.Net.Label lblTypeOutbox;
         
         /// <summary>
-        /// txtJudul control.
+        /// chkOutbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.TextField txtJudul;
+        protected global::Ext.Net.Checkbox chkOutbox;
         
         /// <summary>
-        /// dfTanggal control.
+        /// btnSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.DateField dfTanggal;
+        protected global::Ext.Net.Button btnSearch;
         
         /// <summary>
-        /// txtDari control.
+        /// ReportViewer1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.TextField txtDari;
-        
-        /// <summary>
-        /// txtKeterangan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Ext.Net.TextField txtKeterangan;
+        protected global::Telerik.ReportViewer.WebForms.ReportViewer ReportViewer1;
     }
 }
