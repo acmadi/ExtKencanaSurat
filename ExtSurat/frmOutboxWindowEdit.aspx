@@ -41,10 +41,21 @@
                 </ext:Toolbar>
             </TopBar>
             <Items>
-                <ext:TextField ID="txtKeluarId" runat="server" FieldLabel="ID Surat" AnchorHorizontal="-20" ReadOnly="true" Enabled="false" AllowBlank="false" />
+                <ext:TextField ID="txtKeluarId" runat="server" FieldLabel="ID Surat" AnchorHorizontal="-20" ReadOnly="true" Enabled="false" AllowBlank="false" />                
                 <%--<ext:TextField ID="txtPenomoranSurat" runat="server" FieldLabel="ID Penomoran" AnchorHorizontal="-20" AllowBlank="false" />--%>
                 <%--<ext:ComboBox ID="cmbFormatPenomoran" runat="server" FieldLabel="Format Penomoran" AnchorHorizontal="-20" AllowBlank="false" StoreID="storeFormatSurat" DisplayField="Keterangan" ValueField="format" />--%>
                 <ext:TextField ID="txtNomorSuratKencana" runat="server" FieldLabel="Nomor Surat" AnchorHorizontal="-20" AllowBlank="false" ReadOnly="true" />
+                <ext:CompositeField ID="CompositeField1" runat="server" FieldLabel="Nomor Surat" AnchorHorizontal="-20">
+                    <Items>
+                        <ext:TextField ID="txtIdSuratMasuk" runat="server" Width="200" />
+                        <ext:DisplayField ID="DisplayField1" runat="server" Text="Extended Number" />
+                        <ext:TextField ID="txtIdSuratMasukExtended" runat="server" Width="20" MaxLength="1">
+                            <CustomConfig>
+                                <ext:ConfigItem Name="autoCreate" Value="{tag : 'input', type : 'text', maxlength : 1, autocomplete : 'off' }" />
+                            </CustomConfig>
+                        </ext:TextField>
+                    </Items>
+                </ext:CompositeField>
                 <ext:TextField ID="txtKepada" runat="server" FieldLabel="Penerima" AnchorHorizontal="-20" AllowBlank="false" />
                 <ext:TextField ID="txtJudul" runat="server" FieldLabel="Tittle Surat" AnchorHorizontal="-20" AllowBlank="false" />                                
                 <ext:TextField ID="txtKeterangan" runat="server" FieldLabel="Keterangan" AnchorHorizontal="-20" AllowBlank="false" />
