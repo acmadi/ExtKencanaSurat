@@ -26,3 +26,4 @@ D:\Github\ExtKencanaSurat\ExtSurat.Reports\obj\Release\ExtSurat.Reports.csproj.G
 D:\Github\ExtKencanaSurat\ExtSurat.Reports\obj\Release\ExtSurat.Reports.dll
 D:\Github\ExtKencanaSurat\ExtSurat.Reports\obj\Release\ExtSurat.Reports.pdb
 D:\Github\ExtKencanaSurat\ExtSurat.Reports\obj\Release\ExtSurat.Reports.rptChartInboxMonthly.resources
+D:\Github\ExtKencanaSurat\ExtSurat.Reports\obj\Release\ExtSurat.Reports.rptInboxOutbox.resources

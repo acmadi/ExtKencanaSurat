@@ -29,7 +29,7 @@
                 </ext:Toolbar>
             </TopBar>
             <Items>
-                <ext:TextField ID="txtMasukId" runat="server" FieldLabel="ID Surat" AnchorHorizontal="-20" ReadOnly="true" Enabled="false" />
+                <ext:TextField ID="txtMasukId" runat="server" FieldLabel="ID Surat" AnchorHorizontal="-20" ReadOnly="true" Enabled="false" />                
                 <ext:TextField ID="txtNomorSurat" runat="server" FieldLabel="Format Penomoran" AnchorHorizontal="-20" ReadOnly="true" />
                 <ext:TextField ID="txtNomorSuratKencana" runat="server" FieldLabel="Nomor Surat Internal" AnchorHorizontal="-20" ReadOnly="true" />
                 <ext:TextField ID="txtNomorSuratAsli" runat="server" FieldLabel="Nomor Surat Asal" AnchorHorizontal="-20" />

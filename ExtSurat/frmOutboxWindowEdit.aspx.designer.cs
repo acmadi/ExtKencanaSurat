@@ -85,15 +85,6 @@ namespace ExtSurat {
         protected global::Ext.Net.TextField txtKeluarId;
         
         /// <summary>
-        /// txtNomorSuratKencana control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Ext.Net.TextField txtNomorSuratKencana;
-        
-        /// <summary>
         /// CompositeField1 control.
         /// </summary>
         /// <remarks>
@@ -103,13 +94,13 @@ namespace ExtSurat {
         protected global::Ext.Net.CompositeField CompositeField1;
         
         /// <summary>
-        /// txtIdSuratMasuk control.
+        /// txtNomorSuratKencana control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Ext.Net.TextField txtIdSuratMasuk;
+        protected global::Ext.Net.TextField txtNomorSuratKencana;
         
         /// <summary>
         /// DisplayField1 control.
@@ -128,6 +119,24 @@ namespace ExtSurat {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Ext.Net.TextField txtIdSuratMasukExtended;
+        
+        /// <summary>
+        /// DisplayField2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Ext.Net.DisplayField DisplayField2;
+        
+        /// <summary>
+        /// isEditable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Ext.Net.Checkbox isEditable;
         
         /// <summary>
         /// txtKepada control.

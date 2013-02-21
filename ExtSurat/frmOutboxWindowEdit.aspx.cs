@@ -12,6 +12,7 @@ namespace ExtSurat
 {
     public partial class frmOutboxWindowEdit : System.Web.UI.Page
     {
+        private string user = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!X.IsAjaxRequest)
@@ -24,6 +25,7 @@ namespace ExtSurat
 
                 if (Request.QueryString["keluarid"] != null)
                 {
+                    user = HttpContext.Current.Session["user"].ToString().Trim();
                     HttpContext.Current.Session["keluarid"] = Request.QueryString["keluarid"].ToString().Trim();
                     string keluarIds = HttpContext.Current.Session["keluarid"].ToString().Trim();
                     int keluarid = 0;
@@ -86,9 +88,14 @@ namespace ExtSurat
             Suratkeluar sk = new Suratkeluar();
             if (sk.LoadByPrimaryKey(keluarid))
             {
-                sk.Userid = HttpContext.Current.Session["user"].ToString().Trim();
+                //sk.Userid = HttpContext.Current.Session["user"].ToString().Trim();
                 //sk.Nomorid = txtPenomoranSurat.Text;
                 sk.Kepada = txtKepada.Text;
+                if (!string.IsNullOrEmpty(txtIdSuratMasukExtended.Text.Trim()))
+                {
+                    sk.Nomor = sk.Nomor + txtIdSuratMasukExtended.Text.Trim();
+                }
+
                 //sk.Nomor = txtNomorSuratKencana.Text;
                 sk.Judul = txtJudul.Text;
                 sk.Tanggal = dfTanggal.SelectedDate;
