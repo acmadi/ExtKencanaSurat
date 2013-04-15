@@ -4,7 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>      
+    <title></title>  
+    <link rel="stylesheet" type="text/css" href="Scripts/extjs/resources/css/xtheme-Kencana.css" />    
 </head>
 <body>
     <form id="form1" runat="server">

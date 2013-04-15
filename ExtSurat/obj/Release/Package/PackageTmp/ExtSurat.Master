@@ -17,7 +17,7 @@
             background-image : url(Images/group_access-32.jpg) !important;
         }
     </style>
-    <link rel="stylesheet" type="text/css" href="Styles/css/xtheme-toro.css" />
+    <link rel="stylesheet" type="text/css" href="Scripts/extjs/resources/css/xtheme-Kencana.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">         
     </asp:ContentPlaceHolder>
 </head>

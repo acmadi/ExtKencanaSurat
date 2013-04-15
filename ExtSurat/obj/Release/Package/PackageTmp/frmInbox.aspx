@@ -47,13 +47,53 @@
             </ext:JsonReader>
         </Reader>
     </ext:Store>
-    <ext:GridPanel runat="server" ID="gpInbox" ClientIDMode="Inherit" Height="600" StoreID="storeInbox" AutoExpandColumn="judul" >
+    <ext:GridPanel runat="server" ID="gpInbox" ClientIDMode="Inherit" Height="600" StoreID="storeInbox" AutoExpandColumn="judul" Title="Surat Masuk" >
         <TopBar>
             <ext:Toolbar runat="server">
                 <Items>
                     <ext:Button runat="server" ID="btnAddSuratMasuk" Icon="EmailAdd">
                         <Listeners>
                             <Click Handler="Ext.net.DirectMethods.EditSurat('New', 'new');" />
+                        </Listeners>
+                    </ext:Button>
+                    <ext:ToolbarSpacer />
+                    <ext:ToolbarSpacer />
+                    <ext:ToolbarSpacer />
+                    <ext:ToolbarSpacer />
+                    <ext:ToolbarSeparator />
+                    <ext:ToolbarSeparator />
+                    <ext:Label ID="lblFrom" runat="server" Text="From" />
+                    <ext:ToolbarSeparator />
+                    <ext:DateField runat="server" ID="dfFrom" Width="90" />
+                    <ext:ToolbarSeparator />
+                    <ext:Label ID="lblTo" runat="server" Text="To" />
+                    <ext:ToolbarSeparator />
+                    <ext:DateField runat="server" ID="dfTo" Width="90" />
+                    <ext:ToolbarSeparator />
+                    <ext:ToolbarSeparator />
+                    <ext:Label Text="Nomor Surat" runat="server" ID="lblNomorSurat" />
+                    <ext:ToolbarSeparator />
+                    <ext:TextField runat="server" ID="txtNomorSurat" EmptyText="Nomor Surat" Width="150" />
+                    <ext:ToolbarSeparator />
+                    <ext:ToolbarSeparator />
+                    <ext:Label ID="Label2" Text="Penerima" runat="server" />
+                    <ext:ToolbarSeparator />
+                    <ext:TextField runat="server" ID="txtPenerima" EmptyText="Penerima Surat" Width="150" />
+                    <ext:ToolbarSeparator />
+                    <ext:ToolbarSeparator />
+                    <ext:Label ID="Label3" Text="Judul" runat="server" />
+                    <ext:ToolbarSeparator />
+                    <ext:TextField runat="server" ID="txtJudul" EmptyText="Judul Surat" Width="150" />
+                    <ext:ToolbarSeparator />
+                    <ext:ToolbarSeparator />
+                     <ext:Label ID="Label4" Text="Keterangan" runat="server" />
+                    <ext:ToolbarSeparator />
+                    <ext:TextField runat="server" ID="txtKeterangan" EmptyText="Ket. Surat" Width="150" />
+                    <ext:ToolbarSeparator />
+                    <ext:ToolbarSeparator />
+                    <ext:Button runat="server" ID="btnSearch" Icon="Zoom" ToolTip="Search">
+                        <Listeners>
+                            <Click Handler="Ext.net.DirectMethods.btnSearch_Click();" />
                         </Listeners>
                     </ext:Button>
                 </Items>

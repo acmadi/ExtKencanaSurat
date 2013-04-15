@@ -175,5 +175,45 @@ namespace ExtSurat
                 win.Show();
             }
         }
+
+        [DirectMethod]
+        public void btnSearch_Click()
+        {
+            DateTime dtFrom = DateTime.Now;
+            DateTime dtTo = DateTime.Now;
+            if (dfFrom.IsEmpty)
+                dtFrom = new DateTime(2000, 12, 31);
+            else
+                dtFrom = dfFrom.SelectedDate;
+            if (dfTo.IsEmpty)
+                dtTo = DateTime.Now;
+            else
+                dtTo = dfTo.SelectedDate;
+            if (dtFrom > dtTo)
+            {
+                X.Msg.Alert("Error", "From Date must smaller than End Date").Show();
+                return;
+            }
+
+            //SuratkeluarQuery skQ = new SuratkeluarQuery();
+            SuratmasukQuery smQ = new SuratmasukQuery();
+            smQ.SelectAll();
+            if (dfFrom.SelectedDate == dfTo.SelectedDate)
+            {
+                smQ.Where(smQ.Tanggal == dfFrom.SelectedDate && smQ.Judul.Like("%" + txtJudul.Text.Trim() + "%")
+                    && smQ.Keterangan.Like("%" + txtKeterangan.Text.Trim() + "%") && smQ.Nomor.Like("%" + txtNomorSurat.Text.Trim() +
+                    "%") && smQ.Dari.Like("%" + txtPenerima.Text.Trim() + "%"));
+            }
+            else
+            {
+                smQ.Where(smQ.Tanggal.Between(dfFrom.SelectedDate, dfTo.SelectedDate) && smQ.Judul.Like("%" + txtJudul.Text.Trim() + "%")
+                    && smQ.Keterangan.Like("%" + txtKeterangan.Text.Trim() + "%") && smQ.Nomor.Like("%" + txtNomorSurat.Text.Trim() +
+                    "%") && smQ.Dari.Like("%" + txtPenerima.Text.Trim() + "%"));
+            }
+
+            DataTable dt = smQ.LoadDataTable();            
+            this.storeInbox.DataSource = dt;
+            this.storeInbox.DataBind();
+        }
     }
 }
