@@ -13,6 +13,7 @@
             }
         };
         </script>
+        <link rel="stylesheet" type="text/css" href="Scripts/extjs/resources/css/xtheme-Kencana.css" />
 </head>
 <body>
     <form id="form1" runat="server">
