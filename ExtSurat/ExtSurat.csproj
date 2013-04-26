@@ -108,6 +108,31 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="bootstrap\css\bootstrap-image-gallery.css" />
+    <Content Include="bootstrap\css\bootstrap-image-gallery.min.css" />
+    <Content Include="bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\css\font-awesome.css" />
+    <Content Include="bootstrap\css\prettify.css" />
+    <Content Include="bootstrap\font\fontawesome-webfont.svg" />
+    <Content Include="bootstrap\ico\bootstrap-apple-114x114.png" />
+    <Content Include="bootstrap\ico\bootstrap-apple-57x57.png" />
+    <Content Include="bootstrap\ico\bootstrap-apple-72x72.png" />
+    <Content Include="bootstrap\ico\favicon.ico" />
+    <Content Include="bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="bootstrap\img\loading.gif" />
+    <Content Include="bootstrap\js\bootstrap-image-gallery.js" />
+    <Content Include="bootstrap\js\bootstrap-image-gallery.min.js" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="bootstrap\js\html5.js" />
+    <Content Include="bootstrap\js\jquery.js" />
+    <Content Include="bootstrap\js\load-image.min.js" />
+    <Content Include="bootstrap\js\media.js" />
+    <Content Include="font\fontawesome-webfont.svg" />
     <Content Include="frmInbox.aspx" />
     <Content Include="frmInboxDisposisiAdd.aspx" />
     <Content Include="frmInboxWindow.aspx" />
@@ -126,9 +151,70 @@
     <Content Include="Images\add_user-32.png" />
     <Content Include="Images\group_access-32.jpg" />
     <Content Include="Images\LogoCompany.gif" />
+    <Content Include="Images\Search-icon.png" />
     <Content Include="Master\frmMasterUser.aspx" />
     <Content Include="Master\ucMasterAccess.ascx" />
     <Content Include="Master\ucMasterUser.ascx" />
+    <Content Include="resource\calendar\css\doc.css" />
+    <Content Include="resource\calendar\css\fullcalendar.css" />
+    <Content Include="resource\calendar\css\fullcalendar.print.css" />
+    <Content Include="resource\calendar\js\calendar.js" />
+    <Content Include="resource\calendar\js\fullcalendar.js" />
+    <Content Include="resource\calendar\js\fullcalendar.min.js" />
+    <Content Include="resource\calendar\js\jquery.custom.min.js" />
+    <Content Include="resource\calendar\js\ui.js" />
+    <Content Include="resource\chart\chart-column.js" />
+    <Content Include="resource\chart\chart-pie.js" />
+    <Content Include="resource\chart\chart-spline.js" />
+    <Content Include="resource\chart\chart-stacked.js" />
+    <Content Include="resource\chart\chart.js" />
+    <Content Include="resource\chart\exporting.js" />
+    <Content Include="resource\chart\highcharts.js" />
+    <Content Include="resource\chart\themes\dark-blue.js" />
+    <Content Include="resource\chart\themes\dark-green.js" />
+    <Content Include="resource\chart\themes\gray.js" />
+    <Content Include="resource\chart\themes\grid.js" />
+    <Content Include="resource\chart\themes\skies.js" />
+    <Content Include="resource\css\style.css" />
+    <Content Include="resource\dataTabel\css\DT_bootstrap.css" />
+    <Content Include="resource\dataTabel\img\sort_asc.png" />
+    <Content Include="resource\dataTabel\img\sort_asc_disabled.png" />
+    <Content Include="resource\dataTabel\img\sort_both.png" />
+    <Content Include="resource\dataTabel\img\sort_desc.png" />
+    <Content Include="resource\dataTabel\img\sort_desc_disabled.png" />
+    <Content Include="resource\dataTabel\js\DT_bootstrap.js" />
+    <Content Include="resource\dataTabel\js\jquery.dataTables.js" />
+    <Content Include="resource\img\160x120.gif" />
+    <Content Include="resource\img\acount.png" />
+    <Content Include="resource\img\album.png" />
+    <Content Include="resource\img\bg.png" />
+    <Content Include="resource\img\defaultPhoto.png" />
+    <Content Include="resource\img\post.png" />
+    <Content Include="resource\img\set.png" />
+    <Content Include="resource\img\trash.png" />
+    <Content Include="resource\img\video.png" />
+    <Content Include="resource\js\jstyle.js" />
+    <Content Include="resource\upload\css\jquery.fileupload-ui.css" />
+    <Content Include="resource\upload\js\canvas-to-blob.min.js" />
+    <Content Include="resource\upload\js\cors\jquery.postmessage-transport.js" />
+    <Content Include="resource\upload\js\cors\jquery.xdr-transport.js" />
+    <Content Include="resource\upload\js\jquery.fileupload-fp.js" />
+    <Content Include="resource\upload\js\jquery.fileupload-ui.js" />
+    <Content Include="resource\upload\js\jquery.fileupload.js" />
+    <Content Include="resource\upload\js\jquery.iframe-transport.js" />
+    <Content Include="resource\upload\js\jquery.ui.widget.js" />
+    <Content Include="resource\upload\js\locale.js" />
+    <Content Include="resource\upload\js\main.js" />
+    <Content Include="resource\upload\js\tmpl.min.js" />
+    <Content Include="resource\upload\js\vendor\jquery.ui.widget.js" />
+    <Content Include="resource\validate\img\error.png" />
+    <Content Include="resource\validate\img\valid.png" />
+    <Content Include="resource\validate\jquery.validate.min.js" />
+    <Content Include="resource\validate\script.js" />
+    <Content Include="resource\wysi\css\bootstrap-wysihtml5.css" />
+    <Content Include="resource\wysi\js\bootstrap-wysihtml5.js" />
+    <Content Include="resource\wysi\js\prettify.js" />
+    <Content Include="resource\wysi\js\wysihtml5-0.3.0.js" />
     <Content Include="Scripts\extjs\resources\css\xtheme-Kencana.css" />
     <Content Include="Scripts\extjs\resources\images\Kencana\box\corners-blue.gif" />
     <Content Include="Scripts\extjs\resources\images\Kencana\box\corners.gif" />
@@ -361,6 +447,7 @@
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="TwitterBootstrapDefault.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -563,9 +650,24 @@
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
     <Compile Include="SuratAutonumber.cs" />
+    <Compile Include="TwitterBootstrap.Master.cs">
+      <DependentUpon>TwitterBootstrap.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TwitterBootstrap.Master.designer.cs">
+      <DependentUpon>TwitterBootstrap.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TwitterBootstrapDefault.aspx.cs">
+      <DependentUpon>TwitterBootstrapDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TwitterBootstrapDefault.aspx.designer.cs">
+      <DependentUpon>TwitterBootstrapDefault.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="MasterPage\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
@@ -583,6 +685,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ExtSurat.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TwitterBootstrap.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bootstrap\font\fontawesome-webfont.eot" />
+    <None Include="bootstrap\font\fontawesome-webfont.ttf" />
+    <None Include="bootstrap\font\fontawesome-webfont.woff" />
+    <None Include="font\fontawesome-webfont.eot" />
+    <None Include="font\fontawesome-webfont.ttf" />
+    <None Include="font\fontawesome-webfont.woff" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
