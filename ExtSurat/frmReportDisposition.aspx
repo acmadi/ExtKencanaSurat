@@ -1,8 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ExtSurat.Master" AutoEventWireup="true" CodeBehind="frmReportDisposition.aspx.cs" Inherits="ExtSurat.frmReportDisposition" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TwitterBootstrap.Master" AutoEventWireup="true" CodeBehind="frmReportDisposition.aspx.cs" Inherits="ExtSurat.frmReportDisposition" %>
 <%@ Register assembly="Telerik.ReportViewer.WebForms, Version=6.2.13.109, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" namespace="Telerik.ReportViewer.WebForms" tagprefix="telerik" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<ext:ResourceManager ID="ResourceManager1" runat="server" />   
     <ext:FormPanel runat="server" ID="pnlMain" MonitorResize="true" MonitorValid="true" Title="Laporan Disposisi">
         <TopBar>
             <ext:Toolbar runat="server">

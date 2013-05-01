@@ -74,6 +74,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="SimpleTools.RoleAdmin.API">
+      <HintPath>..\References\SimpleTools.RoleAdmin.API.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
@@ -133,6 +136,7 @@
     <Content Include="bootstrap\js\load-image.min.js" />
     <Content Include="bootstrap\js\media.js" />
     <Content Include="font\fontawesome-webfont.svg" />
+    <Content Include="FormLogout.aspx" />
     <Content Include="frmInbox.aspx" />
     <Content Include="frmInboxDisposisiAdd.aspx" />
     <Content Include="frmInboxWindow.aspx" />
@@ -510,6 +514,13 @@
     </Compile>
     <Compile Include="ExtSurat.Master.designer.cs">
       <DependentUpon>ExtSurat.Master</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogout.aspx.cs">
+      <DependentUpon>FormLogout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormLogout.aspx.designer.cs">
+      <DependentUpon>FormLogout.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmInbox.aspx.cs">
       <DependentUpon>frmInbox.aspx</DependentUpon>

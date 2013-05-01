@@ -13,6 +13,15 @@ namespace ExtSurat {
     public partial class TwitterBootstrap {
         
         /// <summary>
+        /// ResourcePlaceHolder1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Ext.Net.ResourcePlaceHolder ResourcePlaceHolder1;
+        
+        /// <summary>
         /// head control.
         /// </summary>
         /// <remarks>
@@ -40,15 +49,6 @@ namespace ExtSurat {
         protected global::System.Web.UI.WebControls.Label lblTitle;
         
         /// <summary>
-        /// txtSearch control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSearch;
-        
-        /// <summary>
         /// btnSearch control.
         /// </summary>
         /// <remarks>
@@ -56,6 +56,15 @@ namespace ExtSurat {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton btnSearch;
+        
+        /// <summary>
+        /// txtSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSearch;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

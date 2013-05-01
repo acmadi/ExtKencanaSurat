@@ -8,13 +8,17 @@ using Ext.Net;
 using ExtSurat.BusinessObjects;
 using System.Web.Security;
 
+using SimpleTools.RoleAdmin.API.Collections;
+using SimpleTools.RoleAdmin.API.Objects;
+using SimpleTools.RoleAdmin.API.Utilities;
+
 namespace ExtSurat
 {
     public partial class frmLogin : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Response.Redirect(Tools.SingleSignOnRedirectUrl(SingleSignOnRedirectTo.SignIn, Request.QueryString["ReturnUrl"]));
         }
 
         [DirectMethod]
