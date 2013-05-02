@@ -150,6 +150,8 @@
     <Content Include="frmReportChartOutbox.aspx" />
     <Content Include="frmReportDisposition.aspx" />
     <Content Include="frmReportListLetter.aspx" />
+    <Content Include="frmReportSuratIn.aspx" />
+    <Content Include="frmReportSuratMasuk.aspx" />
     <Content Include="frmUserWindowAdd.aspx" />
     <Content Include="frmUserWindowEdit.aspx" />
     <Content Include="Images\add_user-32.png" />
@@ -612,6 +614,20 @@
     </Compile>
     <Compile Include="frmReportListLetter.aspx.designer.cs">
       <DependentUpon>frmReportListLetter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportSuratIn.aspx.cs">
+      <DependentUpon>frmReportSuratIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmReportSuratIn.aspx.designer.cs">
+      <DependentUpon>frmReportSuratIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportSuratMasuk.aspx.cs">
+      <DependentUpon>frmReportSuratMasuk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmReportSuratMasuk.aspx.designer.cs">
+      <DependentUpon>frmReportSuratMasuk.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmUserWindowAdd.aspx.cs">
       <DependentUpon>frmUserWindowAdd.aspx</DependentUpon>

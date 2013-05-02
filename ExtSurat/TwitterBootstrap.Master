@@ -136,13 +136,16 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="/frmReportListLetter.aspx?inbox=1"><i class="icon-list"></i> Laporan Surat Masuk</a>
+                                        <a href="/frmReportListLetter.aspx?inbox=1"><i class="icon-arrow-left"></i> Laporan Surat Masuk</a>
                                     </li>
                                     <li>
-                                        <a href="/frmReportListLetter.aspx?inbox=0"><i class="icon-list"></i> Laporan Surat Keluar</a>
+                                        <a href="/frmReportListLetter.aspx?inbox=0"><i class="icon-arrow-right"></i> Laporan Surat Keluar</a>
                                     </li>
                                     <li>
-                                        <a href="/frmReportDisposition.aspx"><i class="icon-list"></i> Laporan Disposisi</a>
+                                        <a href="/frmReportDisposition.aspx"><i class="icon-certificate"></i> Laporan Disposisi</a>
+                                    </li>
+                                    <li>
+                                        <a href="/frmReportSuratIn.aspx"><i class="icon-cogs"></i> Laporan Surat</a>
                                     </li>
                                 </ul>
                             </li>
@@ -153,7 +156,7 @@
 
                 <ul class="nav pull-right">
                     <li>
-                        <div class="navbar-search pull-left" action="">
+                        <div class="navbar-search pull-left" >
                             <%--<input type="text" class="search-query span2" placeholder="Search" />--%>
                             <%--<asp:TextBox runat="server" ID="txtSearch" class="search-query span2" style="padding-top:5px; display:inline-block;" placeholder="Search" />--%>
                             <asp:ImageButton runat="server" ID="btnSearch" class="btn btn-primary" ImageUrl="~/Images/Search-icon.png" ImageAlign="Middle" Height="16" Width="16" />
