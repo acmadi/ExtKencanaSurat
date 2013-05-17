@@ -7,3 +7,4 @@ D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\bin\Release\EntitySpaces.MySq
 D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\obj\Release\ExtSurat.BusinessObjects.dll
 D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\obj\Release\ExtSurat.BusinessObjects.pdb
 D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\obj\Release\ExtSurat.BusinessObjects.csprojResolveAssemblyReference.cache
+D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\bin\Release\EntitySpaces.SqlClientProvider.dll

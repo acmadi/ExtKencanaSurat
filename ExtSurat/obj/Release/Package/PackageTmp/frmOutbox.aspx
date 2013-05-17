@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ExtSurat.Master" AutoEventWireup="true" CodeBehind="frmOutbox.aspx.cs" Inherits="ExtSurat.frmOutbox" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TwitterBootstrap.Master" AutoEventWireup="true" CodeBehind="frmOutbox.aspx.cs" Inherits="ExtSurat.frmOutbox" %>
 <%@ Register Assembly="Ext.Net" Namespace="Ext.Net" TagPrefix="ext" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
@@ -13,6 +13,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<ext:ResourceManager ID="ResourceManager1" runat="server" />   
     <ext:Store 
         ID="storeOutbox"
         runat="server"
@@ -115,7 +116,7 @@
 
     <ext:TaskManager runat="server" ID="taskManager1" Enabled="true">
         <Tasks>
-            <ext:Task TaskID="taskEdit" Interval="2000">
+            <ext:Task TaskID="taskEdit" Interval="3000" AutoRun="false">
                 <Listeners>
                     <Update Handler="Ext.net.DirectMethods.Refresh_Grid();" />
                 </Listeners>

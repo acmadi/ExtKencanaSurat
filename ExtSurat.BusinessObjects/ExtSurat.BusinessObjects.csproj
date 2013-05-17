@@ -47,6 +47,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\EntitySpaces.MySqlClientProvider.dll</HintPath>
     </Reference>
+    <Reference Include="EntitySpaces.SqlClientProvider">
+      <HintPath>..\References\EntitySpaces.SqlClientProvider.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />

@@ -33,3 +33,5 @@ D:\Github\ExtKencanaSurat\ExtSurat\bin\Telerik.Reporting.xml
 D:\Github\ExtKencanaSurat\ExtSurat\bin\Telerik.ReportViewer.WebForms.pdb
 D:\Github\ExtKencanaSurat\ExtSurat\bin\Telerik.ReportViewer.WebForms.xml
 D:\Github\ExtKencanaSurat\ExtSurat\obj\Release\ExtSurat.csprojResolveAssemblyReference.cache
+D:\Github\ExtKencanaSurat\ExtSurat\bin\SimpleTools.RoleAdmin.API.dll
+D:\Github\ExtKencanaSurat\ExtSurat\bin\SimpleTools.RoleAdmin.API.pdb

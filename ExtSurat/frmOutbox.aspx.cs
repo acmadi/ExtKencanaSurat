@@ -38,6 +38,7 @@ namespace ExtSurat
         {
             this.storeOutbox.DataSource = GetOutbox();
             this.storeOutbox.DataBind();
+            this.storeOutbox.DataBind();
         }
 
         [DirectMethod]
@@ -122,6 +123,7 @@ namespace ExtSurat
             {
                 this.storeOutbox.DataSource = GetOutbox();
                 this.storeOutbox.DataBind();
+                this.storeOutbox.DataBind();
                 HttpContext.Current.Session["isEditInbox"] = false;
                 taskManager1.StopAll();
             }
@@ -148,22 +150,22 @@ namespace ExtSurat
 
             SuratkeluarQuery skQ = new SuratkeluarQuery();
             skQ.SelectAll();
-            if (dfFrom.SelectedDate == dfTo.SelectedDate)
+            if (dtFrom == dtTo)
             {
-                skQ.Where(skQ.Tanggal == dfFrom.SelectedDate && skQ.Judul.Like("%" + txtJudul.Text.Trim() + "%")
+                skQ.Where(skQ.Tanggal == dtFrom && skQ.Judul.Like("%" + txtJudul.Text.Trim() + "%")
                     && skQ.Keterangan.Like("%" + txtKeterangan.Text.Trim() + "%") && skQ.Nomor.Like("%" + txtNomorSurat.Text.Trim() +
                     "%") && skQ.Kepada.Like("%" + txtPenerima.Text.Trim() + "%"));
             }
             else
             {
-                skQ.Where(skQ.Tanggal.Between(dfFrom.SelectedDate,dfTo.SelectedDate) && skQ.Judul.Like("%" + txtJudul.Text.Trim() + "%")
+                skQ.Where(skQ.Tanggal.Between(dtFrom,dtTo) && skQ.Judul.Like("%" + txtJudul.Text.Trim() + "%")
                     && skQ.Keterangan.Like("%" + txtKeterangan.Text.Trim() + "%") && skQ.Nomor.Like("%" + txtNomorSurat.Text.Trim() +
                     "%") && skQ.Kepada.Like("%" + txtPenerima.Text.Trim() + "%"));
             }
 
             DataTable dt = skQ.LoadDataTable();
-            this.storeOutbox.DataSource = dt;
-            this.storeOutbox.DataBind();
+            this.storeOutbox.DataSource = GetOutbox();
+            this.storeOutbox.DataBind();            
         }
     }
 }

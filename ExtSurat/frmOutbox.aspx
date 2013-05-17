@@ -14,28 +14,31 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <ext:ResourceManager ID="ResourceManager1" runat="server" />   
-    <ext:Store 
-        ID="storeOutbox"
-        runat="server"
-        OnReadData="storeOutbox_RefreshData" 
-        Buffered="true">
-        <Reader>
-            <ext:JsonReader>
-                <Fields>
-                    <ext:RecordField Name="keluarid" />
-                    <ext:RecordField Name="userid" />
-                    <ext:RecordField Name="nomorid" />
-                    <ext:RecordField Name="nomor" />
-                    <ext:RecordField Name="kepada" />
-                    <ext:RecordField Name="judul" />
-                    <ext:RecordField Name="keterangan" />
-                    <ext:RecordField Name="tanggal" Type="Date" />
-                </Fields>
-            </ext:JsonReader>
-        </Reader>
-    </ext:Store>
-
-    <ext:GridPanel runat="server" ID="gpOutbox" ClientIDMode="Inherit" Height="600" StoreID="storeOutbox" AutoExpandColumn="judul" Title="Surat Keluar">
+    
+    
+    <%--OnReadData="storeOutbox_RefreshData"--%>
+    <ext:GridPanel runat="server" ID="gpOutbox" ClientIDMode="Inherit" Height="600" AutoExpandColumn="judul" Title="Surat Keluar">
+        <Store>
+            <ext:Store 
+                ID="storeOutbox"
+                runat="server"
+                Buffered="true">
+                <Reader>
+                    <ext:JsonReader>
+                        <Fields>
+                            <ext:RecordField Name="keluarid" />
+                            <ext:RecordField Name="userid" />
+                            <ext:RecordField Name="nomorid" />
+                            <ext:RecordField Name="nomor" />
+                            <ext:RecordField Name="kepada" />
+                            <ext:RecordField Name="judul" />
+                            <ext:RecordField Name="keterangan" />
+                            <ext:RecordField Name="tanggal" Type="Date" />
+                        </Fields>
+                    </ext:JsonReader>
+                </Reader>
+            </ext:Store> 
+        </Store>
         <TopBar>
             <ext:Toolbar ID="Toolbar1" runat="server">
                 <Items>
@@ -116,7 +119,7 @@
 
     <ext:TaskManager runat="server" ID="taskManager1" Enabled="true">
         <Tasks>
-            <ext:Task TaskID="taskEdit" Interval="2000">
+            <ext:Task TaskID="taskEdit" Interval="3000" AutoRun="false">
                 <Listeners>
                     <Update Handler="Ext.net.DirectMethods.Refresh_Grid();" />
                 </Listeners>

@@ -34,3 +34,4 @@ H:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\obj\Debug\ResolveAssemblyRefe
 H:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\obj\Debug\ExtSurat.BusinessObjects.dll
 H:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\obj\Debug\ExtSurat.BusinessObjects.pdb
 D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\obj\Debug\ExtSurat.BusinessObjects.csprojResolveAssemblyReference.cache
+D:\Github\ExtKencanaSurat\ExtSurat.BusinessObjects\bin\Debug\EntitySpaces.SqlClientProvider.dll

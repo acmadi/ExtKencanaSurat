@@ -151,7 +151,9 @@
     <Content Include="frmReportDisposition.aspx" />
     <Content Include="frmReportListLetter.aspx" />
     <Content Include="frmReportSuratIn.aspx" />
+    <Content Include="frmReportSuratKeluar.aspx" />
     <Content Include="frmReportSuratMasuk.aspx" />
+    <Content Include="frmReportSuratOut.aspx" />
     <Content Include="frmUserWindowAdd.aspx" />
     <Content Include="frmUserWindowEdit.aspx" />
     <Content Include="Images\add_user-32.png" />
@@ -161,6 +163,7 @@
     <Content Include="Master\frmMasterUser.aspx" />
     <Content Include="Master\ucMasterAccess.ascx" />
     <Content Include="Master\ucMasterUser.ascx" />
+    <Content Include="Profile.aspx" />
     <Content Include="resource\calendar\css\doc.css" />
     <Content Include="resource\calendar\css\fullcalendar.css" />
     <Content Include="resource\calendar\css\fullcalendar.print.css" />
@@ -503,6 +506,9 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -622,12 +628,26 @@
     <Compile Include="frmReportSuratIn.aspx.designer.cs">
       <DependentUpon>frmReportSuratIn.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmReportSuratKeluar.aspx.cs">
+      <DependentUpon>frmReportSuratKeluar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmReportSuratKeluar.aspx.designer.cs">
+      <DependentUpon>frmReportSuratKeluar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmReportSuratMasuk.aspx.cs">
       <DependentUpon>frmReportSuratMasuk.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="frmReportSuratMasuk.aspx.designer.cs">
       <DependentUpon>frmReportSuratMasuk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportSuratOut.aspx.cs">
+      <DependentUpon>frmReportSuratOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmReportSuratOut.aspx.designer.cs">
+      <DependentUpon>frmReportSuratOut.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmUserWindowAdd.aspx.cs">
       <DependentUpon>frmUserWindowAdd.aspx</DependentUpon>
@@ -667,6 +687,13 @@
     </Compile>
     <Compile Include="Master\ucMasterUser.ascx.designer.cs">
       <DependentUpon>ucMasterUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
