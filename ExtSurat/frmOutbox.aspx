@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TwitterBootstrap.Master" AutoEventWireup="true" CodeBehind="frmOutbox.aspx.cs" Inherits="ExtSurat.frmOutbox" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ExtSurat.Master" AutoEventWireup="true" CodeBehind="frmOutbox.aspx.cs" Inherits="ExtSurat.frmOutbox" %>
 <%@ Register Assembly="Ext.Net" Namespace="Ext.Net" TagPrefix="ext" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
