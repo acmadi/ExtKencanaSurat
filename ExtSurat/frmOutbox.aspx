@@ -13,9 +13,6 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<ext:ResourceManager ID="ResourceManager1" runat="server" />   
-    
-    
     <%--OnReadData="storeOutbox_RefreshData"--%>
     <ext:GridPanel runat="server" ID="gpOutbox" ClientIDMode="Inherit" Height="600" AutoExpandColumn="judul" Title="Surat Keluar">
         <Store>
