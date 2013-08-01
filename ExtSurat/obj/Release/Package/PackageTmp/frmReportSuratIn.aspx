@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TwitterBootstrap.Master" AutoEventWireup="true" CodeBehind="frmReportSuratIn.aspx.cs" Inherits="ExtSurat.frmReportSurat" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ExtSurat.Master" AutoEventWireup="true" CodeBehind="frmReportSuratIn.aspx.cs" Inherits="ExtSurat.frmReportSurat" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

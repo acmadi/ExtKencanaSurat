@@ -13,7 +13,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<ext:ResourceManager ID="ResourceManager1" runat="server" />   
+<%--<ext:ResourceManager ID="ResourceManager1" runat="server" />   --%>
     <script type="text/javascript">
         var RowCommand = function (cmd, record) {
             switch (cmd) {

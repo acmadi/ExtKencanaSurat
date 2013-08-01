@@ -18,7 +18,7 @@ namespace ExtSurat
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Redirect(Tools.SingleSignOnRedirectUrl(SingleSignOnRedirectTo.SignIn, Request.QueryString["ReturnUrl"]));
+            //Response.Redirect(Tools.SingleSignOnRedirectUrl(SingleSignOnRedirectTo.SignIn, Request.QueryString["ReturnUrl"]));
         }
 
         [DirectMethod]

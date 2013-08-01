@@ -34845,11 +34845,6 @@
                      or an XML element.
             </summary>
         </member>
-        <member name="P:Ext.Net.RecordField.RenderMilliseconds">
-            <summary>
-            
-            </summary>
-        </member>
         <member name="P:Ext.Net.RecordField.DateFormat">
             <summary>
             (Optional) A format String for the Date.parseDate function
@@ -69525,17 +69520,7 @@
             <param name="value">The object to deserialize.</param>
             <returns>The deserialized object from the Json string.</returns>
         </member>
-        <member name="P:Ext.Net.JSON.BaseConverters">
-            <summary>
-            
-            </summary>
-        </member>
         <member name="P:Ext.Net.JSON.Converters">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Ext.Net.JSON.DateMsConverters">
             <summary>
             
             </summary>

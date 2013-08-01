@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TwitterBootstrap.Master" AutoEventWireup="true" CodeBehind="frmInbox.aspx.cs" Inherits="ExtSurat.frmInbox" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ExtSurat.Master" AutoEventWireup="true" CodeBehind="frmInbox.aspx.cs" Inherits="ExtSurat.frmInbox" %>
 <%@ Register Assembly="Ext.Net" Namespace="Ext.Net" TagPrefix="ext" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
@@ -13,7 +13,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<ext:ResourceManager ID="ResourceManager1" runat="server" />   
+<%--<ext:ResourceManager ID="ResourceManager1" runat="server" />   --%>
     <script type="text/javascript">
         var RowCommand = function (cmd, record) {
             switch (cmd) {

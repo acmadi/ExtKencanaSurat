@@ -164,7 +164,7 @@ namespace ExtSurat
             }
 
             DataTable dt = skQ.LoadDataTable();
-            this.storeOutbox.DataSource = GetOutbox();
+            this.storeOutbox.DataSource = dt;
             this.storeOutbox.DataBind();            
         }
     }
